@@ -1,0 +1,201 @@
+%----------------------------------------------------------------
+% FEUILLE DE STYLE ENSG au format Latex
+% Création : sept. 2010 (D Lercier)
+% Modification sept. 2012 (T Coupin)
+%----------------------------------------------------------------
+
+\documentclass{themeensg}
+
+%---Texte en filigranne---
+%pour l'enlever : \SetWatermarkText{}
+%-------------------------
+
+%---Mes packages à moi---
+%\usepackage{}
+%------------------------
+
+%---Mes raccourcis---
+\newcommand{\transpose}[1]{{}^t \! #1}
+\newcommand{\ensg}{\textsc{Ensg}}
+%--------------------
+
+%---Paramètres du pdf---
+    \hypersetup{
+       backref=true,                           % Permet d'ajouter des liens dans
+       pagebackref=true,                       % les bibliographies
+       hyperindex=true,                        % Ajoute des liens dans les index.
+       colorlinks=true,  %Colorise les liens : true pour version numérique, false pour version d'impression
+       breaklinks=true,                        % Permet le retour à la ligne dans les liens trop longs.
+       urlcolor= blue,                         % Couleur des hyperliens.
+       linkcolor= blue,                       % Couleur des liens internes.
+       bookmarks=true,                         % Créé des signets pour Acrobat.
+       %bookmarksopen=true,                    % Si les signets Acrobat sont créés,
+                                               % les afficher complètement.
+       pdftitle={Thème ENSG},                 % Titre du document.
+                                               % Informations apparaissant dans
+       pdfauthor={Thibault Coupin},                      % dans les informations du document
+       pdfsubject={Feuille de style ENSG}           % sous Acrobat.
+    }
+
+%-----------------------
+
+
+
+%-------------------------------------------------------------
+
+\setcounter{tocdepth}{1} %profondeur de la table des matières
+
+\title{Feuille de style \LaTeX~de l'\ensg\\Documentation plus que rapide\\Version provisoire du \today~à \timenow}
+
+%
+%-------------------------------------------------------------
+% Début du document
+%--------------------------------------------------------------
+\begin{document}
+%--------------------------------------------------------------
+\begin{titlepage}
+%Inclusion des labels des entreprises
+%Pour un seul label (à gauche), mettre NULL pour les 3e et 4e argument
+\enterprise 
+{logos/logo_ensg.jpg}
+{Ecole Nationale des Sciences Géographiques}
+{logos/logo_ensg.jpg}
+{Ecole Nationale des Sciences Géographiques}
+
+%Inclusion du titre
+\maketitle{Stage de fin d'études \\Cycle des Ingénieurs diplômés de l'ENSG 3\up{ème} année }{logos/logo_ensg.jpg}
+
+\infos{Mohamed-Amjad LASRI}{Septembre 2015}
+\end{titlepage}
+
+
+%---Page du jury---
+\input{jury}
+%------------------
+
+%------------------------------------------------------------------------------
+% Remerciements
+\newevenpage
+\chapter*{Remerciements}
+
+Je tiens à remercier toutes les personnes qui ont participé de différentes façons à la réussite de mon stage et plus particulièrement les personnes que je cite ci-dessous.
+
+Olivier Martin, Frederic VERLUISE, Christian THOM et Christophe MEYNARD qui m'ont encadré, conseillé et ont répondu régulièrement à mes questions tout au long de mon stage.
+
+Emmanuel BARDIERE, mon référent de stage ENSG, qui a suivi l'évolution de mon stage tout au long de ces cinq mois.
+
+Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
+
+
+
+%---Résumé (français)---
+\begin{abstract}
+\thispagestyle{empty}
+	\vspace{1cm}
+
+	Ceci est mon résumé
+	
+	\vspace{1.5cm}
+	
+	\textbf{Mots clés :} clés, clés, clés
+\end{abstract}
+%-----------------------
+
+
+%---Résumé (anglais)---
+\selectlanguage{english}
+\begin{abstract}
+\thispagestyle{empty}
+	\vspace{1cm}
+	
+	This is my abstract
+	
+	\vspace{1.5cm}
+	
+	\textbf{Key words:} key, key, key
+\end{abstract}
+%----------------------
+
+\selectlanguage{frenchb}
+
+%---Table des matières, des figures et des tableaux---
+\newevenpage
+\tableofcontents
+
+\newevenpage
+\listoffigures
+
+\newevenpage
+\listoftables
+%----------------------------------------------------
+
+\newevenpage
+\chapter*{Glossaire et sigles utiles}
+\addcontentsline{toc}{chapter}{Glossaire et sigles utiles}
+
+  \begin{acronym}
+  \acro{ENSG}{\'Ecole Nationale des Sciences Géographiques}
+  \acro{GNSS}{Global Navigation Satellite Systems}
+  \acro{GPS}{Global Positionning System}
+  \end{acronym}
+
+
+%---Introduction------------------------------------------------------------------
+\newevenpage
+\chapter*{Introduction}
+  \addcontentsline{toc}{chapter}{Introduction}
+  
+  \vspace{1.5cm}
+	J'introduis
+
+%-------------------------------------------------------------------------------
+
+\evenchapter[La nouvelle feuille de style \ensg]{La nouvelle feuille\newline de style \ensg}
+
+\textit{Dans tout ce qui suit, et sauf mention contraire l'unité de temps utilisée est le ms. \ensg. }
+
+\section{Les fichiers}
+\begin{itemize}
+\item \texttt{themeensg.cls} : contient les personnalisations et macros utiles
+\item \texttt{jury.tex} : pour la feuille de présentation du jury
+\item le dossier \texttt{images} : il doit contenir toutes les images, il contient déjà le dossier logo avec celui de l'\ensg
+\item \texttt{bibliographie.bib} contient la bibliographie
+\end{itemize}
+
+\section{Commandes personnalisées}
+
+\begin{itemize}
+\item \verb!\newevenpage! : identique à \verb!\newpage! mais en insère une page blanche de façon à débuter la nouvelle page sur un numéro de page impaire.
+\item \verb!\evenchapter{titre}! : démarre un nouveau chapitre sur une page impaire,\\ \verb!\evenchapter[titre sommaire]{titre}! fonctionne aussi mais pas \verb!\evenchapter*{titre}!
+\item idem pour \verb!\evenpart{titre}!
+\end{itemize}
+
+\section{Fichier source de cette doc}
+Ce fichier \texttt{tex} contient toute la structure d'un rapport mais une bonne partie est désactivée car commentée par l'environnement \verb!\begin{comment} ... \end{comment}!
+
+
+%-------------------------------------------------------------------------------
+\newevenpage
+\chapter*{Conclusion}
+  \addcontentsline{toc}{part}{Conclusion}
+  \vspace{1.5cm}
+Il est l'heure de conclure : bonne nuit !
+
+
+%-------------------------------------------------------------------------------
+% Insertion de la bibliographie
+\newevenpage
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{bibliographie}
+
+\newevenpage
+\begin{appendices} 
+\label{beginappendices}
+\annexe[Filtre de Kalman]{Filtre\newline de Kalman}
+\label{annexekalman}
+Annexe 1
+
+\end{appendices} 
+
+\end{document}
