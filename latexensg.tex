@@ -75,12 +75,12 @@
 
 %------------------------------------------------------------------------------
 % Remerciements
-\newevenpage
+%\newevenpage
 \chapter*{Remerciements}
 
 Je tiens à remercier toutes les personnes qui ont participé de différentes façons à la réussite de mon stage et plus particulièrement les personnes que je cite ci-dessous.
 
-Olivier Martin, Frederic VERLUISE, Christian THOM et Christophe MEYNARD qui m'ont encadré, conseillé et ont répondu régulièrement à mes questions tout au long de mon stage.
+Olivier MARTIN, Frederic VERLUISE, Christian THOM et Christophe MEYNARD qui m'ont encadré, conseillé et ont répondu régulièrement à mes questions tout au long de mon stage.
 
 Emmanuel BARDIERE, mon référent de stage ENSG, qui a suivi l'évolution de mon stage tout au long de ces cinq mois.
 
@@ -119,7 +119,7 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
 \selectlanguage{frenchb}
 
 %---Table des matières, des figures et des tableaux---
-\newevenpage
+%\newevenpage
 \tableofcontents
 
 \newevenpage
@@ -129,7 +129,7 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
 \listoftables
 %----------------------------------------------------
 
-\newevenpage
+%\newevenpage
 \chapter*{Glossaire et sigles utiles}
 \addcontentsline{toc}{chapter}{Glossaire et sigles utiles}
 
@@ -146,22 +146,37 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
   \addcontentsline{toc}{chapter}{Introduction}
   
   \vspace{1.5cm}
-	J'introduis
+  
+	La communication en champ proche (NFC) est une méthode de communication utilisée pour l'identification des personnes et des objets
 
 %-------------------------------------------------------------------------------
 
-\evenchapter[La nouvelle feuille de style \ensg]{La nouvelle feuille\newline de style \ensg}
+\evenchapter[La nouvelle feuille de style \ensg]{Concepts clés et problématiques}
 
-\textit{Dans tout ce qui suit, et sauf mention contraire l'unité de temps utilisée est le ms. \ensg. }
+\textit{Le lecteur est prié de prêter une attention particulière au tableau des sigles lors de la lecture du présent document. Les protocoles qu'on présente utilisent un certain nombre d'abrévéations conventionnelles pour désigner Les opérations d'échanges entre. }
 
-\section{Les fichiers}
+\section{Les Géocubes}
+La miniaturisation des capteurs ainsi que la baisse des coûts de fabrication et de la consommation électrique des puces GNSS sont des facteurs qui peuvent laisser à envisager d'abandonner sur le terrain un réseau de capteurs opérant en permanence. Certains de ces capteurs GNSS permettent d'effectuer des mesures sur la phase donnant la possibilité de remonter à des précisions millimétriques, d'où l'idée d'un réseau de Géocubes. Le système Géocube est un réseau de capteurs GPS conçu et développé par le Laboratoire d'Opto-Éléctronique de Mesure et d'Instrumentation de l'Institut Géographique et Forestière Nationale. Il a comme objectif de mesurer les déformations avec une précision millimétrique. Ce réseau de capteurs a la particularité d'être très peu gourmand en énergie. On peut envisager de l'abandonner dans un milieu difficilement accessible sans qu'on ait à se soucier de son alimentation continue en électricité. En plus d'un module radio, un Géocube peut supporter plusieurs couches de capteurs lui permettant de collecter un certain nombre d'informations sur son environnement.
+
+Dans la version industrielle du Géocube maintenue par la société Kylia, une attention particulière est prêtée à l'étanchéité du boîtier qui le contient et à la robustesse du produit final. Ce choix crucial se justifie principalement par le fait qu'un réseau de Géocube peut être destiné à la surveillance environnementale en temps de crise et doit, par conséquence, être résistant aux conditions extremes que peut présenter un tel contexte.
+
+Dans la version industrielle actuelle, un réseau de Géocubes un protocol radio pour centraliser l'information vers un ordinateur centrale, appelé coordinateur.
+
+Le coordinateur est le composant central du réseau, il encapsule toute la logique liée au traitement et au stockage des données. 
+
+Aujourd'hui, Un opérateur humain peut aussi communiquer avec un Géocube, et cela en utilisant une de ces deux méthodes:
+\begin{itemize}
+\item Liaison série filaire, qui permet d'envoyer des commandes  à travers l'interface en lignes de commandes de G3OS.
+\item Radio: Un protocol propriétaire particulier est utilisé pour communiquer avec un Géocube et aussi
+\end{itemize}
+\begin{comment}
 \begin{itemize}
 \item \texttt{themeensg.cls} : contient les personnalisations et macros utiles
 \item \texttt{jury.tex} : pour la feuille de présentation du jury
 \item le dossier \texttt{images} : il doit contenir toutes les images, il contient déjà le dossier logo avec celui de l'\ensg
 \item \texttt{bibliographie.bib} contient la bibliographie
 \end{itemize}
-
+\end{comment}
 \section{Commandes personnalisées}
 
 \begin{itemize}
