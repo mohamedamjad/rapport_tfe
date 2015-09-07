@@ -32,6 +32,7 @@
 \RequirePackage{verbatim} %pour les commentaire sur plusieurs lignes
 \RequirePackage[toc,page]{appendix} %pour les annexes
 \RequirePackage{ifthen} %pour le \ifthenelse
+\RequirePackage{textcomp}
 
 
 %---En-tête et pied de page---

@@ -151,24 +151,34 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
 
 %-------------------------------------------------------------------------------
 
-\evenchapter[La nouvelle feuille de style \ensg]{Concepts clés et problématiques}
+\evenchapter[Concepts clés et problématiques]{Concepts clés et problématiques}
 
 \textit{Le lecteur est prié de prêter une attention particulière au tableau des sigles lors de la lecture du présent document. Les protocoles qu'on présente utilisent un certain nombre d'abrévéations conventionnelles pour désigner Les opérations d'échanges entre. }
 
 \section{Les Géocubes}
 La miniaturisation des capteurs ainsi que la baisse des coûts de fabrication et de la consommation électrique des puces GNSS sont des facteurs qui peuvent laisser à envisager d'abandonner sur le terrain un réseau de capteurs opérant en permanence. Certains de ces capteurs GNSS permettent d'effectuer des mesures sur la phase donnant la possibilité de remonter à des précisions millimétriques, d'où l'idée d'un réseau de Géocubes. Le système Géocube est un réseau de capteurs GPS conçu et développé par le Laboratoire d'Opto-Éléctronique de Mesure et d'Instrumentation de l'Institut Géographique et Forestière Nationale. Il a comme objectif de mesurer les déformations avec une précision millimétrique. Ce réseau de capteurs a la particularité d'être très peu gourmand en énergie. On peut envisager de l'abandonner dans un milieu difficilement accessible sans qu'on ait à se soucier de son alimentation continue en électricité. En plus d'un module radio, un Géocube peut supporter plusieurs couches de capteurs lui permettant de collecter un certain nombre d'informations sur son environnement.
 
-Dans la version industrielle du Géocube maintenue par la société Kylia, une attention particulière est prêtée à l'étanchéité du boîtier qui le contient et à la robustesse du produit final. Ce choix crucial se justifie principalement par le fait qu'un réseau de Géocube peut être destiné à la surveillance environnementale en temps de crise et doit, par conséquence, être résistant aux conditions extremes que peut présenter un tel contexte.
+Dans les premières versions du Géocube initiés par LOEMI, Un opérateur humain peut communiquer directement avec un géocube en utilisant une de ces méthodes:
 
-Dans la version industrielle actuelle, un réseau de Géocubes un protocol radio pour centraliser l'information vers un ordinateur centrale, appelé coordinateur.
-
-Le coordinateur est le composant central du réseau, il encapsule toute la logique liée au traitement et au stockage des données. 
-
-Aujourd'hui, Un opérateur humain peut aussi communiquer avec un Géocube, et cela en utilisant une de ces deux méthodes:
 \begin{itemize}
 \item Liaison série filaire, qui permet d'envoyer des commandes  à travers l'interface en lignes de commandes de G3OS.
-\item Radio: Un protocol propriétaire particulier est utilisé pour communiquer avec un Géocube et aussi
+\item Radio: Un protocol propriétaire particulier (DigiMesh\textcopyright) est utilisé pour communiquer avec un Géocube.
 \end{itemize}
+
+Dans la version industrielle du Géocube maintenue par la société Kylia, une attention particulière est prêtée à l'étanchéité du boîtier qui le contient et à la robustesse du produit final. Ce choix crucial se justifie principalement par le fait qu'un réseau de Géocube peut être destiné à la surveillance environnementale en temps de crise et doit, par conséquence, être résistant aux conditions extremes que peut présenter un tel contexte.
+
+Un réseau de Géocubes communique à travers le protocol radio DigiMesh\textcopyright et l'utilise aussi pour centraliser les mesures acquises par les Géocubes vers un ordinateur, appelé coordinateur. Le coordinateur est le composant central du réseau, il encapsule toute la logique liée au traitement et au stockage des données. Il permet aussi à l'utilisateur de lancer des séries de calculs, récupérer les résultats ou de communiquer avec un Géocube en lançant des commandes qui seront transmises par radio. La Figure\ref{fig:geocube_network} résume ce schéma de fonctionnement.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{images/fig1.png}
+\caption{Un réseau de Géocubes}
+\label{fig:geocube_network}
+\end{figure}
+
+\section{Les systèmes embarqués et les noyaux temps-réel dur:}
+
+
 \begin{comment}
 \begin{itemize}
 \item \texttt{themeensg.cls} : contient les personnalisations et macros utiles
