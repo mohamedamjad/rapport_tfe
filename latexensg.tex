@@ -135,8 +135,14 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
 
   \begin{acronym}
   \acro{ENSG}{\'Ecole Nationale des Sciences Géographiques}
+  \acro{G3OS}{Geocube Operating System}
   \acro{GNSS}{Global Navigation Satellite Systems}
   \acro{GPS}{Global Positionning System}
+  \acro{IEC}{The International Electrotechnical Commission}
+  \acro{ISO}{The International Organization for Standardization}
+  \acro{NFC}{Near Field Communication}
+  \acro{RTOS}{Real Time Operating System}
+  \acro{TCP/IP}{Transmission Control Protocol/Internet Protocol}
   \end{acronym}
 
 
@@ -153,7 +159,8 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
 
 \evenchapter[Concepts clés et problématiques]{Concepts clés et problématiques}
 
-\textit{Le lecteur est prié de prêter une attention particulière au tableau des sigles lors de la lecture du présent document. Les protocoles qu'on présente utilisent un certain nombre d'abrévéations conventionnelles pour désigner Les opérations d'échanges entre. }
+\textit{ Ce chapitre a pour but d'introduire le lecteur aux concepts clés nécessaires pour comprendre le travail effectué lors de ce stage.
+Le lecteur est prié de prêter une attention particulière au tableau des sigles lors de la lecture du présent document. Les protocoles qu'on présente utilisent un certain nombre d’abréviations conventionnelles pour désigner Les opérations d'échanges entre. }
 
 \section{Les Géocubes}
 La miniaturisation des capteurs ainsi que la baisse des coûts de fabrication et de la consommation électrique des puces GNSS sont des facteurs qui peuvent laisser à envisager d'abandonner sur le terrain un réseau de capteurs opérant en permanence. Certains de ces capteurs GNSS permettent d'effectuer des mesures sur la phase donnant la possibilité de remonter à des précisions millimétriques, d'où l'idée d'un réseau de Géocubes. Le système Géocube est un réseau de capteurs GPS conçu et développé par le Laboratoire d'Opto-Éléctronique de Mesure et d'Instrumentation de l'Institut Géographique et Forestière Nationale. Il a comme objectif de mesurer les déformations avec une précision millimétrique. Ce réseau de capteurs a la particularité d'être très peu gourmand en énergie. On peut envisager de l'abandonner dans un milieu difficilement accessible sans qu'on ait à se soucier de son alimentation continue en électricité. En plus d'un module radio, un Géocube peut supporter plusieurs couches de capteurs lui permettant de collecter un certain nombre d'informations sur son environnement.
@@ -177,6 +184,42 @@ Un réseau de Géocubes communique à travers le protocol radio DigiMesh\textcop
 \end{figure}
 
 \section{Les systèmes embarqués et les noyaux temps-réel dur:}
+Un système embarqué est par définition: Un système éléctronique et informatique autonome, souvent temps-réel, spécialisé dans une tâche bien précise []. De cette définition on peut ressortir deux éléments clés:
+\begin{itemize}
+\item Un système embarqué nécessite un développement matériel (électronique) mais aussi logiciel.
+\item Un système embarqué a la particularité d'opérer en temps-réel.
+\end{itemize}
+Le lecteur peut se poser la question légitime: Pourquoi on insiste sur le "temps-réel" dans cette définition? Nos ordinateurs personnels n'opèrent-ils pas en "temps-réel"?. Pour répondre à ces questions et introduire l'importance de ... dans le cas du système Géocube Il faut comprendre que le concept de temps réel en informatique est très relatif et varie d'un métier à un autre: Le temps-réel pour un développeur web est de pouvoir fournir à l'internaute de l'information sous forme de flux, en tolérant les temps de latence qui peuvent résulter parfois des temps d'accès à une base de données ou à la bande passante d'internet. Pour un développeur qui fait de l'informatique pour automobiles et doit, par exemple, développer les couches logicielles relatives à un système d'airbag, Le temps-réel dans ce cas est très strict et la quantification de ce temps latence est primordiale, sinon la vie des gens serait en danger.
+\subsection{Les tâches}
+Une tâche est le composant principal d'un RTOS. Lorsque vous effectuez plusieurs tâches simultanées sur un ordinateur avec une mémoire vive limitée, vous pouvez remarquer à partir d'un certain ... que vos tâches auront du mal à tourner ... Pour les systèmes d'exploitation en temps-réel, communément connus sous le nom de RTOS (Real Time Operating Systems) La quantification de ce temps de latence est primordiale.
+
+Dans cette perspective, une équipe de chercheurs du LOEMI ont mis au point un RTOS adapté aux tâches qui sont effectuées par un Géocube.
+
+Une liste non exhaustive de ces tâches serait alors:
+
+\begin{itemize}
+\item Une tâche GPS qui gère toutes les opérations en relation avec l'acquisition des données GPS:
+\item Une tâche Radio qui gère toutes les orpérations relatives à l'envoi et  à la réception des données et des commandes par radio;
+\item Une tâche accéléromètre qui gère l'acquisition des données de l'accéleromètre...
+\end{itemize}
+
+On note ici qu'à chaque tâche on affecte une priorité. On revient à notre exemple d'airbag pour mieux appréhender cette notion. Imaginons maintenant que dans un RTOS destiné à l'industrie automobile on ne donne pas à la tâche qui gère l'airbag la plus haute priorité. Cela reviendrait à dire qu'à 
+
+\subsection{La communication entre les tâches}
+
+Dans un RTOS généralement, et dans G3OS plus particulièrement, une tâche peut communiquer avec ses semblables ou répondre à des signaux provenant des capteurs, qu'on appelle interruption.
+
+Un signal d'interruption permet à un composant du système embarqué de notifier le micro-contrôleur central de l'arrivée d'un événement qui mérite son attention. Le choix de ces événements se fait souvent en programmant les registres des composants du système. Conventionnellement, le registre qui permet de choisir les événements déclencheurs d'interruptions s'appelle le registre principal des interruptions (Main Interrupt Register).
+
+La communication entre les tâches s'effectue par plusieurs méthodes. La principale connue est la queue de messages. Ce mécanisme permet à une tâche de communiquer avec les autres en envoyant des messages. Un exemple typique serait alors: une tâche qui s'occupe de l'acquisition des données d'une puce GPS. Dès qu'une nouvelle trame de données est disponible, Cette tâche envoie  et une autre du traitement de ces données, Dans ce cas la première tâche envoie à la deuxième les données acquises à travers la que
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{images/fig2.png}
+\caption{Exemple multi tâches}
+\label{fig:multitask_ex}
+\end{figure}
+
 
 
 \begin{comment}
