@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.4)  10 SEP 2015 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.4)  11 SEP 2015 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,7 +1048,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/logos/logo_ensg.jpg, id=40, 308.15125pt x 308.15125pt>
+<images/logos/logo_ensg.jpg, id=48, 308.15125pt x 308.15125pt>
 File: images/logos/logo_ensg.jpg Graphic file (type jpg)
 
 <use images/logos/logo_ensg.jpg>
@@ -1198,19 +1198,19 @@ l.128 \newevenpage
 
 ] [8]
 Chapitre 1.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 160.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 164.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 160--160
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 164--164
 [][] 
  []
 
-<images/fig1.png, id=126, 551.1792pt x 343.2825pt>
+<images/fig1.png, id=140, 551.1792pt x 343.2825pt>
 File: images/fig1.png Graphic file (type png)
  <use images/fig1.png>
-Package pdftex.def Info: images/fig1.png used on input line 181.
+Package pdftex.def Info: images/fig1.png used on input line 185.
 (pdftex.def)             Requested size: 440.94395pt x 274.62636pt.
 
 
@@ -1230,23 +1230,17 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.203 \item U
+l.207 \item U
              ne tâche accéléromètre qui gère l'acquisition des données...
- <./images/fig1.png>] <images/fig2.png, id=140, 469.755pt x 180.675pt>
+ <./images/fig1.png>] <images/fig2.png, id=155, 469.755pt x 180.675pt>
 File: images/fig2.png Graphic file (type png)
 
 <use images/fig2.png>
-Package pdftex.def Info: images/fig2.png used on input line 218.
+Package pdftex.def Info: images/fig2.png used on input line 222.
 (pdftex.def)             Requested size: 469.75386pt x 180.67455pt.
 
-Overfull \hbox (14.50975pt too wide) in paragraph at lines 218--219
+Overfull \hbox (14.50975pt too wide) in paragraph at lines 222--223
  [][] 
- []
-
-
-Overfull \hbox (17.1832pt too wide) in paragraph at lines 236--237
-[]\T1/lmtt/m/n/10.95 \evenchapter[titre sommaire]{titre} \T1/lmr/m/n/10.95 fonc
--tionne aussi mais pas []\T1/lmtt/m/n/10.95 \evenchapter*{titre} 
  []
 
 
@@ -1260,8 +1254,13 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.245 \newevenpage
-                   <./images/fig2.png>]
+l.234 \item I
+             SO/IEC 14443-2: <./images/fig2.png>]
+Overfull \hbox (17.1832pt too wide) in paragraph at lines 276--277
+[]\T1/lmtt/m/n/10.95 \evenchapter[titre sommaire]{titre} \T1/lmr/m/n/10.95 fonc
+-tionne aussi mais pas []\T1/lmtt/m/n/10.95 \evenchapter*{titre} 
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
  Make it at least 13.59999pt.
@@ -1281,7 +1280,7 @@ No file latexensg.bbl.
 ] [16]
 Annexe A.
 
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 262--262
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 302--302
 [][] 
  []
 
@@ -1290,24 +1289,24 @@ AED: lastpage setting LastPage
 [17
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 268.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
  (./latexensg.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
 Package rerunfilecheck Info: File `latexensg.out' has not changed.
-(rerunfilecheck)             Checksum: 5A4A2C48CEA1344D20470C40FB413A61;605.
+(rerunfilecheck)             Checksum: 621F86BC17508D2332C012DCCDA352C4;787.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 308.
  ) 
 Here is how much of TeX's memory you used:
- 11152 strings out of 494950
- 158255 string characters out of 6179041
- 261706 words of memory out of 5000000
- 14069 multiletter control sequences out of 15000+600000
+ 11166 strings out of 494950
+ 158375 string characters out of 6179041
+ 261877 words of memory out of 5000000
+ 14075 multiletter control sequences out of 15000+600000
  95473 words of font info for 79 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  44i,11n,45p,1153b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1320,10 +1319,10 @@ pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latexensg.pdf (22 pages, 583977 bytes).
+Output written on latexensg.pdf (22 pages, 588342 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 104 words of extra memory for PDF output out of 10000 (max. 10000000)
 

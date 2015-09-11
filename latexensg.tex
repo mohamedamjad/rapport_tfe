@@ -135,12 +135,16 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
 
   \begin{acronym}
   \acro{ENSG}{\'Ecole Nationale des Sciences Géographiques}
+  \acro{FIFO}{First In First Out}
   \acro{G3OS}{Geocube Operating System}
   \acro{GNSS}{Global Navigation Satellite Systems}
   \acro{GPS}{Global Positionning System}
   \acro{IEC}{The International Electrotechnical Commission}
+  \acro{IHM}{Interface Homme Machine}
   \acro{ISO}{The International Organization for Standardization}
   \acro{NFC}{Near Field Communication}
+  \acro{PCD}{Proximity Coupling Device}
+  \acro{PICC}{Proximity Inductive Coupling Card}
   \acro{RTOS}{Real Time Operating System}
   \acro{TCP/IP}{Transmission Control Protocol/Internet Protocol}
   \end{acronym}
@@ -219,6 +223,41 @@ La communication entre les tâches s'effectue par plusieurs méthodes. La princi
 \caption{Exemple multi tâches}
 \label{fig:multitask_ex}
 \end{figure}
+
+\section{La communication en champs proche (NFC)}
+La communication en champs proche est un ensemble de protocoles permettant d'établir une connexion radio entre deux dispositifs avec une distance ne dépassant pas 4cm. Aujourd'hui, on compte des millions d'objets connectés contenant la technologie NFC(cartes bancaires, smartphone, arrêts de bus, smartwatch...). L'interopérabilité entre les différentes puces équipant ces objets a poussé les constructeurs à mettre en place un certain nombre de normes régissant la fabrication, la programmation et l'utilisation de cette technologie.
+
+La guerre des normes a fait converger les constructeurs vers l'ISO/IEC 14443. Cette norme encapsule en elle même quatre sous normes:
+
+\begin{itemize}
+\item ISO/IEC 14443-1: Description des couches physiques
+\item ISO/IEC 14443-2: 
+\item ISO/IEC 14443-3:
+\item ISO/IEC 14443-4: 
+\end{itemize}
+
+\subsection{couches matérielles:}
+La conception des couches matérielles d'un circuit NFC doit respecter les recommandations de l'ISO/IEC 14443-1 et une partie de l'ISO/IEC 14443-2 pour garantir l'interopérabilité avec les autres dispositifs disponibles sur le marché. Un circuit NFC typique est composé de 3 parties principales:
+\begin{itemize}
+\item Une antenne: Selon les spécifications de la dite norme les dimensions de l'antenne ne doivent pas excéder 86mm x 54mm x 3mm.
+\item Une capacité adaptée pour garantir une raisonnance du circuit sur la fréquence 13.56Mhz;
+\item Le PICC
+\end{itemize}
+\subsection{couches logicielles:}
+
+
+\section{Les infrastructures de production des logiciels}
+La conception et le développement des solutions logiciels dans un milieu industriel nécessite des infrastructures permettant d'automatiser un certain nombre de tâches qui, ensemble, forment ce qui est communément connu sous le nom de pipeline de production logicielle.
+
+Cette chaîne de production est itérative, Elle favorise les cycles courts pour délivrer au client un produit évolutif et s'adaptant à ses besoins. Dans la Figure... on présente les principales étapes de cette chaîne.
+
+Comme montré dans la Figure.... Une pipeline de production logicielle a un certain nombre d'acteurs externes humains qui garantissent son alimentation en versions(1) et en tickets(2). On définit alors ces acteurs comme suit:
+
+\begin{itemize}
+\item Développeur: s'occupe de la conception et le développement des solutions informatiques en réponse aux besoins des clients exp.. dans le gestionnaire des bugs. Son travail permet d'alimenter le gestionnaire de versions.
+\item Product owner: terme emprunté à la méthode Scrum. Il est l'interlocuteur unique des clients et permet de traduire leurs besoins en tickets 
+\end{itemize}
+
 
 
 
