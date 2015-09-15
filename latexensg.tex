@@ -266,7 +266,7 @@ En plus de ces acteurs humains une infrastructure de production logicielle conti
 \end{itemize}
 
 
-\evenchapter[Conception et développement des couches logicielles et matérielles relatives à la norme NFC ISO1443 et de l'IHM Android dédiée]{Conception et développement des couches logicielles et matérielles relatives à la norme NFC ISO1443 et de l'IHM Android dédiée}
+\evenchapter[Conception et développement des couches logicielles et matérielles relatives à la norme NFC ISO14443 et de l'IHM Android dédiée]{Conception et développement des couches logicielles et matérielles relatives à la norme NFC ISO14443 et de l'IHM Android dédiée}
 
 \section{Analyse du besoin:}
 Dans le but de simplifier au maximum la mécanique et d’assurer au mieux l’étanchéité de celle-ci, il est prévu dans la version industrielle du geocube de n’utiliser ni interrupteur On/Off ni connecteur permettant de communiquer avec le geocube par un lien filaire. La seule possibilité de lien se fera par la radio, dont le débit est trop faible pour assurer des transfert de fichiers de données.
@@ -276,20 +276,21 @@ Solution :
 Nous proposons donc d’inclure dans le geocube la fonctionnalité NFC. Elle devra pouvoir déclencher l’allumage ou au moins le réveil de sommeil profond du processeur du geocube, ainsi que son extinction. Elle devra aussi pouvoir servir de lien de communication avec le logiciel de commande du geocube pour permettre la configuration et le test de bon fonctionnement du geocube par exemple lors de son installation. Enfin, elle permettra le déchargement et le chargement de fichiers depuis et vers la carte µSD.
 Le stage se déroulera en plusieurs phases :
 
--          Identification du chipset NFC à utiliser. Il y en a un déjà dans le design actuel, il faudra vérifier si ses performances sont suffisantes.
+- Identification du chipset NFC à utiliser. Il y en a un déjà dans le design actuel, il faudra vérifier si ses performances sont suffisantes.
 
--          Modification ébventuelles de la carte du geocube pour intégrer le circuit choisi et assurer les fonctionnalités demandées.
+- Modification ébventuelles de la carte du geocube pour intégrer le circuit choisi et assurer les fonctionnalités demandées.
 
--          Test du chipset choisi.
+- Test du chipset choisi.
 
--          Réalisation des couches logicielles interface dans G3OS
+- Réalisation des couches logicielles interface dans G3OS
 
--          Réalisation d’une appli dédiée sous Android pour l’IHM
+- Réalisation d’une appli dédiée sous Android pour l’IHM
 
 \section{Conception de la solution:}
 \subsection{Choix de la puce NFC:}
-Le choix d'une puce NFC est basée sur une webographie effectuée sur les sites des constructeurs pour trouver la puce la plus adaptée à la description du besoin du commanditaire. Une puce NFC doit répondre au mieux à ce besoin tout en encapsulant le maximum de fonctionnalités des 3 derniers niveaux (2, 3 et 4) de la norme ISO-14443.
-  
+Le choix d'une puce NFC est basée sur une webographie effectuée sur les sites des constructeurs pour trouver la puce la plus adaptée à la description du besoin du commanditaire. Une puce NFC doit répondre au mieux à ce besoin tout en encapsulant le maximum de fonctionnalités des 3 derniers niveaux (2, 3 et 4) de la norme ISO-14443. Cette norme garantie l'interaction avec les dispositifs utilisant le système exploitation Android.
+
+
 
 \evenchapter[Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:]{Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:}
 \textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Pour plus d'informations sur le langage voir []. Le système de mise à jour développé fut baptisé Sharokey}
