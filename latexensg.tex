@@ -265,6 +265,32 @@ En plus de ces acteurs humains une infrastructure de production logicielle conti
 \item Intégration continue
 \end{itemize}
 
+
+\evenchapter[Conception et développement des couches logicielles et matérielles relatives à la norme NFC ISO1443 et de l'IHM Android dédiée]{Conception et développement des couches logicielles et matérielles relatives à la norme NFC ISO1443 et de l'IHM Android dédiée}
+
+\section{Analyse du besoin:}
+Dans le but de simplifier au maximum la mécanique et d’assurer au mieux l’étanchéité de celle-ci, il est prévu dans la version industrielle du geocube de n’utiliser ni interrupteur On/Off ni connecteur permettant de communiquer avec le geocube par un lien filaire. La seule possibilité de lien se fera par la radio, dont le débit est trop faible pour assurer des transfert de fichiers de données.
+
+Solution :
+
+Nous proposons donc d’inclure dans le geocube la fonctionnalité NFC. Elle devra pouvoir déclencher l’allumage ou au moins le réveil de sommeil profond du processeur du geocube, ainsi que son extinction. Elle devra aussi pouvoir servir de lien de communication avec le logiciel de commande du geocube pour permettre la configuration et le test de bon fonctionnement du geocube par exemple lors de son installation. Enfin, elle permettra le déchargement et le chargement de fichiers depuis et vers la carte µSD.
+Le stage se déroulera en plusieurs phases :
+
+-          Identification du chipset NFC à utiliser. Il y en a un déjà dans le design actuel, il faudra vérifier si ses performances sont suffisantes.
+
+-          Modification ébventuelles de la carte du geocube pour intégrer le circuit choisi et assurer les fonctionnalités demandées.
+
+-          Test du chipset choisi.
+
+-          Réalisation des couches logicielles interface dans G3OS
+
+-          Réalisation d’une appli dédiée sous Android pour l’IHM
+
+\section{Conception de la solution:}
+\subsection{Choix de la puce NFC:}
+Le choix d'une puce NFC est basée sur une webographie effectuée sur les sites des constructeurs pour trouver la puce la plus adaptée à la description du besoin du commanditaire. Une puce NFC doit répondre au mieux à ce besoin tout en encapsulant le maximum de fonctionnalités des 3 derniers niveaux (2, 3 et 4) de la norme ISO-14443.
+  
+
 \evenchapter[Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:]{Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:}
 \textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Pour plus d'informations sur le langage voir []. Le système de mise à jour développé fut baptisé Sharokey}
 \section{Étude du besoin:}
@@ -332,8 +358,9 @@ Sharokey est une solution informatique légère de mise à jour automatique pour
 Comme schématisé dans la Figure, La partie client est contituée d'un ensemble de paquets Kylia dont nous présentons les fonctionnalités ci-dessous:
 \begin{itemize}
 \item checker.kyl: Ce paquet renvoie trois codes possibles 0, 1 ou 2. 0 si le dispositif client arrive à se connecter au serveur mais aucune nouvelle mise à jour n'est disponible. 1 si le dispositif client arrive à se connecter au serveur et il y a une nouvelle mise à jour a effectué. 2 si le dispositif client n'arrive pas à se connecter à internet\footnote{Le code retour 2 est important pour le coordinateur des Géocubes, puisque ce dernier est dépendant d'internet. Ce code retour permet d'informer le client d'un souci de réseau}.
-\item update.kyl: Ce paquet télécharge et éxécute les mise à jour, il change ensuite le numéro de la version courrante dans le dispositif client
-\item zeus.kyl: Ce script est lancé si on veut
+\item update.kyl: Ce paquet télécharge et éxécute les mises à jour, il change ensuite le numéro de la version courante dans le dispositif client pour l'adapter à celle du serveur.
+\item zeus.kyl: Ce script a pour but d'automatiser la procédure d'installation d'un coordinateur "à la sortie d'usine".
+\item phenix.kyl: Le but de ce paquet est de désintaller le coordinateur et de le réinstaller automatiquement, de partir d'une version minimaliste si une erreur survient.
 \end{itemize}
 \section{conception dynamique}
 Dans la conception dynamique on définit un certain nombre de scénarios typiques que le système ... 

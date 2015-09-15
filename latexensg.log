@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.4)  15 SEP 2015 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.4)  15 SEP 2015 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,7 +1048,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/logos/logo_ensg.jpg, id=64, 308.15125pt x 308.15125pt>
+<images/logos/logo_ensg.jpg, id=76, 308.15125pt x 308.15125pt>
 File: images/logos/logo_ensg.jpg Graphic file (type jpg)
 
 <use images/logos/logo_ensg.jpg>
@@ -1207,7 +1207,7 @@ Overfull \hbox (40.99998pt too wide) in paragraph at lines 164--164
 [][] 
  []
 
-<images/fig1.png, id=168, 551.1792pt x 343.2825pt>
+<images/fig1.png, id=184, 551.1792pt x 343.2825pt>
 File: images/fig1.png Graphic file (type png)
  <use images/fig1.png>
 Package pdftex.def Info: images/fig1.png used on input line 185.
@@ -1232,7 +1232,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
                                                   \fi \fi 
 l.207 \item U
              ne tâche accéléromètre qui gère l'acquisition des données...
- <./images/fig1.png>] <images/fig2.png, id=182, 469.755pt x 180.675pt>
+ <./images/fig1.png>] <images/fig2.png, id=198, 469.755pt x 180.675pt>
 File: images/fig2.png Graphic file (type png)
 
 <use images/fig2.png>
@@ -1265,46 +1265,60 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 [12]
 Chapitre 2.
 
-Underfull \hbox (badness 3009) in paragraph at lines 268--268
+Underfull \hbox (badness 5077) in paragraph at lines 269--269
+[]|\T1/lmr/m/sc/24.88 Conception et d�-ve-lop-pe-
+ []
+
+
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 269--269
+[][] 
+ []
+
+[13
+
+] [14]
+Chapitre 3.
+
+Underfull \hbox (badness 3009) in paragraph at lines 294--294
 \T1/lmr/m/sc/24.88 des-ti-n�e au sys-t�me G�o-
  []
 
 
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 268--268
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 294--294
 [][] 
  []
 
-<images/context_general.png, id=195, 406.6392pt x 316.3017pt>
+<images/context_general.png, id=221, 406.6392pt x 316.3017pt>
 File: images/context_general.png Graphic file (type png)
 
 <use images/context_general.png>
-Package pdftex.def Info: images/context_general.png used on input line 276.
+Package pdftex.def Info: images/context_general.png used on input line 302.
 (pdftex.def)             Requested size: 365.97191pt x 284.66888pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/use_case_sharokey.png, id=198, 552.8655pt x 451.6875pt>
+<images/use_case_sharokey.png, id=224, 552.8655pt x 451.6875pt>
 File: images/use_case_sharokey.png Graphic file (type png)
 
 <use images/use_case_sharokey.png>
-Package pdftex.def Info: images/use_case_sharokey.png used on input line 304.
+Package pdftex.def Info: images/use_case_sharokey.png used on input line 330.
 (pdftex.def)             Requested size: 552.86414pt x 451.68639pt.
 
-Overfull \hbox (97.62003pt too wide) in paragraph at lines 304--306
+Overfull \hbox (97.62003pt too wide) in paragraph at lines 330--332
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13
+[15
 
-] <images/MPD_sharokey.png, id=204, 456.2646pt x 306.6657pt>
+] <images/MPD_sharokey.png, id=230, 456.2646pt x 306.6657pt>
 File: images/MPD_sharokey.png Graphic file (type png)
 
 <use images/MPD_sharokey.png>
-Package pdftex.def Info: images/MPD_sharokey.png used on input line 321.
+Package pdftex.def Info: images/MPD_sharokey.png used on input line 347.
 (pdftex.def)             Requested size: 387.82674pt x 260.66705pt.
 
 
@@ -1313,12 +1327,12 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.327 
+l.353 
        <./images/context_general.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -1326,12 +1340,12 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.334 \item c
+l.360 \item c
              hecker.kyl: Ce paquet renvoie trois codes possibles 0, 1 ou 2. ...
  <./images/use_case_sharokey.png>]
 
@@ -1340,15 +1354,14 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
+[18pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.349 P
-       our créer une pair de clés (privé et publique signée) pour un cli...
- <./images/MPD_sharokey.png>]
-Overfull \hbox (17.1832pt too wide) in paragraph at lines 373--374
+l.377 
+       <./images/MPD_sharokey.png>]
+Overfull \hbox (17.1832pt too wide) in paragraph at lines 402--403
 []\T1/lmtt/m/n/10.95 \evenchapter[titre sommaire]{titre} \T1/lmr/m/n/10.95 fonc
 -tionne aussi mais pas []\T1/lmtt/m/n/10.95 \evenchapter*{titre} 
  []
@@ -1359,49 +1372,49 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17] [18] [19
+[19] [20] [21
 
-] [20]
+] [22]
 No file latexensg.bbl.
 (./latexensg.ann)
 \tf@ann=\write8
 \openout8 = `latexensg.ann'.
 
- [21
+ [23
 
-] [22]
+] [24]
 Annexe A.
 
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 399--399
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 428--428
 [][] 
  []
 
 
 AED: lastpage setting LastPage
-[23
+[25
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
  (./latexensg.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 434.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 434.
 Package rerunfilecheck Info: File `latexensg.out' has not changed.
-(rerunfilecheck)             Checksum: C23D4F6B94AF8CECC4794EA9E9C86E93;1152.
+(rerunfilecheck)             Checksum: A95D1BC10A70495DDAE41C13B535CBF1;1467.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 434.
  ) 
 Here is how much of TeX's memory you used:
- 11214 strings out of 494950
- 159171 string characters out of 6179041
- 262019 words of memory out of 5000000
- 14098 multiletter control sequences out of 15000+600000
+ 11224 strings out of 494950
+ 159278 string characters out of 6179041
+ 262022 words of memory out of 5000000
+ 14102 multiletter control sequences out of 15000+600000
  98470 words of font info for 80 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 44i,12n,45p,1153b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,11n,45p,1153b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
@@ -1412,10 +1425,10 @@ pe1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb>
-Output written on latexensg.pdf (28 pages, 962591 bytes).
+Output written on latexensg.pdf (30 pages, 969948 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 73 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
