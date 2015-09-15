@@ -265,7 +265,100 @@ En plus de ces acteurs humains une infrastructure de production logicielle conti
 \item Intégration continue
 \end{itemize}
 
+\evenchapter[Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:]{Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:}
+\textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Pour plus d'informations sur le langage voir []. Le système de mise à jour développé fut baptisé Sharokey}
+\section{Étude du besoin:}
+Le besoin se fait ressentir de plus en plus au sein de la société Kylia de disposer d'un système permettant aux clients qui ont acheté un système Géocube  d'eefectuer des mises à jour automatiques et de profiter ainsi des améliorations éventuelles qui seront amenées aux couches logicielles des produit sans pour autant procéder à un rappel de celui ci.
 
+En plus du de la gestion des mises à jour, ce système doit être au coeur de plusieurs métiers, permettant de coordonner le travail entre le développeur, l'administrateur système, l'opérateur commercial et les clients désirant profiter des dernières améliorations portées sur les couches logicielles.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.9]{images/context_general.png}
+\label{fig:context_statique}
+\centering
+\caption{Diagramme de contexte statique}
+\end{figure}
+
+De la Figure\ref{fig:context_statique} on définit les acteurs suivants:
+\begin{itemize}
+\item Opérateur commercial: Personne qui procède à la vente des systèmes Géocubes et des licences de mise à jour. Une licence a un date de début et une date de fin. Elle détermine la période ((pour laquelle)) le client à le droit de profiter du support logiciel à travers la mise à jour de son dispositif.
+\item Développeur: Personne responsable de l'alimentation continue du système en versions.
+\item Administrateur: Personne responsable de l'administration et la supervision du système de mise à jour.
+\item Coordinateur: Dispositif client destiné à être mis à jour.
+\end{itemize}
+
+Ce système doit en plus présenter les particularités suivantes:
+\begin{itemize}
+\item La supervision et l'administration du système doit être simplifiée à travers des interfaces homme-machine.
+\item 
+\item Les logs du système doivent être expressifs et facilement accessible par l'administrateur.
+\item Les requêtes du client et les réponses du serveur doivent être sécurisées.
+
+\end{itemize}
+
+\section{Conception statique}
+La Figure\ref{fig:use_case} résume les cas d'utilisation de Sharokey.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{images/use_case_sharokey.png}
+\label{fig:use_case}
+\caption{Diagramme UML des cas d'utilisation de Sharokey}
+\end{figure}
+
+La modélisation de la base de donnée est présentée dans la Figure\ref{fig:mpd}. On définit alors les entités suivantes:
+\begin{itemize}
+\item client: Personne physique qui effectue la commande d'un produit, elle est identifiée par IDC (clef primaire ID Client). Cette personne peut appartenir à une institution (entreprise ou organisme étatique), Les autres champs de la table servent à identifier les informations nécessaires au contact: Nom, Prénom, Téléphone, E-mail et un commentaire qui est laissé au soins de l'opérateur commercial.
+\item product: C'est le coordinateur qui est destiné à recevoir les mises à jour. Il est identifié par son Part-Number (IDP). On lui attribue en plus un nom qui est généralement celui de la marque du fabriquant.
+\item license: Entité qui établie la relation entre la table product et la table client, en utilisant des clés étrangères vers leurs identifiants. Elle attribue à chaque client une licence de mises à jour sur un produit pour une durée comprise entre une date de début (start date) et une date de fin (end date).
+\item software: C'est la table qui contient toutes les mises avec les numéros de versions correspondants. Elle contient une clef étrangère vers la table product, puisque chaque mise à jour est destinée à un produit particulier. chaque mise à jour est identifiée par une version majeure, une version mineure et une version de patchs. La version 1.0.5 correspond alors à la version majeure 1, la version mineure 0 et la version de patchs 5. En plus, chaque mise à jour a un type qui peut être soit V (pour version), ou P pour (patch). La différence réside dans la pertinence des améliorations portées.
+\item Les triggers: Deux triggers pour écouter les événements des tables: client et product.
+\end{itemize}
+
+\begin{figure}
+\centering
+\label{fig:mpd}
+\includegraphics[scale=0.85]{images/MPD_sharokey.png}
+\caption{MDP (Modèle Physique des Données) de la base de données Sharokey}
+\end{figure}
+\subsection{Format des mises à jour}
+
+Une mise à jour est un script auto-extractible fabriqué en utilisant le programme Makeself. Un format de paquets a été conçu pour simplifier et automatiser la création des scripts de mise à jour. Ce format a un point d'entrée qu'on nomme "go.sh" et un répertoire de scripts et de données baptisé "installerScripts". go.sh est un script shell qui execute les scripts contenus dans installerScripts. la fabrication d'un éxecutable auto-extractible à partir de ces éléments en utilisant Makeself permet d'ajouter un mécanisme de vérification de l'intégrité du paquet de mise à jour avec une somme MD5.
+
+\subsection{Architecture logicielle}
+Sharokey est une solution informatique légère de mise à jour automatique pour les solutions informatiques propriétaires basés sur un système d'exploitation GNU/Linux et nécessitant une licence ou une autorisation pour faire les mises à jour. Il est basé sur une architecture client-serveur. Le client est codé entièrement en Shell pour garantir une portabilité sur toutes les distributions GNU/Linux et sur une grande panoplie d'architectures matérielles: Intel, ARM, MIPS, ... Le serveur est écrit en NodeJS. Ce choix garantie se portabilité sur les serveurs utilisant des OS type Windows ou GNU/Linux. Toute fois, il est fortement conseillé d'utiliser GNU/Linux. Les tests effectués jusqu'à ce jour n'ont porté que sur ce type d'OS.
+
+\subsubsection{Client:}
+Comme schématisé dans la Figure, La partie client est contituée d'un ensemble de paquets Kylia dont nous présentons les fonctionnalités ci-dessous:
+\begin{itemize}
+\item checker.kyl: Ce paquet renvoie trois codes possibles 0, 1 ou 2. 0 si le dispositif client arrive à se connecter au serveur mais aucune nouvelle mise à jour n'est disponible. 1 si le dispositif client arrive à se connecter au serveur et il y a une nouvelle mise à jour a effectué. 2 si le dispositif client n'arrive pas à se connecter à internet\footnote{Le code retour 2 est important pour le coordinateur des Géocubes, puisque ce dernier est dépendant d'internet. Ce code retour permet d'informer le client d'un souci de réseau}.
+\item update.kyl: Ce paquet télécharge et éxécute les mise à jour, il change ensuite le numéro de la version courrante dans le dispositif client
+\item zeus.kyl: Ce script est lancé si on veut
+\end{itemize}
+\section{conception dynamique}
+Dans la conception dynamique on définit un certain nombre de scénarios typiques que le système ... 
+
+
+\subsection{Sécurité du système}
+La stratégie de sécurité instaurée pour Sharokey doit respecter les trois points suivants:
+\begin{itemize}
+\item S'assurer de l'identité du dispositif qui effectue la mise à jour
+\item Les requêtes des clients et les réponses du serveur doivent être cryptés pour assurer la protection des paquets binaires lors de leur transition via le réseau.
+\item S'assurer de l'intégrité des paquets envoyés par le serveur.
+\end{itemize}
+Dans cette perspective un système d'authentification par vérification de signature numérique sur la clef publique du client a été implémenté dans Sharokey. Une autorité de certification (KyliaCA) a été créée\footnote{Système cryptographique asymétrique en utilisant le standard RSA}. Son but est de signer la clef publique des clients pour garantir que leur dispositif a bien été vendu par Kylia. La génération des clés (privé et publique) des clients s'effectue d'une manière automatique dans Sharokey dès la création d'un nouveau client dans la base de données, d'ou le trigger Pl/PGSQL sur la table client(Figure\ref{fig:mpd}).
+
+Pour créer une pair de clés (privé et publique signée) pour un client. Sharokey effectue trois opérations en utilisant les fonctions de la librairie OpenSSL:
+\begin{itemize}
+\item Créer une pair de clés aléatoires en utilisant le standard RSA et avec une longueur de 2048 octets\footnote{À ce jour, aucune faille n'est connue dans RSA pour les clés de longueur 2048 octets}
+\item À partir de la clef publique, créer un CSR (Certificate Signature Request).
+\item Signer le fichier CSR avec KyliaCA et générer ainsi une clef publique signée par l'autorité de certification de l'entreprise\footnote{Une autorité de certification est aussi une pair de clés publique-privé sauf qu'elle n'a été signée par aucune autre CA. Elle est auto-signée par elle même}.
+\end{itemize}
+Un tel mécanisme d'authentification assure que le dispositif qui veut effectuer la mise à jour provient de la société Kylia, et répond donc au premier point de sécurité précédemment énoncé.
+
+Concernant le deuxième point relatif au cryptage des requêtes clients et des réponses du serveur. Sharokey oblige toutes les requêtes à passer par le protocole HTTPS pour garantir le cryptage des informations échangés entre le client et le serveur, et ceci en utilisant une cryptographie asymétrique basée sur l'échange mutuel des clés publiques.
+
+Enfin, le troisième point relatif à l'intégrité des données transitant par le réseau est garantit par un mécanisme de checksum-MD5 implémenté par défaut dans le générateur de scripts auto-extractibles Makeself.
 
 \begin{comment}
 \begin{itemize}
