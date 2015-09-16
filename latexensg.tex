@@ -288,9 +288,23 @@ Le stage se déroulera en plusieurs phases :
 
 \section{Conception de la solution:}
 \subsection{Choix de la puce NFC:}
-Le choix d'une puce NFC est basée sur une webographie effectuée sur les sites des constructeurs pour trouver la puce la plus adaptée à la description du besoin du commanditaire. Une puce NFC doit répondre au mieux à ce besoin tout en encapsulant le maximum de fonctionnalités des 3 derniers niveaux (2, 3 et 4) de la norme ISO-14443. Cette norme garantie l'interaction avec les dispositifs utilisant le système exploitation Android.
+Le choix d'une puce NFC s'est basé sur une webographie effectuée sur les sites des constructeurs pour trouver la puce la plus adaptée à la description du besoin du commanditaire. Une puce NFC doit répondre au mieux à ce besoin tout en encapsulant le maximum de fonctionnalités des 3 derniers niveaux (2, 3 et 4) de la norme ISO-14443. Cette norme garantie l'interaction avec les dispositifs utilisant le système exploitation Android.
 
-
+Après une première analyse des caractéristiques de quelques dix puces sélectionnées, On ne garde pour la suite que les trois citées dans le Tableau ci-dessous. La plupart des puces disponibles dans le marché et qui sont interfaçables avec un micro-contrôleur\footnote{La plupart des puces sont stand-alone et programmable une fois.}.
+\begin{figure}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Référence & Constructeur & Prix(\$) & Débit(kbps) & ISO 14443 & Interface & T° & RAM\\ \hline
+TRF7970A & TI & 6.98 & 424 & 3 & SPI-Paral & -40°-110° & NC\\
+RF430CL330H & TI & 1.74 & 848 & 3 & SPI-I2C & -40°-85° & 3KO\\
+AS3953 & AMS & 1.09 & 848 & 3 & SPI & -40°-85° & NC\\
+PN533 & NXP & NC & 848 & 3 & USB2 & -40°-125° & 1KO\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Tableau comparatif des puces NFC présélectionnées.}
+\end{figure}
 
 \evenchapter[Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:]{Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:}
 \textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Pour plus d'informations sur le langage voir []. Le système de mise à jour développé fut baptisé Sharokey}
