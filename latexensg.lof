@@ -6,8 +6,13 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Exemple multi t\IeC {\^a}ches}}{11}{figure.1.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Tableau comparatif des puces NFC pr\IeC {\'e}s\IeC {\'e}lectionn\IeC {\'e}es.}}{14}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Circuit \IeC {\'e}lectrique \IeC {\'e}quivalent d'une puce NFC et et son antenne}}{14}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Circuit \IeC {\'e}lectrique \IeC {\'e}quivalent d'une puce NFC, une antenne avec une r\IeC {\'e}sistance en s\IeC {\'e}rie et les liaisons filaires entre les deux}}{15}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Circuit \IeC {\'e}lectrique \IeC {\'e}quivalent d'une puce NFC, une antenne avec une r\IeC {\'e}sistance en parall\IeC {\`e}le et les liaisons filaires entre les deux}}{15}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Circuit simplifi\IeC {\'e} d'une puce NFC, une antenne et les connexions filaires entre les deux}}{15}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Exp\IeC {\'e}rimentation r\IeC {\'e}alis\IeC {\'e}e pour calibrer l'antenne NFC du G\IeC {\'e}ocube}}{16}{figure.2.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de contexte statique}}{16}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme UML des cas d'utilisation de Sharokey}}{17}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces MDP (Mod\IeC {\`e}le Physique des Donn\IeC {\'e}es) de la base de donn\IeC {\'e}es Sharokey}}{18}{figure.3.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de contexte statique}}{18}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme UML des cas d'utilisation de Sharokey}}{19}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces MDP (Mod\IeC {\`e}le Physique des Donn\IeC {\'e}es) de la base de donn\IeC {\'e}es Sharokey}}{20}{figure.3.3}
 \addvspace {10\p@ }

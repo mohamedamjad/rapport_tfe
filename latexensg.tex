@@ -306,6 +306,93 @@ PN533 & NXP & NC & 848 & 3 & USB2 & -40°-125° & 1KO\\
 \caption{Tableau comparatif des puces NFC présélectionnées.}
 \end{figure}
 
+On remarque qu'aucun constructeur ne propose des puces compatibles avec le 4ème niveau de la norme ISO/IEC 14443. L'utilisation de cette norme est indipensable pour pouvoir communiquer avec un dispositif Android\footnote{Android n'accepte pas les protocoles propriétaires pour la communication en champ proche. Que les protocoles certifiés par l'ISO/IEC}. Un travail serait alors à effectuer pour programmer le niveau manquant de la dite norme dans le micro-contrôleur.
+
+Une puce existe déjà dans la version actuelle du Géocube. C'est l'AS3953, Le maintien de cette puce permettra de gagner:
+\begin{itemize}
+\item en temps de développement matériel.
+\item en prix: c'est la moins cher de sa catégorie.
+\item ultra basse consommation électrique\footnote{Ce qui est crucial pour le Géocube} Dans plusieurs cas d'utilisation la puce s'alimente de l'énergie émise par le smartphone.
+\end{itemize}
+Pour ces raison le choix de l'AS3953 a été maintenu pour le Géocube.
+
+\subsection{Conception et expérimentation de l'antenne:}
+
+Les prototypes des antennes NFC sont généralement conçus d'une manière empirique. Pour cela, Il existe plusieurs méthodes expérimentales conventionnelles. Mais avant de présenter les expériences réalisées. Il faut comprendre qu'un circuit NFC typique peut être assimilé à un circuit de type RLC. L'équivalent électrique d'une puce NFC et son antenne pourrait être assimilé au circuit de la Figure\ref{fig:nfcandantenna}.
+
+\begin{figure}[h!]
+\centering
+\label{fig:nfcandantenna}
+\includegraphics[scale=0.5]{images/chipANDantenna.png}
+\caption{Circuit électrique équivalent d'une puce NFC et et son antenne}
+\end{figure}
+l'antenne est un fil conducteur, son équivalent électrique est la résistance $R_{ant}$. Elle a aussi une inductance qu'on note $L_{ant}$ et une capacité parasite $C_{ant}$. Alors que $R_{chip}$, $C_{tun}$ désignent respectivement la résistance et la capacité introduits par la puce NFC.
+
+La Figure\ref{fig:nfcandantenna} est un schéma simplifié du circuit électronique que présente une antenne et une puce NFC puisqu'il ne prend pas en compte les connexions filaires entre les deux. Un schéma plus global peut se présenter comme dans la Figure\ref{fig:completeeq} lorsque l'antenne ajoute une résistance en série et dans la Figure\ref{fig:completeeq2} lorsque qu'elle inclut une résistance en parallèle.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.7]{images/chipANDantennaANDconn.png}
+\label{fig:completeeq}
+\caption{Circuit électrique équivalent d'une puce NFC, une antenne avec une résistance en série et les liaisons filaires entre les deux}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.7]{images/withPARA.png}
+\label{fig:completeeq2}
+\caption{Circuit électrique équivalent d'une puce NFC, une antenne avec une résistance en parallèle et les liaisons filaires entre les deux}
+\end{figure}
+\begin{itemize}
+\item $R_{con}$: La résistance équivalente parasite générée par les fils de connexion entre la puce NFC et l'antenne.
+\item $C_{con}$: La capacité équivalente parasite générée par les fils de connexion entre la puce NFC et l'antenne.
+\item $R_{s-ant}$: La résistance en série de l'antenne.
+\item $R_{p-ant}$: La résistance en parallèle de l'antenne.
+\end{itemize}
+En calculant la résistance et la capacité équivalentes on obtient la Figure\ref{fig:circuiteq}. $R_{eq}$ est calculée comme suit:
+
+\begin{figure}
+\centering
+\label{fig:circuiteq}
+\includegraphics[scale=0.6]{images/circuiteq.png}
+\caption{Circuit simplifié d'une puce NFC, une antenne et les connexions filaires entre les deux}
+\end{figure}
+
+$$R_{eq}=\frac{R_{chip}\times R_{p-ant}}{R_{chip}+R_{p-ant}}$$
+
+alors que:
+
+$$R_{p-ant}=R_{s-ant}\times(1+(\frac{L_{ant}\times\omega}{R_{s-ant}})^2)$$
+
+La fréquence de raisonnance $f_0$ d'un circuit LC parallèle peut être calculée en utilisant cette formule:
+
+$$f_0=\frac{1}{2\pi\sqrt{L_{ant}.C_{tun}}}$$
+
+L'inductance de l'antenne à la raisonnance peut être exprimée comme suit:
+$$L_{ant}=\frac{1}{(2\pi.f_0)^2.C_{tun}}$$
+
+Dans la plupart des cas on dispose de l'inductance $L_{ant}$ dans les datasheets des antennes. La grandeur qui reste à déterminer est alors $C_{tun}$. Comme nous avons vu précédemment:
+
+$$C_{tun}=C_{chip}+C_{conn}+C_{ant}$$
+
+Les valeurs de $C_{ant}$ et $C_{chip}$ sont généralement disponibles dans les datasheets de l'antenne et de la puce NFC. Théoriquement, La seule grandeur qui reste à déterminer est $C_{conn}$:
+
+$$C_{conn}=C_{tun}-C_{chip}-C_{ant}$$
+
+Malheureusement, ce n'est pas toujours le cas\footnote{Comme c'est le cas pour le Géocube} le circuit imprimé sur lequel vient s'ajouter l'antenne NFC peut modifier l'inductance de l'antenne d'une manière (pseudo-)aléatoire et dépendante des composants rayonnants du circuit, en plus du plan de masse que peut présenter ce dernier. Un mode opératoire itératif qui consiste à faire varier la capacité $C_{conn}$ jusqu'à ce que la fréquence de raisonnance du circuit se stabilise autour de 13.56Mhz serait alors de.
+
+Pour cela nous avons conçu l'expérimentation schématisée sur la Figure\ref{experience} Le but est alors de mesurer pour chaque itération(et donc pour chaque valeur de capacité) la fréquence de raisonnance du circuit à une antenne qui émet à 13.56Mhz\footnote{Ce qui simule l'antenne NFC d'un smartphone}, et ceci jusqu'à trouver la capacité pour laquelle le circuit: Géocube+antenne raisonne à 13.56Mhz. Un GBF(Générateur de Basses fréquences) réglé sur 13.56Mhz et lié à une antenne simule un smartphone avec son antenne NFC. Le but serait alors de mesurer à chaque itération, à l'aide d'un oscilloscope.
+
+\begin{figure}[h!]
+\centering
+\label{experience}
+\includegraphics[scale=0.55]{images/gbfoscillo.png}
+\caption{Expérimentation réalisée pour calibrer l'antenne NFC du Géocube}
+\end{figure}
+Les antennes testées sont des circuits éléctroniques imprimés que nous avons conçus spécialement pour le Géocube
+Cette expérimentation a permit de choisir une capacité pour les modèles d'antennes....
+
+\subsection{Conception des couches logicielles}
+La puce NFC retenu n'inclut pas le niveau 4 de la norme ISO/IEC 14443. Ce niveau est indispensable pour pouvoir communiquer avec d'autres dispositifs NFC et spécialement les smartphones utilisant un système d'exploitation Android.
+
 \evenchapter[Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:]{Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:}
 \textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Pour plus d'informations sur le langage voir []. Le système de mise à jour développé fut baptisé Sharokey}
 \section{Étude du besoin:}
