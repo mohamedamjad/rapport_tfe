@@ -286,7 +286,7 @@ Le stage se déroulera en plusieurs phases :
 
 - Réalisation d’une appli dédiée sous Android pour l’IHM
 
-\section{Conception de la solution:}
+
 \subsection{Choix de la puce NFC:}
 Le choix d'une puce NFC s'est basé sur une webographie effectuée sur les sites des constructeurs pour trouver la puce la plus adaptée à la description du besoin du commanditaire. Une puce NFC doit répondre au mieux à ce besoin tout en encapsulant le maximum de fonctionnalités des 3 derniers niveaux (2, 3 et 4) de la norme ISO-14443. Cette norme garantie l'interaction avec les dispositifs utilisant le système exploitation Android.
 
@@ -390,15 +390,159 @@ Pour cela nous avons conçu l'expérimentation schématisée sur la Figure\ref{e
 Les antennes testées sont des circuits éléctroniques imprimés que nous avons conçus spécialement pour le Géocube
 Cette expérimentation a permit de choisir une capacité pour les modèles d'antennes....
 
-\subsection{Conception des couches logicielles}
-La puce NFC retenu n'inclut pas le niveau 4 de la norme ISO/IEC 14443. Ce niveau est indispensable pour pouvoir communiquer avec d'autres dispositifs NFC et spécialement les smartphones utilisant un système d'exploitation Android.
+\subsection{Conception statique des couches logicielles}
+La puce NFC retenu n'inclut pas le niveau 4 de la norme ISO/IEC 14443. Ce niveau est indispensable pour pouvoir communiquer avec d'autres dispositifs NFC et spécialement les smartphones utilisant un système d'exploitation Android. Ce niveau contient les spécifications relatifs au protocole de transmission des données entre le PCD et le PICC qu'on nomme Le BTP(Block Transmission Protocol).
+
+Le BTP définit un format de bloc tel montré dans le Tableau
+
+\begin{tabular}[hf]{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{Prologue} & \multicolumn{3}{c|}{Information} & \multicolumn{2}{c|}{Epilogue} \\
+\hline
+PCB & [CID] & [NAD] & \multicolumn{3}{|c|}{[INF]} & \multicolumn{2}{c|}{EDC}\\
+\hline
+1 octet & 1 octet & 1 octet & \multicolumn{3}{|c|}{} & \multicolumn{2}{c|}{2 octets}\\
+\hline
+\end{tabular}
+
+\subsubsection{Le prologue}
+Le prologue contient les trois octets suivants:
+\paragraph{PCB[obligatoire]:}
+PCB (Protocol Control Byte)[obligatoire]: utilisé pour contrôler la transmission des données. Il peut être un de ces trois octets:
+\begin{itemize}
+\item I-Block Figure\ref{fig:I-Block} utilisé pour indiquer au dispositif destinataire que le bloc envoyé est un bloc d'information et contient des octets dans le champs INF.
+\item R-Block Figure\ref{fig:R-Block} utilisé pour indiquer une reconnaissance négative ou positive. Un R-Block ne contient jamais de champs INF.
+\item S-Block Figure\ref{fig:S-Block} utilisé pour échanger des informations de control entre le PCD et le PICC. Il existe deux types de S-Block: le DESELECT qui n'est jamais suivit par un champ INF et le WTE qui doit être suivit par un octets dans le champ INF.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{images/iblock.png}
+\caption{Structure binaire d'un I-Block}
+\label{fig:I-Block}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{images/rblock.png}
+\caption{Structure binaire d'un R-Block}
+\label{fig:R-Block}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{images/sblock.png}
+\caption{Structure binaire d'un S-Block}
+\label{fig:S-Block}
+\end{figure}
+\paragraph{CID[optionnel]:}
+CID (Card IDentifier) est un octet attribué par le PCD et qui sert à identifier un PICC. La manière dont le PICC gère un CID est décrite dans ce qui suit:
+
+Un PICC qui ne supporte pas les CID\footnote{Comme l'AS3953} doit l'ignorer.
+
+Un PICC qui supporte le CID doit:
+\begin{itemize}
+\item Répondre à un bloc contenant un CID en utilisant le même CID.
+\item Ignorer les blocs contenant d'autres CID que celui utilisé à l'initiation de la communication.
+\item Répondre avec un bloc sans CID s'il reçoit un CID nul.
+\end{itemize}
+
+\paragraph{NAD[optionnel]:}
+
+Non supporté par l'AS3953\footnote{On laisse le lecteur curieux découvrir son utilité et son fonctionnement dans l'ISO-14443-3.}.
+
+\subsubsection{Champ d'information [INF][optionnel]:}
+
+Le champ INF est utilisé pour envoyer les informations de la couche applicatif du PICC au PCD et inversement. La longueur de ce champ est calculée  en fonction des octets qu'il contient.
+
+\subsubsection{L'epilogue:}
+Ce champ contient le CRC du bloc envoyé, son calcul est détaillé dans l'ISO/IEC 14443-3. Il est calculé automatiquement par la puce AS3953.
+
+La structure de données du BTP qu'on vient de présenter a été programmée et intégrée dans G3OS durant ce stage. Dans ce qui suit on présente l'aspect dynamique du système NFC. On détermine un certain nombre de scénarios auxquels le système doit répondre. 
+
+\subsection{Conception dynamique des couches logicielles}
+\textit{ Dans ce qui suit la notation $I(X)$ désigne un I-Block avec un numéro de bloc X. On utilise le diagramme de séquence UML pour modéliser les scénarios possibles. Tous les scénarios suivants ont été programmés et intégrés dans G3OS lors de ce stage}
+
+Comme dans n'importe quel RTOS. La NFC correspond à une tâche indépendante. L'ordonnanceur de G3OS reçoit un signal d'interruption de la puce NFC, acquitte l'interruption et lance la tâche correspondante. Et c'est alors à la tâche de découvrir pourquoi elle a été lancée en lisant le registre principal des interruptions de la puce NFC. Toutes les communications entre le micro-contrôleur (MSP430) et la puce NFC (AS3953) s'effectue en SPI(interface série).
+
+En plus des registres, l'AS3953 contient une EEPROM(Electrically Erasable Programmable Read-Only Memory) de 32 mots de 32 bits et une file FIFO (First In First Out) de 32 octets qui permet de stocker temporairement les informations à transmettre dans les deux sens. Tous ces éléments sont accessible en SPI\footnote{Voir Chapitre1 pour comprendre le fonctionnement}.
+
+Lorsqu'on veut écrire un mot dans la FIFO par exemple, il faut fabriquer une suite de bits constituée de:
+\begin{itemize}
+\item Un octet pour indiquer le mode de communication. C'est le mot qui permet au microcontrôleur d'indiquer à la puce NFC ce qu'on veut faire. Tous les modes de communication sont disponible sur la datasheet de l'AS3953. Pour écrire un mot dans la FIFO par exemple, le mode correspondant est 1000 0000
+\item L'adresse du mot de la FIFO qu'on veut écrire. La plage d'adresse de la FIFO est entre 0000 0000 et 0010 0000
+\item Le mot qu'on veut écrire.
+\end{itemize}
+Donc la suite de bits: 1000 0000 0010 0000 1111 0000 envoyée en SPI correspond à une écriture du mot 1111 0000 dans le dernier mot de la FIFO(32ème mot).
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{images/blockdiagram.png}
+\label{fig:blockdiagram}
+\caption{Schéma en fonctionnement global de l'AS3953}
+\end{figure}
+
+Ainsi toutes les communications entre le micro-contrôleur et la puce NFC s'effectuent de la même façon: constituer un mot contenant un octet pour le mode de communication\footnote{Lire/Ecrire l'EEPROM, Lire/Ecrire les registres et Lire/Ecrire la FIFO}, suivi d'un mot pour indiquer l'adresse qu'on veut lire ou écrire et finalement le mot qu'on veut écrire pour l'écriture et rien pour la lecture.
+
+L'AS3953 implémente aussi un certain nombre de commandes dites commandes directes. Les commandes directes permettent au micro-contrôleur de notifier la puce NFC
+
+\begin{itemize}
+\item Clear: arrêter toutes les activités et effacer tous les mots de la FIFO.
+\item Transmit: Transmettre les données stockées dans la FIFO à l'autre dispositif (du PICC au PCD et inversement).
+\item Go2halt: arrêter la communication avec le dispositif.
+\item setDefault: retourner à l'état par défaut de la puce (état initial).
+\end{itemize}
+
+Les deux commandes qui nous intéressent le plus sont: Transmit et Go2halt. La première permet d'envoyer le contenu de la FIFO au dispositif NFC destinataire et la deuxième arrêter la communication avec celui ci.
+
+Lorsqu'on reçoit un message d'un autre dispositif. Un signal d'interruption permet de notifier le micro-contrôleur qu'un dispositif à initier le processus de communication et a passé les trois premiers niveaux de l'ISO/IEC 14443 et qu'il veut initier un échange de message avec le micro-contrôleur. Dès que ce signal d'interruption est acquitté, l'ordonnanceur lance la tâche NFC, qui commence par lire le registre des interruptions pour s'assurer qu'il s'agit bien d'une initiation de communication et que le dispositif en question a passé les 3 premiers niveaux de la norme NFC sans problèmes. Dès lors, il peut lire le premier message reçu de la FIFO et répondre en écrivant un mot dans la FIFO et en exécutant la commande Transmit pour envoyer le message.
+
+L'échange des messages entre deux dispositifs doit se faire en respectant le FWT (Frame Waiting Time) qui est le temps dans lequel un dispositif doit renvoyer un message en réponse à un bloc reçu. Si aucune réponse n'est initiée dans la période définit par le FWT, la connexion est arrêtée. La valeur par défaut du FWT et de 2000 ms.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.65]{images/fwt.png}
+\caption{le Frame Waiting Time}
+\end{figure}
+
+Le 4ème niveau de l'ISO/IEC 14443 oblige les dispositifs NFC à utiliser le protocole de transmission des blocs pour échanger les messages. Dans ce qui suit quelques scénarios de communication. On fait abstraction sur la manière dont l'échange s'effectue (C'est ce qu'on a expliqué précédemment) et on se concentre sur la nature des blocs envoyés pour chaque scénario. Voir la conception statique des couches logicielles pour plus d'informations sur la structure des blocs.
+
+\subsubsection{Vérification de la présence et la compatibilité du PICC}
+Le PCD peut vérifier la présence d'un PICC et sa compatibilité avec la norme ISO-14443 en échangeant des I-Block ou des R-Block suivant le diagramme de séquence Figure\ref{fig:presencecheck}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{images/presencecheck.png}
+\label{fig:presencecheck}
+\caption{Diagramme de séquence pour la vérification de la présence d'un PICC compatible ISO/IEC 14443}
+\end{figure}
+
+\subsubsection{DESELECT:}
+DESELECT est la commande envoyée par le PCD pour informer le PICC de la fin de la transmission. Comme nous avons évoqué précedemment, cette commande est codé dans un S-Block. L'équivalent binaire du prologue d'une commande DESELECT est: $11000010$. Sachant que le 4ème bit peut être 1 si le CID s'en suit. La Figure\ref{fig:deselect} présente le diagramme de séquence correspondant.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{images/deselect.png}
+\label{fig:deselect}
+\caption{Diagramme de séquence pour l'échange d'une commande DESELECT}
+\end{figure}
+
+\subsubsection{Échange de données:}
+Pour échanger des données entre les PCD et le PICC il faut utiliser des blocs de chaînage. Le chaînage est le mécanisme qui permet d'envoyer des données de la couche applicative. Il est activé en mettant le 5ème bit (b5) d'un I-Block à 1. Chaque bloc alors contient un champ d'informations INF. Chaque I-Block de chaînage contenant un champ d'information est alors notifié par le dispositif destinataire par un R(ACK).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{images/chaining.png}
+\label{fig:chaining}
+\caption{Échange de blocs d'informations en utilisant le chaînage. crédit du schéma: OpenPCD.org}
+\end{figure}
+
 
 \evenchapter[Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:]{Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:}
 \textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Pour plus d'informations sur le langage voir []. Le système de mise à jour développé fut baptisé Sharokey}
 \section{Étude du besoin:}
-Le besoin se fait ressentir de plus en plus au sein de la société Kylia de disposer d'un système permettant aux clients qui ont acheté un système Géocube  d'eefectuer des mises à jour automatiques et de profiter ainsi des améliorations éventuelles qui seront amenées aux couches logicielles des produit sans pour autant procéder à un rappel de celui ci.
+Le besoin se fait ressentir de plus en plus au sein de la société Kylia de disposer d'un système permettant aux clients qui ont acheté un système Géocube  d'effectuer des mises à jour automatiques et de profiter ainsi des améliorations éventuelles qui seront amenées aux couches logicielles des produit sans pour autant procéder à un rappel de celui ci.
 
-En plus du de la gestion des mises à jour, ce système doit être au coeur de plusieurs métiers, permettant de coordonner le travail entre le développeur, l'administrateur système, l'opérateur commercial et les clients désirant profiter des dernières améliorations portées sur les couches logicielles.
+En plus de la gestion des mises à jour, ce système doit être au coeur de plusieurs métiers, permettant de coordonner le travail entre le développeur, l'administrateur système, l'opérateur commercial et les clients désirant profiter des dernières améliorations portées sur les couches logicielles.
 
 \begin{figure}[h!]
 \includegraphics[scale=0.9]{images/context_general.png}
@@ -508,6 +652,15 @@ Enfin, le troisième point relatif à l'intégrité des données transitant par 
 \section{Fichier source de cette doc}
 Ce fichier \texttt{tex} contient toute la structure d'un rapport mais une bonne partie est désactivée car commentée par l'environnement \verb!\begin{comment} ... \end{comment}!
 
+\evenchapter[Mise en place et sécurisation d'une infrastructure virtuelle de production des logiciels:]{Mise en place et sécurisation d'une infrastructure virtuelle de production des logiciels:}
+
+Le besoin se fait ressentir au sein de la société Kylia de disposer d'une infrastructure de production des logiciels lui permettant ....
+
+\section{Système de versioning:}
+Un système de versioning sert principalement à:
+\begin{itemize}
+\
+\end{itemize}
 
 %-------------------------------------------------------------------------------
 \newevenpage

@@ -11,8 +11,17 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Circuit \IeC {\'e}lectrique \IeC {\'e}quivalent d'une puce NFC, une antenne avec une r\IeC {\'e}sistance en parall\IeC {\`e}le et les liaisons filaires entre les deux}}{15}{figure.2.4}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Circuit simplifi\IeC {\'e} d'une puce NFC, une antenne et les connexions filaires entre les deux}}{15}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Exp\IeC {\'e}rimentation r\IeC {\'e}alis\IeC {\'e}e pour calibrer l'antenne NFC du G\IeC {\'e}ocube}}{16}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Structure binaire d'un I-Block}}{17}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Structure binaire d'un R-Block}}{18}{figure.2.8}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Structure binaire d'un S-Block}}{18}{figure.2.9}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Sch\IeC {\'e}ma en fonctionnement global de l'AS3953}}{19}{figure.2.10}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces le Frame Waiting Time}}{20}{figure.2.11}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Diagramme de s\IeC {\'e}quence pour la v\IeC {\'e}rification de la pr\IeC {\'e}sence d'un PICC compatible ISO/IEC 14443}}{21}{figure.2.12}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Diagramme de s\IeC {\'e}quence pour l'\IeC {\'e}change d'une commande DESELECT}}{21}{figure.2.13}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces \IeC {\'E}change de blocs d'informations en utilisant le cha\IeC {\^\i }nage. cr\IeC {\'e}dit du sch\IeC {\'e}ma: OpenPCD.org}}{22}{figure.2.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de contexte statique}}{18}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme UML des cas d'utilisation de Sharokey}}{19}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces MDP (Mod\IeC {\`e}le Physique des Donn\IeC {\'e}es) de la base de donn\IeC {\'e}es Sharokey}}{20}{figure.3.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de contexte statique}}{24}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme UML des cas d'utilisation de Sharokey}}{25}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces MDP (Mod\IeC {\`e}le Physique des Donn\IeC {\'e}es) de la base de donn\IeC {\'e}es Sharokey}}{26}{figure.3.3}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
