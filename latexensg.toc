@@ -38,6 +38,8 @@
 \contentsline {section}{\numberline {3.4}Commandes personnalis\IeC {\'e}es}{27}{section.3.4}
 \contentsline {section}{\numberline {3.5}Fichier source de cette doc}{27}{section.3.5}
 \contentsline {chapter}{\numberline {4}Mise en place et s\IeC {\'e}curisation d'une infrastructure virtuelle de production des logiciels:}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}Syst\IeC {\`e}me de versioning:}{29}{section.4.1}
+\contentsline {section}{\numberline {4.1}Syst\IeC {\`e}me h\IeC {\^o}te:}{29}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Choix du syst\IeC {\`e}me d'exploitation:}{29}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Syst\IeC {\`e}me de versioning:}{29}{section.4.2}
 \contentsline {part}{Conclusion}{31}{chapter*.16}
 \contentsline {chapter}{\numberline {A}Filtre de Kalman}{35}{Annexe.1.A}

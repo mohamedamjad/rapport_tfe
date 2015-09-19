@@ -654,16 +654,47 @@ Ce fichier \texttt{tex} contient toute la structure d'un rapport mais une bonne 
 
 \evenchapter[Mise en place et sécurisation d'une infrastructure virtuelle de production des logiciels:]{Mise en place et sécurisation d'une infrastructure virtuelle de production des logiciels:}
 
-Le besoin se fait ressentir au sein de la société Kylia de disposer d'une infrastructure de production des logiciels lui permettant ....
+Le besoin se fait ressentir au sein de la société Kylia de disposer d'une infrastructure de production des logiciels lui permettant de gérer le patrimoine logiciel dont elle dispose et spécialement celui en relation avec le Géocube.  
+
+\section{Système hôte:}
+
+Pour déployer une infrastructure de production des logiciels. il faut disposer d'un serveur avec une adresse IP statique, permettant à tous les acteurs de centraliser leurs contributions et de les rendre accessibles aux autres en temps réel.
+
+Selon la taille des entreprises et des performances demandées des solutions existent. Pour les PME (cas de la société Kylia) qui ne disposent pas moyens logistiques\footnote{installations électriques, systèmes de climatisation, connexion internet deterministique, ...} pour accueillir un serveur physique, Des prestataires, dont le métier est l'hébergement des data-centres proposent des solutions pour la location d'un serveur virtuel. Ainsi une société peut disposer d'un serveur hautement disponible sans pour autant l'accueillir physiquement.
+
+Ce type de solution, communément connus sous le nom de VPS(Virtual Private Server), est accessible en ligne de commande à travers le protocole SSH (Shell sécurisé) et laisse la liberté complète à l'administrateur de gérer le système, comme dans un serveur physique.
+
+Le prestataire selectionné garantit une accessibilité de 99.989\% ce qui correspond à 364.96 jours accessibles par an, une bande passante de 100Mbps, une puissance de calcul permettant de signer 114 certificats OpenSSL par seconde et par CPU.
+
+Un tel serveur est adapté pour accueillir une infrastructure logicielle d'une PME ainsi que de proposer des services en ligne (voir chapitre3) pour un nombre de clients qu'on estime à vingts.
+
+\subsection{Choix du système d'exploitation:}
+
+Le système d'exploitation du VPS a été choisit en respectant les critères suivants:
+\begin{itemize}
+\item Grande communauté de développeurs et d'utilisateurs.
+\item Stabilité.
+\item Compatible avec le système d'exploitation sur lequel tourne le coordinateur(Debian) pour simplifier les tests.
+\end{itemize}
+
+Debian a été retenu comme système d'exploitation du VPS puisqu'il respecte tous ces points.
 
 \section{Système de versioning:}
 Un système de versioning sert principalement à:
+
 \begin{itemize}
 \item Garder des traces de toutes les modifications effectuées sur le code. et donc répondre aux question: qui a fait quoi et quand?
 \item Coordonner le travail entre les développeurs.
-\item disposer toujours de la dernière version pour effectuer les tests et déployer.
-
+\item disposer toujours de la dernière version pour effectuer les tests et déployer sur les serveurs de production.
 \end{itemize}
+
+Il existe deux principaux types de systèmes de versioning:
+\begin{itemize}
+\item Systèmes centralisés: Le dépôt central est hébérgé dans un serveur, tous les développeurs s'alignent sur la version du serveur et envoient leurs mdifications vers ce dépôt.
+\item Systèmes décentralisés: chaque développeurs
+\end{itemize}
+
+Le contexte dans le quel s'inscrit le projet Géocube favorise le choix d'un système de versioning décentralisé garantissant à chacun des deux organisme intervenant sur le projet (l'IGN et Kylia) de disposer d'un version complète des soft
 
 %-------------------------------------------------------------------------------
 \newevenpage
