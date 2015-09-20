@@ -84,8 +84,7 @@ Olivier MARTIN, Frederic VERLUISE, Christian THOM et Christophe MEYNARD qui m'on
 
 Emmanuel BARDIERE, mon référent de stage ENSG, qui a suivi l'évolution de mon stage tout au long de ces cinq mois.
 
-Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
-
+Tout le personnel du Laboratoire d'Opto-Électronique de Metrologie et d'Instrumentation de l'Institut National de l'Information Géographique et Forestière et de la société KYLIA.
 
 
 %---Résumé (français)---
@@ -93,11 +92,11 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
 \thispagestyle{empty}
 	\vspace{1cm}
 
-	Ceci est mon résumé
+	Dans ce rapport, je présente le travail effectué lors de mon stage de fin d'études: une implémentation du protocole de transfert des blocs de l'ISO/IEC 14443-4 realtif aux puces NFC a été effectuée dans le système d'exploitation du Géocube G3OS, en plus du développement d'une antenne et de l'interface Android dédiée. A cela s'ajoute la conception, le développement et le déploiement d'un système de mises à jour du coordinateur des Géocubes, et la mise en place partielle d'une pipeline de production des logicielles au sein de la société Kylia.
 	
 	\vspace{1.5cm}
 	
-	\textbf{Mots clés :} clés, clés, clés
+	\textbf{Mots clés :} NFC, systèmes embarqués, production des logicielles,
 \end{abstract}
 %-----------------------
 
@@ -157,7 +156,11 @@ Tout le personnel du Laboratoire d'Opto-Électronique et de la société KYLIA.
   
   \vspace{1.5cm}
   
-	La communication en champ proche NFC a généré plus de dix milliards de dollars de chiffre d'affaire en 2014. Les objets connectés sont de plus en plus présents dans notre quotidien: Nos cartes bancaires, nos cartes de transports, nos smartphones, les arrêts de bus, ...et j'en passe, sont tous équipés de puces NFC. Cette technologie, utilisée généralement pour partager des identifiants ou des informations peu volumineuse se voit démocratisée .
+	La communication en champ proche NFC a généré plus de dix milliards de dollars de chiffre d'affaire en 2014. Les objets connectés sont de plus en plus présents dans notre quotidien: Nos cartes bancaires, nos cartes de transports, nos smartphones, les arrêts de bus, .etc, sont tous équipés de puces NFC. Cette technologie, utilisée généralement pour partager des identifiants ou des informations peu volumineuse se voit démocratisée et normée, (offrant)ouvrant la porte ainsi au concepteurs de systèmes innovants ....
+	
+	L'objectif de ce stage est d'intégrer une solution de communication en champ proche (NFC) au Géocube. Ceci sous entend le développement les couches matérielles et logicielles de cette solution, ainsi qu'une interface IHM Android dédiée. En plus du sujet principal du stage deux autres tâches relatives à la mise en place d'un serveur de production des logiciels et un système de mise à jour automatique du coordinateur des Géocubes.
+	
+	Dans le premier chapitre de ce rapport on présente les notions fondamentales nécessaires au lecteur pour comprendre le travail effectué. Le deuxième chapitre résume la conception et le developpement relatif  
 
 %-------------------------------------------------------------------------------
 
@@ -698,7 +701,25 @@ Le contexte dans le quel s'inscrit le projet Géocube favorise le choix d'un sys
 
 Ainsi nous avons opté pour un système de versioning basé sur Git. Et ceci à travers Gitolite.
 
-Gitolite est une solution libre de gestion des dépôts de logiciel basée sur Git. Elle offre aux administrateurs des systèmes la possibilité de déployer un 
+Gitolite est une réécriture de Gitosis, par Sitaram Chamarty. Il permet de gérer des dépôts Git à l'aide d'un.. dépôt Git, il attribut aux utilisateurs du système des droits spécifiques comme la lecture, écriture, etc. Il possède un fichier de configuration qui permet le contrôle d'accès sur chaque branche, incluant des spécifications comme qui peut ou ne peut pas revenir sur une branche donnée.
+
+Gitolite utilise évidement les clés publiques ssh pour l'ajout d'utilisateur, mais il est intéressant car il interdit ses utilisateurs de se connecter au shell dans les dépôts. Ainsi aucune modification ne peut être effectuer sur le code d'un dépôt sans commiter les modifications sans C'est l'un des points importants de sécurité auxquels répond Gitolite.
+
+ La configuration de Gitolite est simple. Un dépôt de configuration nommé gitolite-admin est créé sur le serveur, ainsi que son clône dans le répertoire personnel de l'administrateur. C'est dans celui-ci les dépôts sont configurés. Cette configuration comprend un fichier et un dossier :
+\begin{itemize}
+\item gitolite.conf : fichier de configuration de Gitolite, contenant les dépôts, leurs utilisateurs-groupes et leurs droits associés;
+\item keydir : dossier contenant les clés publiques des utilisateurs autorisés, sous la forme user-name.pub.
+\end{itemize}
+
+La configuration de Gitolite utilisant un dépôt Git spécifique, il sera nécessaire de commiter les changements effectués pour qu'ils prennent effet.
+
+Tous les codes de la société Kylia sont actuellement intégrés à l'outil de versionning. Une interface web permettant de superviser tous les dépôts a été créées à l'aide de Gitlist. Cette interface ne permet que la visualisation des commits, les branches, statistiques d'utilisation, ... aucune modification du code n'est permise à partir de cette interface.
+
+\section{Gestionnaire de bugs:}
+Un gestionnaire de bugs, et contrairement à ce que son nom peut laisse croire, ne sert pas qu'à gérer les bugs. C'est un système d'information qui permet de coordonner le travail du développeur, testeur et opérateur commercial. Ce système permet de reporter les bugs, les propositions d'amélioration, les remarques des clients ainsi que de suivre l'évolution de la réalisation et la réponse des développeurs à tout ça.
+
+Le plus connu des gestionnaires de bugs est BugZilla, c'est une solution libre de la fondation Mozilla qui a su fédérer une grande communauté de développeurs et d'utilisateurs. C'est une solution stable qui est utilisée dans plusieurs grands projets informatiques\footnote{Le plus connu reste le navigateur FireFox}. Elle a donc été choisit comme gestionnaire de bugs au sein de la société Kylia. Le llecteur curieux désirant Son installation sur le serveur de production et sa configuration peut se réferer directement à sa documentation officielle.
+
 
 %-------------------------------------------------------------------------------
 \newevenpage

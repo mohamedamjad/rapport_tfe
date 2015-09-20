@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.5)  19 SEP 2015 17:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.5)  20 SEP 2015 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1042,7 +1042,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/logos/logo_ensg.jpg, id=84, 308.15125pt x 308.15125pt>
+<images/logos/logo_ensg.jpg, id=88, 308.15125pt x 308.15125pt>
 File: images/logos/logo_ensg.jpg Graphic file (type jpg)
 
 <use images/logos/logo_ensg.jpg>
@@ -1153,12 +1153,12 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.101 \end{abstract}
+l.100 \end{abstract}
                      [1]pdfTeX warning (ext4): destination with the same identi
 fier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.116 \end{abstract}
+l.115 \end{abstract}
                      [1] (./latexensg.toc)
 \tf@toc=\write5
 \openout5 = `latexensg.toc'.
@@ -1167,7 +1167,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.125 \newevenpage
+l.124 \newevenpage
                    [2] (./latexensg.lof)
 \tf@lof=\write6
 \openout6 = `latexensg.lof'.
@@ -1176,12 +1176,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 \newevenpage
+l.127 \newevenpage
                    [3]pdfTeX warning (ext4): destination with the same identifi
 er (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 \newevenpage
+l.127 \newevenpage
                    [4] (./latexensg.lot)
 \tf@lot=\write7
 \openout7 = `latexensg.lot'.
@@ -1192,19 +1192,19 @@ l.128 \newevenpage
 
 ] [8]
 Chapitre 1.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 164.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 167.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 164--164
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 167--167
 [][] 
  []
 
-<images/fig1.png, id=228, 551.1792pt x 343.2825pt>
+<images/fig1.png, id=233, 551.1792pt x 343.2825pt>
 File: images/fig1.png Graphic file (type png)
  <use images/fig1.png>
-Package pdftex.def Info: images/fig1.png used on input line 185.
+Package pdftex.def Info: images/fig1.png used on input line 188.
 (pdftex.def)             Requested size: 440.94395pt x 274.62636pt.
 
 
@@ -1224,16 +1224,16 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.207 \item U
+l.210 \item U
              ne tâche accéléromètre qui gère l'acquisition des données...
- <./images/fig1.png>] <images/fig2.png, id=242, 469.755pt x 180.675pt>
+ <./images/fig1.png>] <images/fig2.png, id=247, 469.755pt x 180.675pt>
 File: images/fig2.png Graphic file (type png)
 
 <use images/fig2.png>
-Package pdftex.def Info: images/fig2.png used on input line 222.
+Package pdftex.def Info: images/fig2.png used on input line 225.
 (pdftex.def)             Requested size: 469.75386pt x 180.67455pt.
 
-Overfull \hbox (14.50975pt too wide) in paragraph at lines 222--223
+Overfull \hbox (14.50975pt too wide) in paragraph at lines 225--226
  [][] 
  []
 
@@ -1248,7 +1248,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.234 \item I
+l.237 \item I
              SO/IEC 14443-2: <./images/fig2.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -1259,45 +1259,45 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 [12]
 Chapitre 2.
 
-Underfull \hbox (badness 5077) in paragraph at lines 269--269
+Underfull \hbox (badness 5077) in paragraph at lines 272--272
 []|\T1/lmr/m/sc/24.88 Conception et d�-ve-lop-pe-
  []
 
 
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 269--269
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 272--272
 [][] 
  []
 
 
-Overfull \hbox (35.45355pt too wide) in paragraph at lines 296--305
+Overfull \hbox (35.45355pt too wide) in paragraph at lines 299--308
  [] 
  []
 
 [13
 
-] <images/chipANDantenna.png, id=266, 759.83875pt x 269.005pt>
+] <images/chipANDantenna.png, id=271, 759.83875pt x 269.005pt>
 File: images/chipANDantenna.png Graphic file (type png)
 
 <use images/chipANDantenna.png>
-Package pdftex.def Info: images/chipANDantenna.png used on input line 326.
+Package pdftex.def Info: images/chipANDantenna.png used on input line 329.
 (pdftex.def)             Requested size: 379.91844pt x 134.50217pt.
 
-<images/chipANDantennaANDconn.png, id=270, 620.3175pt x 185.69376pt>
+<images/chipANDantennaANDconn.png, id=275, 620.3175pt x 185.69376pt>
 File: images/chipANDantennaANDconn.png Graphic file (type png)
 
 <use images/chipANDantennaANDconn.png>
 Package pdftex.def Info: images/chipANDantennaANDconn.png used on input line 33
-4.
+7.
 (pdftex.def)             Requested size: 434.2193pt x 129.98474pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/withPARA.png, id=271, 617.30624pt x 182.6825pt>
+<images/withPARA.png, id=276, 617.30624pt x 182.6825pt>
 File: images/withPARA.png Graphic file (type png)
 
 <use images/withPARA.png>
-Package pdftex.def Info: images/withPARA.png used on input line 340.
+Package pdftex.def Info: images/withPARA.png used on input line 343.
 (pdftex.def)             Requested size: 432.11142pt x 127.87686pt.
 
 
@@ -1314,20 +1314,20 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.347 \item $
+l.350 \item $
              R_{s-ant}$: La résistance en série de l'antenne.pdfTeX warning (
 ext4): destination with the same identifier (name{figure.2.2}) has been already
  used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.347 \item $
+l.350 \item $
              R_{s-ant}$: La résistance en série de l'antenne. <./images/chipA
-NDantenna.png>] <images/circuiteq.png, id=283, 293.095pt x 161.60374pt>
+NDantenna.png>] <images/circuiteq.png, id=288, 293.095pt x 161.60374pt>
 File: images/circuiteq.png Graphic file (type png)
 
 <use images/circuiteq.png>
-Package pdftex.def Info: images/circuiteq.png used on input line 355.
+Package pdftex.def Info: images/circuiteq.png used on input line 358.
 (pdftex.def)             Requested size: 175.85834pt x 96.96298pt.
 
 
@@ -1341,25 +1341,25 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.366 
+l.369 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 2.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.366 
+l.369 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 2.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.366 
+l.369 
        <./images/chipANDantennaANDconn.png> <./images/withPARA.png> <./images/c
-ircuiteq.png>] <images/gbfoscillo.png, id=295, 729.72626pt x 294.09875pt>
+ircuiteq.png>] <images/gbfoscillo.png, id=300, 729.72626pt x 294.09875pt>
 File: images/gbfoscillo.png Graphic file (type png)
 
 <use images/gbfoscillo.png>
-Package pdftex.def Info: images/gbfoscillo.png used on input line 387.
+Package pdftex.def Info: images/gbfoscillo.png used on input line 390.
 (pdftex.def)             Requested size: 401.3507pt x 161.7548pt.
 
 
@@ -1373,27 +1373,27 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.395 
+l.398 
        <./images/gbfoscillo.png>]
-<images/iblock.png, id=307, 352.4367pt x 171.7617pt>
+<images/iblock.png, id=312, 352.4367pt x 171.7617pt>
 File: images/iblock.png Graphic file (type png)
  <use images/iblock.png>
-Package pdftex.def Info: images/iblock.png used on input line 420.
+Package pdftex.def Info: images/iblock.png used on input line 423.
 (pdftex.def)             Requested size: 352.43585pt x 171.76128pt.
 
-<images/rblock.png, id=308, 352.4367pt x 171.7617pt>
+<images/rblock.png, id=313, 352.4367pt x 171.7617pt>
 File: images/rblock.png Graphic file (type png)
  <use images/rblock.png>
-Package pdftex.def Info: images/rblock.png used on input line 427.
+Package pdftex.def Info: images/rblock.png used on input line 430.
 (pdftex.def)             Requested size: 352.43585pt x 171.76128pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/sblock.png, id=309, 352.4367pt x 180.675pt>
+<images/sblock.png, id=314, 352.4367pt x 180.675pt>
 File: images/sblock.png Graphic file (type png)
  <use images/sblock.png>
-Package pdftex.def Info: images/sblock.png used on input line 434.
+Package pdftex.def Info: images/sblock.png used on input line 437.
 (pdftex.def)             Requested size: 352.43585pt x 180.67455pt.
 
 
@@ -1410,7 +1410,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.454 \subsubsection
+l.457 \subsubsection
                     {Champ d'information [INF][optionnel]:} <./images/iblock.pn
 g>]
 
@@ -1424,24 +1424,24 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.466 C
+l.469 C
        omme dans n'importe quel RTOS. La NFC correspond à une tâche indép...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.466 C
+l.469 C
        omme dans n'importe quel RTOS. La NFC correspond à une tâche indép...
  <./images/rblock.png> <./images/sblock.png>]
-<images/blockdiagram.png, id=334, 639.38875pt x 174.6525pt>
+<images/blockdiagram.png, id=339, 639.38875pt x 174.6525pt>
 File: images/blockdiagram.png Graphic file (type png)
 
 <use images/blockdiagram.png>
-Package pdftex.def Info: images/blockdiagram.png used on input line 479.
+Package pdftex.def Info: images/blockdiagram.png used on input line 482.
 (pdftex.def)             Requested size: 511.51169pt x 139.72218pt.
 
-Overfull \hbox (56.26758pt too wide) in paragraph at lines 479--481
+Overfull \hbox (56.26758pt too wide) in paragraph at lines 482--484
  [][] 
  []
 
@@ -1456,38 +1456,38 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.498 
+l.501 
        <./images/blockdiagram.png>]
-<images/fwt.png, id=342, 614.295pt x 199.74625pt>
+<images/fwt.png, id=347, 614.295pt x 199.74625pt>
 File: images/fwt.png Graphic file (type png)
  <use images/fwt.png>
-Package pdftex.def Info: images/fwt.png used on input line 503.
+Package pdftex.def Info: images/fwt.png used on input line 506.
 (pdftex.def)             Requested size: 399.287pt x 129.83351pt.
 
-<images/presencecheck.png, id=344, 334.3692pt x 298.2342pt>
+<images/presencecheck.png, id=349, 334.3692pt x 298.2342pt>
 File: images/presencecheck.png Graphic file (type png)
 
 <use images/presencecheck.png>
-Package pdftex.def Info: images/presencecheck.png used on input line 514.
+Package pdftex.def Info: images/presencecheck.png used on input line 517.
 (pdftex.def)             Requested size: 300.92949pt x 268.4083pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/deselect.png, id=346, 252.945pt x 180.675pt>
+<images/deselect.png, id=351, 252.945pt x 180.675pt>
 File: images/deselect.png Graphic file (type png)
  <use images/deselect.png>
-Package pdftex.def Info: images/deselect.png used on input line 524.
+Package pdftex.def Info: images/deselect.png used on input line 527.
 (pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/chaining.png, id=347, 838.13126pt x 635.37375pt>
+<images/chaining.png, id=352, 838.13126pt x 635.37375pt>
 File: images/chaining.png Graphic file (type png)
 
 <use images/chaining.png>
-Package pdftex.def Info: images/chaining.png used on input line 534.
+Package pdftex.def Info: images/chaining.png used on input line 537.
 (pdftex.def)             Requested size: 419.0646pt x 317.6861pt.
 
 
@@ -1504,7 +1504,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.540 ...omatique destinée au système Géocube:}
+l.543 ...omatique destinée au système Géocube:}
                                                    <./images/fwt.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -1517,14 +1517,14 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.540 ...omatique destinée au système Géocube:}
+l.543 ...omatique destinée au système Géocube:}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{figure.2.13}) has been already used, dupli
 cate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.540 ...omatique destinée au système Géocube:}
+l.543 ...omatique destinée au système Géocube:}
                                                    <./images/presencecheck.png>
  <./images/deselect.png>]
 
@@ -1538,37 +1538,37 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.540 ...omatique destinée au système Géocube:}
+l.543 ...omatique destinée au système Géocube:}
                                                    <./images/chaining.png>]
 Chapitre 3.
 
-Underfull \hbox (badness 3009) in paragraph at lines 540--540
+Underfull \hbox (badness 3009) in paragraph at lines 543--543
 \T1/lmr/m/sc/24.88 des-ti-n�e au sys-t�me G�o-
  []
 
 
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 540--540
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 543--543
 [][] 
  []
 
-<images/context_general.png, id=366, 406.6392pt x 316.3017pt>
+<images/context_general.png, id=371, 406.6392pt x 316.3017pt>
 File: images/context_general.png Graphic file (type png)
 
 <use images/context_general.png>
-Package pdftex.def Info: images/context_general.png used on input line 548.
+Package pdftex.def Info: images/context_general.png used on input line 551.
 (pdftex.def)             Requested size: 365.97191pt x 284.66888pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/use_case_sharokey.png, id=369, 552.8655pt x 451.6875pt>
+<images/use_case_sharokey.png, id=374, 552.8655pt x 451.6875pt>
 File: images/use_case_sharokey.png Graphic file (type png)
 
 <use images/use_case_sharokey.png>
-Package pdftex.def Info: images/use_case_sharokey.png used on input line 576.
+Package pdftex.def Info: images/use_case_sharokey.png used on input line 579.
 (pdftex.def)             Requested size: 552.86414pt x 451.68639pt.
 
-Overfull \hbox (97.62003pt too wide) in paragraph at lines 576--578
+Overfull \hbox (97.62003pt too wide) in paragraph at lines 579--581
  [][] 
  []
 
@@ -1577,11 +1577,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [23
 
-] <images/MPD_sharokey.png, id=375, 456.2646pt x 306.6657pt>
+] <images/MPD_sharokey.png, id=380, 456.2646pt x 306.6657pt>
 File: images/MPD_sharokey.png Graphic file (type png)
 
 <use images/MPD_sharokey.png>
-Package pdftex.def Info: images/MPD_sharokey.png used on input line 593.
+Package pdftex.def Info: images/MPD_sharokey.png used on input line 596.
 (pdftex.def)             Requested size: 387.82674pt x 260.66705pt.
 
 
@@ -1595,7 +1595,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.599 
+l.602 
        <./images/context_general.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -1608,7 +1608,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.606 \item c
+l.609 \item c
              hecker.kyl: Ce paquet renvoie trois codes possibles 0, 1 ou 2. ...
  <./images/use_case_sharokey.png>]
 
@@ -1622,9 +1622,9 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.623 
+l.626 
        <./images/MPD_sharokey.png>]
-Overfull \hbox (17.1832pt too wide) in paragraph at lines 648--649
+Overfull \hbox (17.1832pt too wide) in paragraph at lines 651--652
 []\T1/lmtt/m/n/10.95 \evenchapter[titre sommaire]{titre} \T1/lmr/m/n/10.95 fonc
 -tionne aussi mais pas []\T1/lmtt/m/n/10.95 \evenchapter*{titre} 
  []
@@ -1638,12 +1638,12 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 [27] [28]
 Chapitre 4.
 
-Underfull \hbox (badness 3039) in paragraph at lines 655--655
+Underfull \hbox (badness 3039) in paragraph at lines 658--658
 []|\T1/lmr/m/sc/24.88 Mise en place et s�-cu-ri-
  []
 
 
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 655--655
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 658--658
 [][] 
  []
 
@@ -1669,7 +1669,7 @@ No file latexensg.bbl.
 ] [34]
 Annexe A.
 
-Overfull \hbox (40.99998pt too wide) in paragraph at lines 717--717
+Overfull \hbox (40.99998pt too wide) in paragraph at lines 742--742
 [][] 
  []
 
@@ -1678,24 +1678,24 @@ AED: lastpage setting LastPage
 [35
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 723.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 723.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 748.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 748.
  (./latexensg.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 723.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 723.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 748.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 748.
 Package rerunfilecheck Info: File `latexensg.out' has not changed.
-(rerunfilecheck)             Checksum: 990C3E1CA6BF0FA357856275F5F8E560;1663.
+(rerunfilecheck)             Checksum: E9E47BB489311EC4925E9ABD4C7E2022;1731.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 723.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 748.
  ) 
 Here is how much of TeX's memory you used:
- 11160 strings out of 494958
- 158521 string characters out of 6179214
+ 11163 strings out of 494958
+ 158557 string characters out of 6179214
  261932 words of memory out of 5000000
- 13972 multiletter control sequences out of 15000+600000
+ 13973 multiletter control sequences out of 15000+600000
  98470 words of font info for 80 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  44i,12n,45p,1153b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1713,10 +1713,10 @@ mss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on latexensg.pdf (40 pages, 1328040 bytes).
+Output written on latexensg.pdf (40 pages, 1331558 bytes).
 PDF statistics:
- 540 PDF objects out of 1000 (max. 8388607)
- 447 compressed objects within 5 object streams
- 128 named destinations out of 1000 (max. 500000)
- 256 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 454 compressed objects within 5 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
