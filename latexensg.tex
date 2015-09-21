@@ -33,8 +33,8 @@
                                                % les afficher complètement.
        pdftitle={Thème ENSG},                 % Titre du document.
                                                % Informations apparaissant dans
-       pdfauthor={Thibault Coupin},                      % dans les informations du document
-       pdfsubject={Feuille de style ENSG}           % sous Acrobat.
+       pdfauthor={Mohamed-Amjad LASRI},                      % dans les informations du document
+       pdfsubject={rapport de TFE}           % sous Acrobat.
     }
 
 %-----------------------
@@ -156,13 +156,13 @@ Tout le personnel du Laboratoire d'Opto-Électronique de Metrologie et d'Instrum
   
   \vspace{1.5cm}
   
-	La communication en champ proche NFC a généré plus de dix milliards de dollars de chiffre d'affaire en 2014. Les objets connectés sont de plus en plus présents dans notre quotidien: Nos cartes bancaires, nos cartes de transports, nos smartphones, les arrêts de bus, etc, sont tous équipés de puces NFC. Cette technologie, utilisée généralement pour partager des identifiants ou des informations peu volumineuse se voit démocratisée et normée, offrant au concepteur des produits novateurs une solution ....
+	Les objets connectés sont de plus en plus présents dans notre quotidien: Nos cartes bancaires, nos cartes de transports, nos smartphones, les arrêts de bus, etc, sont tous équipés de puces NFC. Cette technologie, utilisée généralement pour partager des identifiants ou des informations peu volumineuse se voit démocratisée et normée, offrant au concepteur des produits novateurs une solution de communication simple et à la disposition du large publique.
 	
-	L'objectif de ce stage est d'intégrer une solution de communication en champ proche (NFC) au Géocube. Ceci sous entend le développement les couches matérielles et logicielles de cette solution, ainsi qu'une interface IHM Android dédiée. En plus du sujet principal du stage deux autres tâches relatives à la mise en place d'un serveur de production des logiciels et un système de mise à jour automatique du coordinateur des Géocubes.
+	L'objectif de ce stage est d'intégrer une solution de communication en champ proche (NFC) au Géocube. Ceci sous entend le développement les couches matérielles et logicielles de cette solution, ainsi qu'une application Android dédiée. En plus du sujet principal du stage deux autres tâches relatives à la mise en place d'un serveur de production des logiciels et un système de mise à jour automatique du coordinateur des Géocubes ont été réalisées.
 	
-	Dans le premier chapitre de ce rapport on présente les notions fondamentales nécessaires au lecteur pour comprendre le travail effectué. Le deuxième chapitre résume la conception et le developpement relatif à la solution NFC qui a été implémentée dans le Géocube. Dans le 3ème chapitre, On présente le travail effectué pour concevoir, développer et déployer une solution de mises à jour automatique pour le coordinateur des Geocubes. Finalement, le 4ème chapitre donne un aperçu sur l'infrastructure virtuelle de production des logiciels instauré pour répondre au besoin de la société Kylia ....
+	Dans le premier chapitre de ce rapport on présente les notions fondamentales nécessaires au lecteur pour comprendre le travail effectué, le contenu de ce rapport touche à plusieurs disciplines (électronique, systèmes embarqués, réseaux, sécurité informatique, ...) la lecture du premier chapitre est fortement conseillée. Le deuxième chapitre résume la conception et le développement relatif à la solution NFC implémentée dans le Géocube, on présente les expérimentations électroniques réalisées pour choisir une antenne NFC adaptée au Géocube, les développements effectués sur G3OS\footnote{Système d'exploitation du Géocube} pour implémenter le 4ème niveau de la norme ISO14443 relative au protocole de transmission des blocs NFC et finalement développement de l'application Android dédiée. Dans le 3ème chapitre, On présente le travail effectué pour concevoir, développer et déployer une solution de mises à jour automatique pour le coordinateur des Géocubes. Finalement, le 4ème chapitre donne un aperçu sur l'infrastructure virtuelle de production des logiciels instaurée pour répondre au besoin de la société Kylia de disposer d'un serveur de production adaptée à ses besoins.
 	
-	 On note ici que tous les codes produits durant ce stage restent la propriété des organismes d'accueil et ont la liberté de choisir la licence appropriée. pour toute consulation de ces codes, le lecteur est prié de s'adresser directement aux encadrants.
+	 On note ici que tous les codes produits durant ce stage restent la propriété des organismes d'accueil et ont la liberté de choisir la licence appropriée. pour toute consultation de ces codes, le lecteur est prié de s'adresser directement aux encadrants.
 
 %-------------------------------------------------------------------------------
 
@@ -321,6 +321,8 @@ Une puce existe déjà dans la version actuelle du Géocube. C'est l'AS3953, Le 
 \end{itemize}
 Pour ces raison le choix de l'AS3953 a été maintenu pour le Géocube.
 
+\section{Conception de la solution}
+
 \subsection{Conception et expérimentation de l'antenne:}
 
 Les prototypes des antennes NFC sont généralement conçus d'une manière empirique. Pour cela, Il existe plusieurs méthodes expérimentales conventionnelles. Mais avant de présenter les expériences réalisées. Il faut comprendre qu'un circuit NFC typique peut être assimilé à un circuit de type RLC. L'équivalent électrique d'une puce NFC et son antenne pourrait être assimilé au circuit de la Figure\ref{fig:nfcandantenna}.
@@ -465,7 +467,7 @@ Ce champ contient le CRC du bloc envoyé, son calcul est détaillé dans l'ISO/I
 
 La structure de données du BTP qu'on vient de présenter a été programmée et intégrée dans G3OS durant ce stage. Dans ce qui suit on présente l'aspect dynamique du système NFC. On détermine un certain nombre de scénarios auxquels le système doit répondre. 
 
-\subsection{Conception dynamique des couches logicielles}
+\subsection{Conception dynamique des couches logicielles et développement}
 \textit{ Dans ce qui suit la notation $I(X)$ désigne un I-Block avec un numéro de bloc X. On utilise le diagramme de séquence UML pour modéliser les scénarios possibles. Tous les scénarios suivants ont été programmés et intégrés dans G3OS lors de ce stage}
 
 Comme dans n'importe quel RTOS. La NFC correspond à une tâche indépendante. L'ordonnanceur de G3OS reçoit un signal d'interruption de la puce NFC, acquitte l'interruption et lance la tâche correspondante. Et c'est alors à la tâche de découvrir pourquoi elle a été lancée en lisant le registre principal des interruptions de la puce NFC. Toutes les communications entre le micro-contrôleur (MSP430) et la puce NFC (AS3953) s'effectue en SPI(interface série).
@@ -522,7 +524,7 @@ Le PCD peut vérifier la présence d'un PICC et sa compatibilité avec la norme 
 \end{figure}
 
 \subsubsection{DESELECT:}
-DESELECT est la commande envoyée par le PCD pour informer le PICC de la fin de la transmission. Comme nous avons évoqué précedemment, cette commande est codé dans un S-Block. L'équivalent binaire du prologue d'une commande DESELECT est: $11000010$. Sachant que le 4ème bit peut être 1 si le CID s'en suit. La Figure\ref{fig:deselect} présente le diagramme de séquence correspondant.
+DESELECT est la commande envoyée par le PCD pour informer le PICC de la fin de la transmission. Comme nous avons évoqué précedemment, cette commande est codé dans un S-Block. L'équivalent binaire du prologue d'une commande DESELECT est: 1100 0010. Sachant que le 4ème bit peut être 1 si le CID s'en suit. La Figure\ref{fig:deselect} présente le diagramme de séquence correspondant.
 
 \begin{figure}[h!]
 \centering
@@ -541,7 +543,11 @@ Pour échanger des données entre les PCD et le PICC il faut utiliser des blocs 
 \caption{Échange de blocs d'informations en utilisant le chaînage. crédit du schéma: OpenPCD.org}
 \end{figure}
 
+\subsubsection{Gestion des erreurs}
+Lorsqu'une erreur survient lors de la transmission des blocs, l'état du registre des erreurs est changé, 
 
+%------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------
 \evenchapter[Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:]{Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:}
 \textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Pour plus d'informations sur le langage voir []. Le système de mise à jour développé fut baptisé Sharokey}
 \section{Étude du besoin:}
@@ -570,7 +576,6 @@ Ce système doit en plus présenter les particularités suivantes:
 \item 
 \item Les logs du système doivent être expressifs et facilement accessible par l'administrateur.
 \item Les requêtes du client et les réponses du serveur doivent être sécurisées.
-
 \end{itemize}
 
 \section{Conception statique}
@@ -613,9 +618,7 @@ Comme schématisé dans la Figure, La partie client est contituée d'un ensemble
 \item zeus.kyl: Ce script a pour but d'automatiser la procédure d'installation d'un coordinateur "à la sortie d'usine".
 \item phenix.kyl: Le but de ce paquet est de désintaller le coordinateur et de le réinstaller automatiquement, de partir d'une version minimaliste si une erreur survient.
 \end{itemize}
-\section{conception dynamique}
-Dans la conception dynamique on définit un certain nombre de scénarios typiques que le système ... 
-
+\section{conception dynamique et développement}
 
 \subsection{Sécurité du système}
 La stratégie de sécurité instaurée pour Sharokey doit respecter les trois points suivants:
@@ -636,7 +639,56 @@ Un tel mécanisme d'authentification assure que le dispositif qui veut effectuer
 
 Concernant le deuxième point relatif au cryptage des requêtes clients et des réponses du serveur. Sharokey oblige toutes les requêtes à passer par le protocole HTTPS pour garantir le cryptage des informations échangés entre le client et le serveur, et ceci en utilisant une cryptographie asymétrique basée sur l'échange mutuel des clés publiques.
 
-Enfin, le troisième point relatif à l'intégrité des données transitant par le réseau est garantit par un mécanisme de checksum-MD5 implémenté par défaut dans le générateur de scripts auto-extractibles Makeself.
+Enfin, le troisième point relatif à l'intégrité des données transitant par le réseau est garantit par un mécanisme de checksum-MD5 implémenté par défaut dans le générateur de scripts auto-extractibles Makeself que Sharokey utilsie pour créer les paquets de mise à jour.
+
+\subsection{Composants et interaction:}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{images/composants.png}
+\label{fig:composants}
+\caption{Schéma des composants de Sharokey}
+\end{figure}
+
+La Figure\ref{fig:composants} présente les composants de sharokey. Dans ce qui suit le rlôe de chaque composant et son interaction avec les autres:
+
+\begin{itemize}
+\item Model: module NodeJS qui encapsule toute la logique liée aux opérations que les autres composants peuvent effectuer sur la base de donnée. Ainsi, si un module veut effectuer une opération sur la base de données, il devra passer par ce module.
+\item Kernel: C'est le noyau NodeJS de Sharokey (l'API centrale) qui contient toutes les fonctions communes aux autres modules.
+\item Watcher: C'est le composant le plus dynamique du système il écoute les triggers de la base de données effectue les modifications nécessaires sur le systèmes de fichier et vice-versa. Il encapsule aussi la logique liée à la sécurité et la génération automatique et signature des clés publiques et privés des nouveaux clients.
+\item server: C'est le serveur NodeJS qui reçoit les requêtes des clients en HTTPS, vérifie la signature sur leurs clés publiques, vérifie leur droit d'effectuer des mises à jour, prépare et envoie la mise à jour sous format de scripts auto-extractible.
+\end{itemize}
+
+Le système a été conçu d'une manière modulaire, chaque composant peut vivre sur une machine à part l’interaction entre les modules s'effectue en utilisant TCP/IP.
+
+Les Figures .... présentent les interactions entre les composants à travers des diagrammes de séquence UML.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{images/new_client.png}
+\label{fig:new_client}
+\caption{Digramme de séquence: ajout d'un nouveau client}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{images/new_product.png}
+\label{fig:new_product}
+\caption{Digramme de séquence: ajout d'un nouveau produit}
+\end{figure}
+
+\begin{figure}
+\centering\includegraphics[scale=0.8]{images/maj.png}
+\label{fig:maj}
+\caption{Digramme de séquence: Mise à jour du coordianteur}
+\end{figure}
+
+\begin{figure}
+\centering\includegraphics[scale=0.8]{images/seq_dev.png}
+\label{fig:seq_dev}
+\caption{Digramme de séquence: Ajout d'une nouvelle version dans le dépôt}
+\end{figure}
+
 
 \begin{comment}
 \begin{itemize}
@@ -646,16 +698,9 @@ Enfin, le troisième point relatif à l'intégrité des données transitant par 
 \item \texttt{bibliographie.bib} contient la bibliographie
 \end{itemize}
 \end{comment}
-\section{Commandes personnalisées}
 
-\begin{itemize}
-\item \verb!\newevenpage! : identique à \verb!\newpage! mais en insère une page blanche de façon à débuter la nouvelle page sur un numéro de page impaire.
-\item \verb!\evenchapter{titre}! : démarre un nouveau chapitre sur une page impaire,\\ \verb!\evenchapter[titre sommaire]{titre}! fonctionne aussi mais pas \verb!\evenchapter*{titre}!
-\item idem pour \verb!\evenpart{titre}!
-\end{itemize}
 
-\section{Fichier source de cette doc}
-Ce fichier \texttt{tex} contient toute la structure d'un rapport mais une bonne partie est désactivée car commentée par l'environnement \verb!\begin{comment} ... \end{comment}!
+
 
 \evenchapter[Mise en place et sécurisation d'une infrastructure virtuelle de production des logiciels:]{Mise en place et sécurisation d'une infrastructure virtuelle de production des logiciels:}
 
@@ -720,7 +765,7 @@ Tous les codes de la société Kylia sont actuellement intégrés à l'outil de 
 \section{Gestionnaire de bugs:}
 Un gestionnaire de bugs, et contrairement à ce que son nom peut laisse croire, ne sert pas qu'à gérer les bugs. C'est un système d'information qui permet de coordonner le travail du développeur, testeur et opérateur commercial. Ce système permet de reporter les bugs, les propositions d'amélioration, les remarques des clients ainsi que de suivre l'évolution de la réalisation et la réponse des développeurs à tout ça.
 
-Le plus connu des gestionnaires de bugs est BugZilla, c'est une solution libre de la fondation Mozilla qui a su fédérer une grande communauté de développeurs et d'utilisateurs. C'est une solution stable qui est utilisée dans plusieurs grands projets informatiques\footnote{Le plus connu reste le navigateur FireFox}. Elle a donc été choisit comme gestionnaire de bugs au sein de la société Kylia. Le llecteur curieux désirant Son installation sur le serveur de production et sa configuration peut se réferer directement à sa documentation officielle.
+Le plus connu des gestionnaires de bugs est BugZilla, c'est une solution libre de la fondation Mozilla qui a su fédérer une grande communauté de développeurs et d'utilisateurs. C'est une solution stable qui est utilisée dans plusieurs grands projets informatiques\footnote{Le plus connu reste le navigateur FireFox}. Elle a donc été choisit comme gestionnaire de bugs au sein de la société Kylia. Le lecteur curieux désirant Son installation sur le serveur de production et sa configuration peut se reférer directement à sa documentation officielle.
 
 
 %-------------------------------------------------------------------------------
@@ -728,7 +773,46 @@ Le plus connu des gestionnaires de bugs est BugZilla, c'est une solution libre d
 \chapter*{Conclusion}
   \addcontentsline{toc}{part}{Conclusion}
   \vspace{1.5cm}
-Il est l'heure de conclure : bonne nuit !
+
+Les développements nécessaires à l'implémentation de la solution NFC dans le Géocube était une réelle chance de travailler, pour la première fois, sur le noyau d'un système d'exploitation en temps-réel, de comprendre le fonctionnement de ses composants et de les manipuler. Cette partie du stage était une opportunité de s'ouvrir sur le monde de l'électronique, de comprendre de processus par lequel passe une carte électronique depuis sa conception jusqu'à sa fabrication et d'entreprendre, moi même, des tests et des expérimentations électroniques en vue de valider les hypothèses émises lors de la phase ...
+
+La deuxième partie du stage relative au développement de Sharokey était pour moi une mise en pratique des connaissances que j'ai acquis durant mon année de spécialité à l'ENSG, de décomposer le système d'information en couches: de la partie matérielle jusqu'à l'interface homme-machine en passant par la sécurité du systèmes, le développements des composants, jusqu'aux tests et mise en production.
+
+La troisième partie qui traite de la mise en place d'une infrastructure virtuelle de production des logicielles au sein de la société Kylia est une 
+
+Enfin, durant ce stage j'ai aussi effectué un travail de réflexion autour d'un sujet de thèse proposé par LOEMI et Kylia et qui s'articule autour du système Géocube. Un projet de recherche a été produit, voir Annexe I.
+
+%-------------------------------------------------------------------------------
+\newevenpage
+\chapter*{Bibliographie:}
+  \addcontentsline{toc}{part}{Bibliographie}
+  \vspace{1.5cm}
+
+[1]Tanenbaum, Andrew (2008). Modern Operating Systems. Upper Saddle River, NJ: Pearson/Prentice Hall. p. 160. ISBN 978-0-13-600663-3.
+
+[2]Ortiz, C. Enrique (June 2006). "An Introduction to Near-Field Communication and the Contactless Communication API".
+
+[3]Electronista Article: New NFC spec lets two phones swap messages, October 2011
+
+[4]"Android 4.1 APIs". Android Developer Network
+
+[5]Charles A. Walton "Portable radio frequency emitting identifier" U.S. Patent 4,384,288 issue date May 17, 1983.
+
+[6]ISO/IEC 14443-1:2008 Identification cards -- Contactless integrated circuit cards -- Proximity cards -- Part 1: Physical characteristics
+
+[7]ISO/IEC 14443-2:2010 Identification cards -- Contactless integrated circuit cards -- Proximity cards -- Part 2: Radio frequency power and signal interface
+
+[8]ISO/IEC 14443-3:2011 Identification cards -- Contactless integrated circuit cards -- Proximity cards -- Part 3: Initialization and anticollision
+
+[9]ISO/IEC 14443-4:2008 Identification cards -- Contactless integrated circuit cards -- Proximity cards -- Part 4: Transmission protocol
+
+[10]Menezes, Alfred; van Oorschot, Paul C.; Vanstone, Scott A. (October 1996). Handbook of Applied Cryptography. CRC Press. ISBN 0-8493-8523-7.
+
+[11]Grime, James. "RSA Encryption". Numberphile. Brady Haran
+
+[12]"Trust". Git Concepts. Git User's Manual. 2006-10-18
+
+
 
 
 %-------------------------------------------------------------------------------
@@ -736,14 +820,47 @@ Il est l'heure de conclure : bonne nuit !
 \newevenpage
 \nocite{*}
 \bibliographystyle{apalike}
-\bibliography{bibliographie}
+\bibliography{bibliographie.bib}
 
 \newevenpage
 \begin{appendices} 
 \label{beginappendices}
-\annexe[Filtre de Kalman]{Filtre\newline de Kalman}
+\annexe[Projet de recherche]{Projet de recherche}
 \label{annexekalman}
-Annexe 1
+\section*{Titre:}
+Utilisation de réseaux de capteurs pour la mesure conjointe des déformations du sol par GPS de précision et de paramètres physico-chimiques dans un contexte volcanique.
+\section*{Contexte:}
+La miniaturisation des capteurs ainsi que la baisse des coûts de fabrication et de la consommation électrique des puces GNSS sont des facteurs qui peuvent laisser à envisager d'abandonner sur le terrain un réseau de capteurs opérant en permanence. Certains de ces capteurs GNSS permettent d'effectuer des mesures sur la phase donnant la possibilité de remonter à des précisions millimétriques, d'où l'idée d'un réseau de Géocubes. Le système Géocube est un réseau de capteurs GPS conçu et développé par le Laboratoire d'Opto-Éléctronique de Mesure et d'Instrumentation de l'Institut Géographique et Forestière Nationale. Il a comme objectif de mesurer les déformations avec une précision millimétrique. Ce réseau de capteurs a la particularité d'être très peu gourmand en énergie. On peut envisager de l'abandonner dans un milieu difficilement accessible au moment de crises environnementales sans qu'on ait à se soucier de son alimentation continue en électricité. En plus d'un module radio, un Géocube peut supporter plusieurs couches de capteurs qui peuvent donner accès à des connaissances sur les caractéristiques physico-chimiques du milieu de déploiement. Un tel réseau peu opérer dans des milieux dangereux et difficilement accessibles, comme les volcans.
+
+\section*{État de l'art:}
+
+La surveillance instrumentale de l'activité volcanique est indispensable à la compréhension de ce phénomène géo-physique et à la prévision des éruptions. Aujourd'hui, Les volcans sont déjà surveillés par des réseaux de capteurs physico-chimiques, des stations GNSS permanentes et des méthodes de télédétection spatiale. Plusieurs méthodes existent et permettent d'avoir des précisions dépendantes du mode opératoire et la fréquence des mesures effectuées. Ces méthodes se basent principalement sur la détermination des variations des paramètres physico-chimiques lors d'une activité volcanique Géochimie, Magnétométrie, Micro-gravimétrie ou sur la mesure du mouvement de sol engendré par les variations ces mêmes activités Photogrammétrie, Géodésie spatiale, interférométrie Radar.
+
+Un réseau de Géocubes permet de mesurer les déformations avec des précisions comparables à celles obtenues en utilisant les capteurs GNSS bi-fréquence avec la mesure de la phase en L2. Les tests effectués jusqu'à ce jour montrent qu'on peut atteindre une précision millimétrique en planimétrie et centimétrique en altimétrie sur un réseau sub-kilométrique.
+
+Dans des milieux tectoniquement actifs et difficilement accessible, ce réseau de capteur peut s'avérer d'une importance cruciale. La précision spatio-temporelle qu'il offre peut être utilisée pour dater et localiser avec une grande précision des phénomènes géo-physiques et géo-chimiques à l'aide de couches de capteurs qu'on peut embarquer dans un Géocube. Son faible coût de fabrication peut laisser envisager de l'abandonner dans des zones à risques en le dottant d'une couche de capteurs adaptée.
+
+\section*{Objectifs scientifiques et industriels:}
+
+L'objectif scientifique d'étudier l'apport de la fusion de capteurs GNSS et des capteurs physico-chimiques dans un réseau de Géocubes à la connaissance du volcanisme, la prédiction des éruptions volcanique et à la restitution des déformations du sol et des variations des paramètres physico-chimiques dans un contexte de crise. La question qu'on peut se poser serait alors: y-a t'il des phénomènes physico-chimiques, mais aussi optiques, dans des endroits plus profonds du cratères volcaniques et qui aideront à quantifier et à prédire la durée d'une éruption volcanique, la quantité de laves qui sera éjectée et à mieux comprendre la structure des gazes et des roches volcaniques?
+
+La méthode proposée est une méthode instrumentale de surveillance volcanique en champ proche, dans un contexte de crise, basée sur la fusion des capteurs physico-chimiques et des capteurs GNSS. Cette méthode se basera essentiellement sur la mesure conjointe des variations des paramètres physico-chimiques et des variations surfaciques qui occurrent dans un contexte volcanique difficilement accessible par les humains et les machines de grande taille. En plus de l'apport que les systèmes GNSS peuvent avoir sur la localisation et la datation précises de ces phénomènes, ces systèmes peuvent mesurer avec une précision millimétrique les déformations surfaciques sur des grandes échelles de temps. Une combinaison de tous ces aspects pourrait alors donner naissance à un système de surveillance volcanique en champs proche, opérant parallèlement aux instruments de surveillance volcanique classiques, facilement déployable en temps de crise et capable d'aller opérer dans des endroits difficilement accessibles, facilitant ainsi la prédiction des éruptions et la génération d'alertes.
+
+La miniaturisation des capteurs, l'autonomie des réseaux Géocubes sont des facteurs clés qui peuvent laisser envisager, en cas de validation scientifique de la méthode proposée, d'industrialiser des versions de Géocubes dotées de capteurs permettant mieux connaître l'environnement de déploiement, assez robuste pour supporter les conditions extrêmes d'un contexte de crise (robustesse mécanique, température opérationnelle élevée, ...) , et d'apporter ainsi des dimensions d'analyse en plus de la dimension spatiale disponible dans la version actuelle. Ce système de surveillance viendra se superposer aux méthodes existantes de surveillance volcanique, et apportera des connaissances additionnelles (Exemple: utiliser un réseau de Géocube dense pour fournir des points d'appui au sol aux méthodes de photogrammétrie spatiale. Comme le projet SVOBS2015.svobs.eu , ...).
+
+\section*{Verrous scientifiques et techniques:}
+
+Au fur et à mesure de l'avancement des travaux, plusieurs verrous scientifiques et techniques devront être levés. La principale problématique concerne la taille des réseaux des Géocubes, les tests effectués jusqu'à ce jour ont donné des précisions raisonnables dans des réseaux de taille sub-kilométrique. Une amélioration de la méthode de résolution des ambiguïtés atmosphériques actuellement implémentée est à prévoir pour pouvoir couvrir des surfaces plus importantes, adaptées à un contexte volcanique. Cette méthode de résolution des ambiguïtés atmosphériques nécessite aussi plusieurs heures de calculs pour obtenir une bonne précision, l'amélioration de cette méthode est essentielle si on compte déployer un réseau de Géocubes en contexte de crise, là ou chaque minute est importante et cruciale. S'ajoute à cela plusieurs verrous technologiques liés à la gestion de la consommation électrique dans des endroits ou l'énergie solaire serait insuffisante pour couvrir le besoin d'un Géocube en énergie. Des stratégies de gestion énergétique seraient alors à définir et à implémenter pour garantir une plus longue durée opérationnelle dans un contexte de crise. La robustesse du Géocube (mécanique et thermique) est un point important si on prévoit de le larguer par drone. Une stratégie de déploiement est aussi à définir et la faisabilité technique d'un déploiement par drones est à démontrer.
+
+\section*{Méthodologie de recherche:}
+
+Ce projet de recherche se trouve dans l'intersection de plusieurs sciences et disciplines Géophysique, Géochimie, Informatique et systèmes embarqués, Analyse de données. La méthodologie de recherche proposée pour ce projet est une méthodologie de recherche expérimentale et observationnelle qui passe par les étapes conventionnelles de la méthode scientifique: Question générale, affinage, conception de l'expérimentation, observation, analyse, conclusion et publication. Tout d'abord, Un dégrossissage et une décomposition du sujet en plusieurs hypothèses basées sur les observations effectuées devra être réalisé. Un affinage de ces hypothèses basé sur les résultats obtenus lors des expériences sur le terrain. Une analyse des données s'en suivra pour tirer les conclusions et les enseignements nécessaires à la réitération de ce processus.
+
+\section*{Planning des travaux}
+
+Le planning des travaux prévoit deux expériences sur le terrain. La première à réaliser en première année de thèse, nécessitera le développement d'une couche de capteurs géophysiques, et électrochimiques. Les données issues de cette expérience seront traitées et analysées pour tirer les conclusions nécessaires à la conception de la deuxième expérience qui se tiendra en deuxième année de thèse. Cette deuxième et dernière expérience a pour but de valider les enseignements tirés de la première expérience, d'affiner la liste des capteurs utilisés dans le Géocube, et de tirer les conclusions scientifiques nécessaires à la validation de la méthode de surveillance en question.
+
+
 
 \end{appendices} 
 

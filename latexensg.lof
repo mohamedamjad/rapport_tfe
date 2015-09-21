@@ -23,5 +23,10 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de contexte statique}}{24}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme UML des cas d'utilisation de Sharokey}}{25}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces MDP (Mod\IeC {\`e}le Physique des Donn\IeC {\'e}es) de la base de donn\IeC {\'e}es Sharokey}}{26}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sch\IeC {\'e}ma des composants de Sharokey}}{28}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Digramme de s\IeC {\'e}quence: ajout d'un nouveau client}}{29}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Digramme de s\IeC {\'e}quence: ajout d'un nouveau produit}}{29}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Digramme de s\IeC {\'e}quence: Mise \IeC {\`a} jour du coordianteur}}{30}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Digramme de s\IeC {\'e}quence: Ajout d'une nouvelle version dans le d\IeC {\'e}p\IeC {\^o}t}}{30}{figure.3.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
