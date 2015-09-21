@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.4)  21 SEP 2015 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.4)  21 SEP 2015 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1214,7 +1214,10 @@ Package pdftex.def Info: images/fig1.png used on input line 190.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9
 
 ]
 
@@ -1228,8 +1231,8 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.212 \item U
-             ne tâche accéléromètre qui gère l'acquisition des données...
+l.211 \item U
+             ne tâche Radio qui gère toutes les orpérations relatives à ...
  <./images/fig1.png>] <images/fig2.png, id=263, 469.755pt x 180.675pt>
 File: images/fig2.png Graphic file (type png)
 
@@ -1252,8 +1255,9 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.239 \item I
-             SO/IEC 14443-2: <./images/fig2.png>]
+l.235 L
+       a guerre des normes a fait converger les constructeurs vers l'ISO/IEC...
+ <./images/fig2.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
  Make it at least 13.59999pt.
@@ -1771,48 +1775,35 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 867.
  (./latexensg.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 867.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 867.
-
-
-Package rerunfilecheck Warning: File `latexensg.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `latexensg.out':
-(rerunfilecheck)             Before: 4204763ADA88CAED266507D6FB24C83E;1730
-(rerunfilecheck)             After:  F7866FF3018899E595D0EFDC31836D9F;1730.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `latexensg.out' has not changed.
+(rerunfilecheck)             Checksum: F7866FF3018899E595D0EFDC31836D9F;1730.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 867.
  ) 
 Here is how much of TeX's memory you used:
- 11421 strings out of 494950
- 162662 string characters out of 6179041
- 265135 words of memory out of 5000000
+ 11420 strings out of 494950
+ 162651 string characters out of 6179041
+ 265153 words of memory out of 5000000
  14209 multiletter control sequences out of 15000+600000
  94119 words of font info for 74 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  44i,12n,45p,1489b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{chapter*.16} has been referenced but does not exi
-st, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/sha
-re/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-t
-s1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
-y10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msam10.pfb>
-Output written on latexensg.pdf (46 pages, 1989716 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/l
+msy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb>
+Output written on latexensg.pdf (46 pages, 1990495 bytes).
 PDF statistics:
- 606 PDF objects out of 1000 (max. 8388607)
- 495 compressed objects within 5 object streams
- 152 named destinations out of 1000 (max. 500000)
+ 605 PDF objects out of 1000 (max. 8388607)
+ 494 compressed objects within 5 object streams
+ 151 named destinations out of 1000 (max. 500000)
  299 words of extra memory for PDF output out of 10000 (max. 10000000)
 
