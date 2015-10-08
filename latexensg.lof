@@ -2,8 +2,9 @@
 \select@language {english}
 \select@language {frenchb}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Un r\IeC {\'e}seau de G\IeC {\'e}ocubes}}{10}{figure.1.1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Exemple multi t\IeC {\^a}ches}}{11}{figure.1.2}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Un r\IeC {\'e}seau de G\IeC {\'e}ocubes}}{8}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Exemple multi t\IeC {\^a}ches}}{9}{figure.1.2}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Pipeline de production des logiciels}}{11}{figure.1.3}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Tableau comparatif des puces NFC pr\IeC {\'e}s\IeC {\'e}lectionn\IeC {\'e}es.}}{14}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Circuit \IeC {\'e}lectrique \IeC {\'e}quivalent d'une puce NFC et et son antenne}}{14}{figure.2.2}
@@ -19,14 +20,15 @@
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Diagramme de s\IeC {\'e}quence pour la v\IeC {\'e}rification de la pr\IeC {\'e}sence d'un PICC compatible ISO/IEC 14443}}{21}{figure.2.12}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Diagramme de s\IeC {\'e}quence pour l'\IeC {\'e}change d'une commande DESELECT}}{21}{figure.2.13}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces \IeC {\'E}change de blocs d'informations en utilisant le cha\IeC {\^\i }nage. cr\IeC {\'e}dit du sch\IeC {\'e}ma: OpenPCD.org}}{22}{figure.2.14}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Maquette et interaction des activit\IeC {\'e}s}}{23}{figure.2.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de contexte statique}}{24}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme UML des cas d'utilisation de Sharokey}}{25}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces MDP (Mod\IeC {\`e}le Physique des Donn\IeC {\'e}es) de la base de donn\IeC {\'e}es Sharokey}}{26}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Sch\IeC {\'e}ma des composants de Sharokey}}{28}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Digramme de s\IeC {\'e}quence: ajout d'un nouveau client}}{29}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Digramme de s\IeC {\'e}quence: ajout d'un nouveau produit}}{29}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Digramme de s\IeC {\'e}quence: Mise \IeC {\`a} jour du coordianteur}}{30}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Digramme de s\IeC {\'e}quence: Ajout d'une nouvelle version dans le d\IeC {\'e}p\IeC {\^o}t}}{30}{figure.3.8}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de contexte statique}}{26}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme UML des cas d'utilisation de Sharokey}}{27}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces MDP (Mod\IeC {\`e}le Physique des Donn\IeC {\'e}es) de la base de donn\IeC {\'e}es Sharokey}}{28}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sch\IeC {\'e}ma des composants de Sharokey}}{30}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagramme de s\IeC {\'e}quence: ajout d'un nouveau client}}{31}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagramme de s\IeC {\'e}quence: ajout d'un nouveau produit}}{31}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagramme de s\IeC {\'e}quence: Mise \IeC {\`a} jour du coordianteur}}{32}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagramme de s\IeC {\'e}quence: Ajout d'une nouvelle version dans le d\IeC {\'e}p\IeC {\^o}t}}{32}{figure.3.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,21 +1,21 @@
 \select@language {french}
 \select@language {english}
 \select@language {frenchb}
-\contentsline {chapter}{Glossaire et sigles utiles}{6}{chapter*.4}
-\contentsline {chapter}{Introduction}{7}{chapter*.5}
-\contentsline {chapter}{\numberline {1}Concepts cl\IeC {\'e}s et probl\IeC {\'e}matiques}{9}{chapter.1}
-\contentsline {section}{\numberline {1.1}Les G\IeC {\'e}ocubes}{9}{section.1.1}
-\contentsline {section}{\numberline {1.2}Les syst\IeC {\`e}mes embarqu\IeC {\'e}s et les noyaux temps-r\IeC {\'e}el dur:}{10}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Les t\IeC {\^a}ches}{10}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}La communication entre les t\IeC {\^a}ches}{11}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}La communication en champs proche (NFC)}{11}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}couches mat\IeC {\'e}rielles:}{12}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}couches logicielles:}{12}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Les infrastructures de production des logiciels}{12}{section.1.4}
+\contentsline {chapter}{Glossaire et sigles utiles}{4}{chapter*.4}
+\contentsline {chapter}{Introduction}{5}{chapter*.5}
+\contentsline {chapter}{\numberline {1}Concepts cl\IeC {\'e}s et probl\IeC {\'e}matiques}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Les G\IeC {\'e}ocubes}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Les syst\IeC {\`e}mes embarqu\IeC {\'e}s et les noyaux temps-r\IeC {\'e}el dur:}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Les t\IeC {\^a}ches}{8}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}La communication entre les t\IeC {\^a}ches}{9}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}La communication en champs proche (NFC)}{10}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}couches mat\IeC {\'e}rielles:}{10}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}couches logicielles:}{10}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Les infrastructures de production des logiciels}{10}{section.1.4}
 \contentsline {chapter}{\numberline {2}Conception et d\IeC {\'e}veloppement des couches logicielles et mat\IeC {\'e}rielles relatives \IeC {\`a} la norme NFC ISO14443 et de l'IHM Android d\IeC {\'e}di\IeC {\'e}e}{13}{chapter.2}
 \contentsline {section}{\numberline {2.1}Analyse du besoin:}{13}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Choix de la puce NFC:}{13}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Conception de la solution}{14}{section.2.2}
+\contentsline {section}{\numberline {2.2}Conception et d\IeC {\'e}veloppement de la solution}{14}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Conception et exp\IeC {\'e}rimentation de l'antenne:}{14}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Conception statique des couches logicielles}{17}{subsection.2.2.2}
 \contentsline {subsubsection}{Le prologue}{17}{section*.6}
@@ -24,25 +24,27 @@
 \contentsline {paragraph}{NAD[optionnel]:}{18}{section*.9}
 \contentsline {subsubsection}{Champ d'information [INF][optionnel]:}{18}{section*.10}
 \contentsline {subsubsection}{L'epilogue:}{18}{section*.11}
-\contentsline {subsection}{\numberline {2.2.3}Conception dynamique des couches logicielles et d\IeC {\'e}veloppement}{18}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Conception dynamique des couches logicielles et d\IeC {\'e}veloppement}{19}{subsection.2.2.3}
 \contentsline {subsubsection}{V\IeC {\'e}rification de la pr\IeC {\'e}sence et la compatibilit\IeC {\'e} du PICC}{20}{section*.12}
 \contentsline {subsubsection}{DESELECT:}{20}{section*.13}
 \contentsline {subsubsection}{\IeC {\'E}change de donn\IeC {\'e}es:}{20}{section*.14}
 \contentsline {subsubsection}{Gestion des erreurs}{21}{section*.15}
-\contentsline {chapter}{\numberline {3}Conception, d\IeC {\'e}veloppement et d\IeC {\'e}ploiement d'un syst\IeC {\`e}me de mise \IeC {\`a} jour automatique destin\IeC {\'e}e au syst\IeC {\`e}me G\IeC {\'e}ocube:}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}\IeC {\'E}tude du besoin:}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Conception statique}{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Format des mises \IeC {\`a} jour}{24}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Architecture logicielle}{25}{subsection.3.2.2}
-\contentsline {subsubsection}{Client:}{26}{section*.16}
-\contentsline {section}{\numberline {3.3}conception dynamique et d\IeC {\'e}veloppement}{26}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}S\IeC {\'e}curit\IeC {\'e} du syst\IeC {\`e}me}{26}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Composants et interaction:}{27}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {4}Mise en place et s\IeC {\'e}curisation d'une infrastructure virtuelle de production des logiciels:}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Syst\IeC {\`e}me h\IeC {\^o}te:}{31}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Choix du syst\IeC {\`e}me d'exploitation:}{31}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Syst\IeC {\`e}me de versioning:}{31}{section.4.2}
-\contentsline {section}{\numberline {4.3}Gestionnaire de bugs:}{32}{section.4.3}
-\contentsline {part}{Conclusion}{33}{chapter*.17}
-\contentsline {part}{Bibliographie}{35}{chapter*.18}
-\contentsline {chapter}{\numberline {A}Projet de recherche}{39}{Annexe.1.A}
+\contentsline {section}{\numberline {2.3}Conception et d\IeC {\'e}veloppement de l'application Android:}{22}{section.2.3}
+\contentsline {chapter}{\numberline {3}Conception, d\IeC {\'e}veloppement et d\IeC {\'e}ploiement d'un syst\IeC {\`e}me de mise \IeC {\`a} jour automatique destin\IeC {\'e}e au syst\IeC {\`e}me G\IeC {\'e}ocube:}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}\IeC {\'E}tude du besoin:}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Conception statique}{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Format des mises \IeC {\`a} jour}{26}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Architecture logicielle}{27}{subsection.3.2.2}
+\contentsline {subsubsection}{Client:}{28}{section*.16}
+\contentsline {section}{\numberline {3.3}conception dynamique et d\IeC {\'e}veloppement}{28}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}S\IeC {\'e}curit\IeC {\'e} du syst\IeC {\`e}me}{28}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Composants et interaction:}{29}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}D\IeC {\'e}ploiement et mise en production:}{29}{section.3.4}
+\contentsline {chapter}{\numberline {4}Mise en place et s\IeC {\'e}curisation d'une infrastructure virtuelle de production des logiciels:}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Syst\IeC {\`e}me h\IeC {\^o}te:}{33}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Choix du syst\IeC {\`e}me d'exploitation:}{33}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Syst\IeC {\`e}me de versioning:}{34}{section.4.2}
+\contentsline {section}{\numberline {4.3}Gestionnaire de bugs:}{34}{section.4.3}
+\contentsline {part}{Conclusion}{37}{chapter*.17}
+\contentsline {part}{Bibliographie}{39}{chapter*.18}
+\contentsline {chapter}{\numberline {A}Projet de recherche}{43}{Annexe.1.A}

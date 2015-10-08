@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.5)  20 SEP 2015 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.4)  22 SEP 2015 12:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **jury.tex
 (./jury.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 6 languages loaded.
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 6 languages loaded.
 ! Undefined control sequence.
 l.2 \newevenpage
                 
@@ -88,7 +88,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.9 P
-     ierre-Yvves Hardouin
+     ierre-Yvves Hardouin, directeur des enseignements de l'ENSG
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -112,6 +112,40 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ' in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no G in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 9--10
 []
@@ -432,7 +466,45 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 ...nsable pédagogique du cycle Ingénieur :}
+l.28 E
+      mmanuel Bardière ENSG
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no E in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no G in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 28--29
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...nsable pédagogique du cycle Ingénieur :}
                                                    \\
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -442,52 +514,52 @@ Missing character: There is no � in font cmbx10!
 Missing character: There is no � in font cmbx10!
 Missing character: There is no � in font cmbx10!
 
-Overfull \hbox (82.25935pt too wide) in paragraph at lines 30--31
+Overfull \hbox (82.25935pt too wide) in paragraph at lines 32--33
 []\OT1/cmr/bx/n/10 Responsable
  []
 
 
-Overfull \hbox (22.52069pt too wide) in paragraph at lines 30--31
+Overfull \hbox (22.52069pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 pda-
  []
 
 
-Overfull \hbox (38.17342pt too wide) in paragraph at lines 30--31
+Overfull \hbox (38.17342pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 gogique
  []
 
 
-Overfull \hbox (12.77771pt too wide) in paragraph at lines 30--31
+Overfull \hbox (12.77771pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 du
  []
 
 
-Overfull \hbox (15.01381pt too wide) in paragraph at lines 30--31
+Overfull \hbox (15.01381pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 cy-
  []
 
 
-Overfull \hbox (13.57632pt too wide) in paragraph at lines 30--31
+Overfull \hbox (13.57632pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 cle
  []
 
 
-Overfull \hbox (14.58325pt too wide) in paragraph at lines 30--31
+Overfull \hbox (14.58325pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 In-
  []
 
 
-Overfull \hbox (9.58328pt too wide) in paragraph at lines 30--31
+Overfull \hbox (9.58328pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 g-
  []
 
 
-Overfull \hbox (25.97905pt too wide) in paragraph at lines 30--31
+Overfull \hbox (25.97905pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 nieur
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 30--31
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 32--33
 \OT1/cmr/bx/n/10 : 
  []
 
@@ -498,7 +570,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 S
+l.34 S
       erge Botton, IGN/ENSG/DE/DPTS
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -532,7 +604,7 @@ Missing character: There is no P in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no S in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 32--33
+Overfull \hbox (20.0pt too wide) in paragraph at lines 34--35
 []
  []
 
@@ -543,43 +615,43 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36 \textbf{Tuteur du stage pluridisciplinaire :}
+l.38 \textbf{Tuteur du stage pluridisciplinaire :}
                                                    \\
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (54.29845pt too wide) in paragraph at lines 36--37
+Overfull \hbox (54.29845pt too wide) in paragraph at lines 38--39
 []\OT1/cmr/bx/n/10 Tuteur
  []
 
 
-Overfull \hbox (12.77771pt too wide) in paragraph at lines 36--37
+Overfull \hbox (12.77771pt too wide) in paragraph at lines 38--39
 \OT1/cmr/bx/n/10 du
  []
 
 
-Overfull \hbox (25.61928pt too wide) in paragraph at lines 36--37
+Overfull \hbox (25.61928pt too wide) in paragraph at lines 38--39
 \OT1/cmr/bx/n/10 stage
  []
 
 
-Overfull \hbox (41.85533pt too wide) in paragraph at lines 36--37
+Overfull \hbox (41.85533pt too wide) in paragraph at lines 38--39
 \OT1/cmr/bx/n/10 pluridis-
  []
 
 
-Overfull \hbox (12.13882pt too wide) in paragraph at lines 36--37
+Overfull \hbox (12.13882pt too wide) in paragraph at lines 38--39
 \OT1/cmr/bx/n/10 ci-
  []
 
 
-Overfull \hbox (37.95813pt too wide) in paragraph at lines 36--37
+Overfull \hbox (37.95813pt too wide) in paragraph at lines 38--39
 \OT1/cmr/bx/n/10 plinaire
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 36--37
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 38--39
 \OT1/cmr/bx/n/10 : 
  []
 
@@ -590,7 +662,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.38 P
+l.40 P
       atricia Parisi, IGN/ENSG/DE/DSHI
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -627,7 +699,7 @@ Missing character: There is no S in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no I in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 38--39
+Overfull \hbox (20.0pt too wide) in paragraph at lines 40--41
 []
  []
 
@@ -638,34 +710,34 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \copyright
+l.44 \copyright
                 \hspace{0.3cm} ENSG
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 44.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
-LaTeX Font Info:    Try loading font information for +cmr on input line 42.
-LaTeX Font Info:    No file cmr.fd. on input line 42.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 44.
+LaTeX Font Info:    Try loading font information for +cmr on input line 44.
+LaTeX Font Info:    No file cmr.fd. on input line 44.
 
 
 LaTeX Font Warning: Font shape `/cmr/m/n' undefined
-(Font)              using `/cmsy/m/n' instead on input line 42.
+(Font)              using `/cmsy/m/n' instead on input line 44.
 
-LaTeX Font Info:    Try loading font information for +cmsy on input line 42.
-LaTeX Font Info:    No file cmsy.fd. on input line 42.
+LaTeX Font Info:    Try loading font information for +cmsy on input line 44.
+LaTeX Font Info:    No file cmsy.fd. on input line 44.
 
 LaTeX Font Warning: Font shape `/cmsy/m/n' undefined
-(Font)              using `/cmsy/m/n' instead on input line 42.
+(Font)              using `/cmsy/m/n' instead on input line 44.
 
 ! Corrupted NFSS tables.
 wrong@fontshape ...message {Corrupted NFSS tables}
                                                   error@fontshape else let f...
-l.42 \copyright
+l.44 \copyright
                 \hspace{0.3cm} ENSG
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -674,19 +746,19 @@ and deduce the truth by order and method.
 
 
 LaTeX Font Warning: Font shape `/cmsy/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 42.
+(Font)              using `OT1/cmr/m/n' instead on input line 44.
 
 Missing character: There is no E in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no G in font nullfont!
 
-Overfull \hbox (30.00002pt too wide) in paragraph at lines 42--43
+Overfull \hbox (30.00002pt too wide) in paragraph at lines 44--45
 [][]
  []
 
 ! Undefined control sequence.
-l.44 \section
+l.46 \section
              *{Stage de fin d'étude du 04/05/2015 au 04/10/2015 }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -701,7 +773,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.44 \section*
+l.46 \section*
               {Stage de fin d'étude du 04/05/2015 au 04/10/2015 }
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -750,13 +822,13 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 46.
+(Font)              <7> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 46.
+(Font)              <5> on input line 48.
 ! Undefined control sequence.
 <recently read> \boxtimes 
                           
-l.46 \textbf{Diffusion web :} $\boxtimes
+l.48 \textbf{Diffusion web :} $\boxtimes
                                         $ Internet \hspace{0.2cm}$\boxtimes$...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -775,7 +847,7 @@ Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
 <recently read> \boxtimes 
                           
-l.46 ...oxtimes$ Internet \hspace{0.2cm}$\boxtimes
+l.48 ...oxtimes$ Internet \hspace{0.2cm}$\boxtimes
                                                   $ Intranet Polytechnicum\h...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -807,7 +879,7 @@ Missing character: There is no m in font nullfont!
 ! Undefined control sequence.
 <recently read> \boxtimes 
                           
-l.47 $\boxtimes
+l.49 $\boxtimes
                $ Intranet ENSG\vspace{0.3cm}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -828,32 +900,32 @@ Missing character: There is no N in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no G in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 44--48
+Overfull \hbox (20.0pt too wide) in paragraph at lines 46--50
 []
  []
 
 
-Overfull \hbox (19.36101pt too wide) in paragraph at lines 44--48
+Overfull \hbox (19.36101pt too wide) in paragraph at lines 46--50
 \OT1/cmr/bx/n/10 Dif-
  []
 
 
-Overfull \hbox (13.73604pt too wide) in paragraph at lines 44--48
+Overfull \hbox (13.73604pt too wide) in paragraph at lines 46--50
 \OT1/cmr/bx/n/10 fu-
  []
 
 
-Overfull \hbox (19.86932pt too wide) in paragraph at lines 44--48
+Overfull \hbox (19.86932pt too wide) in paragraph at lines 46--50
 \OT1/cmr/bx/n/10 sion
  []
 
 
-Overfull \hbox (19.64574pt too wide) in paragraph at lines 44--48
+Overfull \hbox (19.64574pt too wide) in paragraph at lines 46--50
 \OT1/cmr/bx/n/10 web
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 44--48
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 46--50
 \OT1/cmr/bx/n/10 :
  []
 
@@ -864,38 +936,38 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.49 \textbf{Situation du document :}
+l.51 \textbf{Situation du document :}
                                      
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (65.84001pt too wide) in paragraph at lines 49--51
+Overfull \hbox (65.84001pt too wide) in paragraph at lines 51--53
 []\OT1/cmr/bx/n/10 Situation
  []
 
 
-Overfull \hbox (12.77771pt too wide) in paragraph at lines 49--51
+Overfull \hbox (12.77771pt too wide) in paragraph at lines 51--53
 \OT1/cmr/bx/n/10 du
  []
 
 
-Overfull \hbox (21.40266pt too wide) in paragraph at lines 49--51
+Overfull \hbox (21.40266pt too wide) in paragraph at lines 51--53
 \OT1/cmr/bx/n/10 doc-
  []
 
 
-Overfull \hbox (10.22217pt too wide) in paragraph at lines 49--51
+Overfull \hbox (10.22217pt too wide) in paragraph at lines 51--53
 \OT1/cmr/bx/n/10 u-
  []
 
 
-Overfull \hbox (25.3957pt too wide) in paragraph at lines 49--51
+Overfull \hbox (25.3957pt too wide) in paragraph at lines 51--53
 \OT1/cmr/bx/n/10 ment
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 49--51
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 51--53
 \OT1/cmr/bx/n/10 :
  []
 
@@ -906,7 +978,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 R
+l.54 R
       apport de stage de fin d'études présenté en fin de 3\up{ème} anné...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -959,7 +1031,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no 3 in font nullfont!
 ! Undefined control sequence.
-l.52 ...de fin d'études présenté en fin de 3\up
+l.54 ...de fin d'études présenté en fin de 3\up
                                                   {ème} année du cycle des...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -999,7 +1071,7 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 52--54
+Overfull \hbox (20.0pt too wide) in paragraph at lines 54--56
 []
  []
 
@@ -1007,7 +1079,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 52--54
 ! Undefined control sequence.
 <argument> ...ame c@x\endcsname \getpagerefnumber 
                                                   {LastPage}-\getpagerefnumb...
-l.57 ...age}-\getpagerefnumber{beginappendices}+1}
+l.59 ...age}-\getpagerefnumber{beginappendices}+1}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1018,7 +1090,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    {
-l.57 ...age}-\getpagerefnumber{beginappendices}+1}
+l.59 ...age}-\getpagerefnumber{beginappendices}+1}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1031,7 +1103,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.57 ...age}-\getpagerefnumber{beginappendices}+1}
+l.59 ...age}-\getpagerefnumber{beginappendices}+1}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1048,7 +1120,7 @@ Missing character: There is no - in font nullfont!
 ! Undefined control sequence.
 <argument> ...number {LastPage}-\getpagerefnumber 
                                                   {beginappendices}+1\relax 
-l.57 ...age}-\getpagerefnumber{beginappendices}+1}
+l.59 ...age}-\getpagerefnumber{beginappendices}+1}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1074,7 +1146,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no + in font nullfont!
 Missing character: There is no 1 in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 57--58
+Overfull \hbox (20.0pt too wide) in paragraph at lines 59--60
 [] 
  []
 
@@ -1085,29 +1157,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \textbf{Nombres de pages :}
-                                 \getpagerefnumber{LastPage} pages dont \ara...
-
+l.61 \textbf{Nombres de pages :}
+                                 50 pages dont 3 d'annexes
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-! Undefined control sequence.
-l.59 \textbf{Nombres de pages :} \getpagerefnumber
-                                                  {LastPage} pages dont \ara...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no P in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no g in font nullfont!
@@ -1117,7 +1173,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -1128,22 +1184,22 @@ Missing character: There is no x in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (64.9456pt too wide) in paragraph at lines 59--61
+Overfull \hbox (64.9456pt too wide) in paragraph at lines 61--63
 []\OT1/cmr/bx/n/10 Nombres
  []
 
 
-Overfull \hbox (11.65967pt too wide) in paragraph at lines 59--61
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 61--63
 \OT1/cmr/bx/n/10 de
  []
 
 
-Overfull \hbox (27.53593pt too wide) in paragraph at lines 59--61
+Overfull \hbox (27.53593pt too wide) in paragraph at lines 61--63
 \OT1/cmr/bx/n/10 pages
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 59--61
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 61--63
 \OT1/cmr/bx/n/10 :
  []
 
@@ -1154,7 +1210,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.62 \textbf{Système hôte :}
+l.64 \textbf{Système hôte :}
                                \LaTeX
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1169,22 +1225,22 @@ Missing character: There is no T in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no X in font nullfont!
 
-Overfull \hbox (56.32063pt too wide) in paragraph at lines 62--64
+Overfull \hbox (56.32063pt too wide) in paragraph at lines 64--66
 []\OT1/cmr/bx/n/10 Systme
  []
 
 
-Overfull \hbox (16.13187pt too wide) in paragraph at lines 62--64
+Overfull \hbox (16.13187pt too wide) in paragraph at lines 64--66
 \OT1/cmr/bx/n/10 hte
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 62--64
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 64--66
 \OT1/cmr/bx/n/10 :
  []
 
 
-Overfull \hbox (5.90282pt too wide) in paragraph at lines 62--64
+Overfull \hbox (5.90282pt too wide) in paragraph at lines 64--66
 [][] 
  []
 
@@ -1195,25 +1251,25 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 \textbf{Modifications :}
+l.68 \textbf{Modifications :}
                              
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (88.00099pt too wide) in paragraph at lines 66--67
+Overfull \hbox (88.00099pt too wide) in paragraph at lines 68--69
 []\OT1/cmr/bx/n/10 Modifications
  []
 
 
-Overfull \hbox (3.19443pt too wide) in paragraph at lines 66--67
+Overfull \hbox (3.19443pt too wide) in paragraph at lines 68--69
 \OT1/cmr/bx/n/10 : 
  []
 
 ! Use of \@array doesn't match its definition.
 \@ifnextchar ... \reserved@d =#1\def \reserved@a {
                                                   #2}\def \reserved@b {#3}\f...
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 If you say, e.g., `\def\a1{...}', then you must always
 put `1' after `\a', since control sequence names are
@@ -1223,7 +1279,7 @@ followed by the required stuff, so I'm ignoring it.
 ! Argument of \@firstoftwo has an extra }.
 <inserted text> 
                 \par 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1236,7 +1292,7 @@ Runaway argument?
 ! Paragraph ended before \@firstoftwo was complete.
 <to be read again> 
                    \par 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1245,7 +1301,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Use of \@array doesn't match its definition.
 \@xexpast #1*#2#3#4\@@ ->\edef \reserved@a {
                                             #1}\@tempcnta #2\relax \ifnum \@...
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 If you say, e.g., `\def\a1{...}', then you must always
 put `1' after `\a', since control sequence names are
@@ -1255,7 +1311,7 @@ followed by the required stuff, so I'm ignoring it.
 ! Use of \@array doesn't match its definition.
 \@ifnextchar ... \reserved@d =#1\def \reserved@a {
                                                   #2}\def \reserved@b {#3}\f...
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 If you say, e.g., `\def\a1{...}', then you must always
 put `1' after `\a', since control sequence names are
@@ -1265,7 +1321,7 @@ followed by the required stuff, so I'm ignoring it.
 ! Use of \@argtabularcr doesn't match its definition.
 \@ifnextchar ...eserved@d =#1\def \reserved@a {#2}
                                                   \def \reserved@b {#3}\futu...
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 If you say, e.g., `\def\a1{...}', then you must always
 put `1' after `\a', since control sequence names are
@@ -1275,7 +1331,7 @@ followed by the required stuff, so I'm ignoring it.
 ! Use of \@array doesn't match its definition.
 \@xexpast #1*#2#3#4\@@ ->\edef \reserved@a {
                                             #1}\@tempcnta #2\relax \ifnum \@...
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 If you say, e.g., `\def\a1{...}', then you must always
 put `1' after `\a', since control sequence names are
@@ -1289,7 +1345,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1301,7 +1357,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1313,7 +1369,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1321,7 +1377,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Argument of \reserved@c has an extra }.
 <inserted text> 
                 \par 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1334,7 +1390,7 @@ Runaway argument?
 ! Paragraph ended before \reserved@c was complete.
 <to be read again> 
                    \par 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1343,7 +1399,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Argument of \reserved@b has an extra }.
 <inserted text> 
                 \par 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1357,7 +1413,7 @@ Runaway argument?
 ! Paragraph ended before \reserved@b was complete.
 <to be read again> 
                    \par 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1366,14 +1422,14 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1384,14 +1440,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1402,14 +1458,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1420,14 +1476,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1438,14 +1494,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1456,14 +1512,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1474,14 +1530,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1492,14 +1548,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1510,14 +1566,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1528,14 +1584,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1546,14 +1602,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1564,14 +1620,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1582,14 +1638,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1600,14 +1656,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1618,14 +1674,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1636,14 +1692,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1654,14 +1710,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1672,14 +1728,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1690,14 +1746,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1708,14 +1764,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1726,14 +1782,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1744,14 +1800,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1762,14 +1818,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1780,14 +1836,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1798,14 +1854,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1816,14 +1872,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1834,14 +1890,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1852,14 +1908,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1870,14 +1926,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1888,14 +1944,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1906,14 +1962,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1924,14 +1980,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1942,14 +1998,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1960,14 +2016,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1978,14 +2034,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1996,14 +2052,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2014,14 +2070,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2032,14 +2088,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2050,14 +2106,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2068,14 +2124,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2086,14 +2142,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2104,14 +2160,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2122,21 +2178,21 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.68 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
+l.70 ...in{tabular}{|c|c|c|>{\centering}p{6.5cm}|}
                                                   
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 44 strings out of 494958
- 576 string characters out of 6179214
- 48190 words of memory out of 5000000
- 3364 multiletter control sequences out of 15000+600000
+ 44 strings out of 494950
+ 584 string characters out of 6179041
+ 49219 words of memory out of 5000000
+ 3369 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  24i,6n,36p,148b,167s stack positions out of 5000i,500n,10000p,200000b,80000s

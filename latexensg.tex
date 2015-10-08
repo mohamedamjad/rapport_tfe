@@ -45,7 +45,7 @@
 
 \setcounter{tocdepth}{1} %profondeur de la table des matières
 
-\title{Intégration d’un dispositif de communication  en champ proche (NFC) au geocube\\Version provisoire du \today~à \timenow}
+\title{Intégration d’un dispositif de communication  en champ proche (NFC) au Géocube}
 
 %
 %-------------------------------------------------------------
@@ -92,11 +92,11 @@ Tout le personnel du Laboratoire d'Opto-Électronique de Metrologie et d'Instrum
 \thispagestyle{empty}
 	\vspace{1cm}
 
-	Dans ce rapport, je présente le travail effectué lors de mon stage de fin d'études: une implémentation du protocole de transfert des blocs de l'ISO/IEC 14443-4 realtif aux puces NFC dans le système d'exploitation du Géocube G3OS, en plus du développement d'une antenne et de l'interface Android dédiée. A cela s'ajoute la conception, le développement et le déploiement d'un système de mises à jour du coordinateur des Géocubes, et la mise en place partielle d'une pipeline de production des logicielles au sein de la société Kylia.
+	Dans ce rapport, je présente le travail effectué lors de mon stage de fin d'études: une implémentation du protocole de transfert des blocs de l'ISO/IEC 14443-4 realtif aux puces NFC dans le système d'exploitation du Géocube G3OS, en plus du développement d'une antenne et de l'interface Android dédiée. A cela s'ajoute la conception, le développement et le déploiement d'un système de mises à jour du coordinateur des Géocubes, et la mise en place partielle d'une pipeline de production des logiciels au sein de la société Kylia.
 	
 	\vspace{1.5cm}
 	
-	\textbf{Mots clés :} NFC, systèmes embarqués, production des logicielles,
+	\textbf{Mots clés :} NFC, systèmes embarqués, production des logiciels,
 \end{abstract}
 %-----------------------
 
@@ -117,15 +117,14 @@ Tout le personnel du Laboratoire d'Opto-Électronique de Metrologie et d'Instrum
 
 \selectlanguage{frenchb}
 
-%---Table des matières, des figures et des tableaux---
+%---
+ des matières, des figures et des tableaux---
 %\newevenpage
 \tableofcontents
 
 \newevenpage
 \listoffigures
 
-\newevenpage
-\listoftables
 %----------------------------------------------------
 
 %\newevenpage
@@ -156,11 +155,11 @@ Tout le personnel du Laboratoire d'Opto-Électronique de Metrologie et d'Instrum
   
   \vspace{1.5cm}
   
-	Les objets connectés sont de plus en plus présents dans notre quotidien: Nos cartes bancaires, nos cartes de transports, nos smartphones, les arrêts de bus, etc, sont tous équipés de puces NFC. Cette technologie, utilisée généralement pour partager des identifiants ou des informations peu volumineuse se voit démocratisée et normée, offrant au concepteur des produits novateurs une solution de communication simple et à la disposition du large publique.
+	Les objets connectés sont de plus en plus présents dans notre quotidien: Nos cartes bancaires, nos cartes de transports, nos smartphones, les arrêts de bus, etc, sont tous équipés de puces NFC. Cette technologie, utilisée généralement pour partager des identifiants ou des informations peu volumineuses se voit démocratisée et normée, offrant au concepteur de produits novateurs une solution de communication simple et à la disposition du large public.
 	
-	L'objectif de ce stage est d'intégrer une solution de communication en champ proche (NFC) au Géocube. Ceci sous entend le développement les couches matérielles et logicielles de cette solution, ainsi qu'une application Android dédiée. En plus du sujet principal du stage deux autres tâches relatives à la mise en place d'un serveur de production des logiciels et un système de mise à jour automatique du coordinateur des Géocubes ont été réalisées.
+	L'objectif de ce stage est d'intégrer une solution de communication en champ proche (NFC) au Géocube. Ceci sous-entend le développement des couches matérielles et logicielles de cette solution, ainsi qu'une application Android dédiée. En plus du sujet principal du stage deux autres tâches relatives à la mise en place d'un serveur de production des logiciels et un système de mise à jour automatique du coordinateur des Géocubes ont été réalisées.
 	
-	Dans le premier chapitre de ce rapport, on présente les notions fondamentales nécessaires au lecteur pour comprendre le travail effectué. Le contenu de ce rapport touche à plusieurs disciplines (électronique, systèmes embarqués, réseaux, sécurité informatique, ...) la lecture du premier chapitre est fortement conseillée. Le deuxième chapitre résume la conception et le développement relatif à la solution NFC implémentée dans le Géocube, on présente les expérimentations électroniques réalisées pour choisir une antenne NFC adaptée au Géocube, les développements effectués sur G3OS\footnote{Système d'exploitation du Géocube} pour implémenter le 4ème niveau de la norme ISO14443 relative au protocole de transmission des blocs NFC et finalement le développement de l'application Android dédiée. Dans le 3ème chapitre, On présente le travail effectué pour concevoir, développer et déployer une solution de mises à jour automatique pour le coordinateur des Géocubes. Finalement, le 4ème chapitre donne un aperçu sur l'infrastructure virtuelle de production des logiciels instaurée pour répondre au besoin de la société Kylia de disposer d'un serveur de production adaptée à ses besoins.
+	Dans le premier chapitre de ce rapport, on présente les notions fondamentales nécessaires au lecteur pour comprendre le travail effectué. Le contenu de ce rapport touche à plusieurs disciplines (électronique, systèmes embarqués, réseaux, sécurité informatique, ...) la lecture du premier chapitre est fortement conseillée. Le deuxième chapitre résume la conception et le développement relatif à la solution NFC implémentée dans le Géocube, on présente les expérimentations électroniques réalisées pour choisir une antenne NFC adaptée au Géocube, les développements effectués sur G3OS\footnote{Système d'exploitation du Géocube} pour implémenter le 4ème niveau de la norme ISO14443 relative au protocole de transmission des blocs NFC et finalement le développement de l'application Android dédiée. Dans le 3ème chapitre, on présente le travail effectué pour concevoir, développer et déployer une solution de mises à jour automatique pour le coordinateur des Géocubes. Finalement, le 4ème chapitre donne un aperçu sur l'infrastructure virtuelle de production des logiciels instaurée pour répondre au besoin de la société Kylia de disposer d'un serveur de production adaptée à ses besoins.
 	
 	 On note ici que tous les codes produits durant ce stage restent la propriété des organismes d'accueil et ont la liberté de choisir la licence appropriée. pour toute demande de consultation de ces codes, le lecteur est prié de s'adresser directement aux encadrants.
 
@@ -168,20 +167,20 @@ Tout le personnel du Laboratoire d'Opto-Électronique de Metrologie et d'Instrum
 
 \evenchapter[Concepts clés et problématiques]{Concepts clés et problématiques}
 
-\textit{ Ce chapitre a pour but d'introduire le lecteur aux concepts clés nécessaires pour comprendre le travail effectué lors de ce stage.
+\textit{ Ce chapitre a pour but d'initié le lecteur aux concepts clés nécessaires pour comprendre le travail effectué lors de ce stage.
 Le lecteur est prié de prêter une attention particulière au tableau des sigles lors de la lecture du présent document. Les protocoles qu'on présente utilisent un certain nombre d’abréviations conventionnelles pour désigner Les opérations d'échanges entre les dispositifs, spécialement NFC. }
 
 \section{Les Géocubes}
-La miniaturisation des capteurs ainsi que la baisse des coûts de fabrication et de la consommation électrique des puces GNSS sont des facteurs qui peuvent laisser à envisager d'abandonner sur le terrain un réseau de capteurs opérant en permanence. Certains de ces capteurs GNSS permettent d'effectuer des mesures sur la phase donnant la possibilité de remonter à des précisions millimétriques, d'où l'idée d'un réseau de Géocubes. Le système Géocube est un réseau de capteurs GPS conçu et développé par le Laboratoire d'Opto-Éléctronique, Métrologie et Instrumentation de l'Institut National de l'Information Géographique et Forestière. Il a comme objectif de mesurer les déformations avec une précision millimétrique. Ce réseau de capteurs a la particularité d'être très peu gourmand en énergie. On peut envisager de l'abandonner dans un milieu difficilement accessible sans qu'on ait à se soucier de son alimentation continue en électricité. En plus d'un module radio, un Géocube peut supporter plusieurs couches de capteurs lui permettant de collecter un certain nombre d'informations sur son environnement.
+La miniaturisation des capteurs ainsi que la baisse des coûts de fabrication et de la consommation électrique des puces GNSS sont des facteurs qui peuvent laisser envisager d'abandonner sur le terrain un réseau de capteurs opérant en permanence. Certains de ces capteurs GNSS permettent d'effectuer des mesures sur la phase donnant la possibilité de remonter à des précisions millimétriques, d'où l'idée d'un réseau de Géocubes. Le système Géocube est un réseau de capteurs GPS conçu et développé par le Laboratoire d'Opto-Éléctronique, Métrologie et Instrumentation de l'Institut National de l'Information Géographique et Forestière. Il a comme objectif de mesurer les déformations avec une précision millimétrique. Ce réseau de capteurs a la particularité d'être très peu gourmand en énergie. On peut envisager de l'abandonner dans un milieu difficilement accessible sans qu'on ait à se soucier de son alimentation continue en électricité. En plus d'un module radio, un Géocube peut supporter plusieurs couches de capteurs lui permettant de collecter un certain nombre d'informations sur son environnement.
 
-Dans les premières versions du Géocube initiés par LOEMI, Un opérateur humain peut communiquer directement avec un géocube en utilisant une de ces méthodes:
+Dans les premières versions du Géocube initiés par LOEMI, un opérateur humain peut communiquer directement avec un géocube en utilisant une de ces méthodes:
 
 \begin{itemize}
 \item Liaison série filaire, qui permet d'envoyer des commandes  à travers l'interface en lignes de commandes de G3OS.
 \item Radio: Un protocol propriétaire particulier (DigiMesh\textcopyright) est utilisé pour communiquer avec un Géocube.
 \end{itemize}
 
-Dans la version industrielle du Géocube maintenue par la société Kylia, une attention particulière est prêtée à l'étanchéité du boîtier qui le contient et à la robustesse du produit final. Ce choix crucial se justifie principalement par le fait qu'un réseau de Géocube peut être destiné à la surveillance environnementale en temps de crise et doit, par conséquence, être résistant aux conditions extremes que peut présenter un tel contexte.
+Dans la version industrielle du Géocube maintenue par la société Kylia, une attention particulière est prêtée à l'étanchéité du boîtier qui le contient et à la robustesse du produit final. Ce choix crucial se justifie principalement par le fait qu'un réseau de Géocube peut être destiné à la surveillance environnementale en temps de crise et doit, par conséquence, être résistant aux conditions extrêmes que peut présenter un tel contexte.
 
 Un réseau de Géocubes communique à travers le protocole radio DigiMesh\textcopyright et l'utilise aussi pour centraliser les mesures acquises par les Géocubes vers un ordinateur déployé aussi sur le terrain, appelé coordinateur. Le coordinateur est le composant central du réseau, il encapsule toute la logique liée au traitement et au stockage des données. Il permet aussi à l'utilisateur de lancer des séries de calculs, récupérer les résultats ou de communiquer avec un Géocube en lançant des commandes qui seront transmises par radio. La Figure\ref{fig:geocube_network} résume ce schéma de fonctionnement.
 
@@ -198,30 +197,37 @@ Un système embarqué est par définition: Un système éléctronique et informa
 \item Un système embarqué nécessite un développement matériel (électronique) mais aussi logiciel.
 \item Un système embarqué a la particularité d'opérer en temps-réel.
 \end{itemize}
-Le lecteur peut se poser la question légitime: Pourquoi on insiste sur le "temps-réel" dans cette définition? Nos ordinateurs personnels n'opèrent-ils pas en "temps-réel"?. Pour répondre à ces questions et introduire l'importance du temps-réel dans le cas du système Géocube Il faut comprendre que ce concept est très relatif en informatique et varie d'un métier à un autre: Le temps-réel pour un développeur web est de pouvoir fournir à l'internaute de l'information sous forme de flux, en tolérant les temps de latence qui peuvent résulter parfois des temps d'accès à une base de données ou à la bande passante d'internet. Pour un développeur qui fait de l'informatique pour automobiles et doit, par exemple, développer les couches logicielles relatives à un système d'airbag, Le temps-réel dans ce cas est très strict et la quantification de ce temps latence est primordiale, sinon la vie des gens serait en danger.
+Le lecteur peut se poser la question légitime: Pourquoi insiste-t-on sur le "temps-réel" dans cette définition? Nos ordinateurs personnels n'opèrent-ils pas en "temps-réel"?. Pour répondre à ces questions et introduire l'importance du temps-réel dans le cas du système Géocube Il faut comprendre que ce concept est très relatif en informatique et varie d'un métier à un autre: Le temps-réel pour un développeur web est de pouvoir fournir à l'internaute de l'information sous forme de flux, en tolérant les temps de latence qui peuvent résulter parfois des temps d'accès à une base de données ou à la bande passante d'internet. Pour un développeur qui fait de l'informatique pour automobiles et doit, par exemple, développer les couches logicielles relatives à un système d'airbag, Le temps-réel dans ce cas est très strict et la quantification de ce temps latence est primordiale, sinon la vie des gens serait en danger.
 \subsection{Les tâches}
-Une tâche est le composant principal d'un RTOS. Lorsque vous effectuez plusieurs tâches simultanées sur un ordinateur avec une mémoire vive limitée, vous pouvez remarquer à partir d'un certain ... que vos tâches auront du mal à tourner ... Pour les systèmes d'exploitation en temps-réel, communément connus sous le nom de RTOS (Real Time Operating Systems) La quantification de ce temps de latence est primordiale.
+Une tâche est le composant principal d'un système d'exploitation en temps-réel. Lorsque vous effectuez plusieurs tâches simultanées sur un ordinateur avec une mémoire vive limitée, vous pouvez remarquer que vos tâches auront du mal à tourner à partir d'un certain niveau. Pour les systèmes d'exploitation en temps-réel, communément connus sous le nom de RTOS (Real Time Operating Systems) La quantification de ce temps de latence est primordiale.
 
 Dans cette perspective, une équipe de chercheurs du LOEMI ont mis au point un RTOS adapté aux tâches qui sont effectuées par un Géocube.
 
 Une liste non exhaustive de ces tâches serait alors:
 
 \begin{itemize}
-\item Une tâche GPS qui gère toutes les opérations en relation avec l'acquisition des données GPS:
-\item Une tâche Radio qui gère toutes les orpérations relatives à l'envoi et  à la réception des données et des commandes par radio;
-\item Une tâche accéléromètre qui gère l'acquisition des données de l'accéleromètre...
+\item Une tâche GPS qui gère toutes les opérations relatives à l'acquisition des données GPS;
+\item Une tâche Radio qui gère toutes les opérations relatives à l'envoi et  à la réception des données et des commandes par radio;
+\item Une tâche accéléromètre qui gère l'acquisition des données de l’accéléromètre...
 \end{itemize}
 
-On note ici qu'à chaque tâche on affecte une priorité. On revient à notre exemple d'airbag pour mieux appréhender cette notion. Imaginons maintenant que dans un RTOS destiné à l'industrie automobile on ne donne pas à la tâche qui gère l'airbag la plus haute priorité. Cela reviendrait à dire qu'à 
+On note ici qu'à chaque tâche on affecte une priorité. On revient à notre exemple d'airbag pour mieux appréhender cette notion. Imaginons maintenant que dans un RTOS destiné à l'industrie automobile on ne donne pas à la tâche qui gère l'airbag la plus haute priorité. Cela reviendrait à prioriser une autre fonctionnalité de l'automobile que l'airbag lors d'un accident.
 
 \subsection{La communication entre les tâches}
 
 Dans un RTOS généralement, et dans G3OS plus particulièrement, une tâche peut communiquer avec ses semblables ou répondre à des signaux provenant des capteurs, qu'on appelle interruption.
 
-Un signal d'interruption permet à un composant du système embarqué de notifier le micro-contrôleur central de l'arrivée d'un événement qui mérite son attention. Le choix de ces événements se fait souvent en programmant les registres des composants du système. Conventionnellement, le registre qui permet de choisir les événements déclencheurs d'interruptions s'appelle le registre principal des interruptions (Main Interrupt Register).
+Un signal d'interruption permet à un composant du système embarqué de notifier le micro-contrôleur central de l'arrivée d'un événement qui mérite son attention. Le choix de ces événements se fait souvent en programmant les registres des composants du système.
 
-La communication entre les tâches s'effectue par plusieurs méthodes. La principale connue est la queue de messages. Ce mécanisme permet à une tâche de communiquer avec les autres en envoyant des messages. Un exemple typique serait alors: une tâche qui s'occupe de l'acquisition des données d'une puce GPS. Dès qu'une nouvelle trame de données est disponible, Cette tâche envoie  et une autre du traitement de ces données, Dans ce cas la première tâche envoie à la deuxième les données acquises à travers la que
+La communication entre les tâches s'effectue par plusieurs méthodes. La principale est la queue de messages. Ce mécanisme permet à une tâche de communiquer avec les autres en envoyant des messages. Un exemple typique serait alors: une tâche qui s'occupe de l'acquisition des données d'une puce GPS. Dès qu'une nouvelle trame de données est disponible, cette tâche envoie les trames à une autre qui se charge  du traitement de ces données, Dans ce cas la première tâche envoie à la deuxième les données acquises à travers la queue des messages. on schématise ce scénario dans la Figure\ref{fig:multitask_ex}.
 
+\begin{itemize}
+\item 1: Un signal d'interruption arrive, ordonnanceur acquitte l'interruption, enregistre le contexte de la tâche d'acquisition (variables locales, ...) et lance la tâche de traitement.
+\item 2: La tâche de traitement reçoit le message enregistré par la première tâche dans la queue des messages et initialise ou reprend son contexte de calcul.
+\item 3: La tâche de traitement a finit ses calculs, l’ordonnanceur enregistre son contexte local.
+\item 4: L'ordonnanceur relance la tâche d'acquisition avec son contexte local précédemment enregistré.
+
+\end{itemize}
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=1]{images/fig2.png}
@@ -230,15 +236,15 @@ La communication entre les tâches s'effectue par plusieurs méthodes. La princi
 \end{figure}
 
 \section{La communication en champs proche (NFC)}
-La communication en champs proche est un ensemble de protocoles permettant d'établir une connexion radio entre deux dispositifs avec une distance ne dépassant pas 4cm. Aujourd'hui, on compte des millions d'objets connectés contenant la technologie NFC(cartes bancaires, smartphone, arrêts de bus, smartwatch...). L'interopérabilité entre les différentes puces équipant ces objets a poussé les constructeurs à mettre en place un certain nombre de normes régissant la fabrication, la programmation et l'utilisation de cette technologie.
+La communication en champ proche est un ensemble de protocoles permettant d'établir une connexion radio entre deux dispositifs avec une distance ne dépassant pas 4cm. Aujourd'hui, on compte des millions d'objets connectés contenant la technologie NFC(cartes bancaires, smartphone, arrêts de bus, smartwatch...). L'interopérabilité entre les différentes puces équipant ces objets a poussé les constructeurs à mettre en place un certain nombre de normes régissant la fabrication, la programmation et l'utilisation de cette technologie.
 
 La guerre des normes a fait converger les constructeurs vers l'ISO/IEC 14443. Cette norme encapsule en elle même quatre sous normes:
 
 \begin{itemize}
 \item ISO/IEC 14443-1: Description des couches physiques
-\item ISO/IEC 14443-2: 
-\item ISO/IEC 14443-3:
-\item ISO/IEC 14443-4: 
+\item ISO/IEC 14443-2: Description de l'encodage, du signal ainsi que le bit timing. 
+\item ISO/IEC 14443-3: Cette partie traite des paquets NFC, le mécanisme d’anti-collision utilisé pour lire plusieurs puces en même temps.
+\item ISO/IEC 14443-4: Partie dynamique de la norme, elle décrit le protocole de transfert des blocs NFC.
 \end{itemize}
 
 \subsection{couches matérielles:}
@@ -246,17 +252,24 @@ La conception des couches matérielles d'un circuit NFC doit respecter les recom
 \begin{itemize}
 \item Une antenne: Selon les spécifications de la dite norme les dimensions de l'antenne ne doivent pas excéder 86mm x 54mm x 3mm.
 \item Une capacité adaptée pour garantir une raisonnance du circuit sur la fréquence 13.56Mhz;
-\item Le PICC
+\item Le PICC (Proximity Integrated Circuit Card), terme utilisé pour désigner la puce NFC qui sera lue par le PCD(Proximity Coupling Device), le lecteur de puces.
 \end{itemize}
 \subsection{couches logicielles:}
-
+Les couches logicielles sont décrites dans les niveaux 3 et 4 de la norme. Dans l'ISO/IEC 14443-3 un mécanisme d'initialisation et d’anti-collision est décrit, voir [8]. quant au niveau 4, il décrit la partie dynamique du système: Le BTP(Block Transmission Protocol), il sera implémenté dans le micro-contrôleur, voir Chapitre II.
 
 \section{Les infrastructures de production des logiciels}
 La conception et le développement des solutions logiciels dans un milieu industriel nécessite des infrastructures permettant d'automatiser un certain nombre de tâches qui, ensemble, forment ce qui est communément connu sous le nom de pipeline de production logicielle.
 
-Cette chaîne de production est itérative, Elle favorise les cycles courts pour délivrer au client un produit évolutif et s'adaptant à ses besoins. Dans la Figure... on présente les principales étapes de cette chaîne.
+Cette chaîne de production est itérative, Elle favorise les cycles courts pour délivrer au client un produit évolutif et s'adaptant à ses besoins. Dans la Figure\ref{fig:fig3} on présente les principales étapes de cette chaîne.
 
-Comme montré dans la Figure.... Une pipeline de production logicielle a un certain nombre d'acteurs externes humains qui garantissent son alimentation en versions(1) et en tickets(2). On définit alors ces acteurs comme suit:
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{images/fig3.png}
+\label{fig:fig3}
+\caption{Pipeline de production des logiciels}
+\end{figure}
+
+Comme montré dans la Figure\ref{fig:fig3} Un pipeline de production logicielle a un certain nombre d'acteurs externes humains qui garantissent son alimentation en versions et en tickets. On définit alors ces acteurs comme suit:
 
 \begin{itemize}
 \item Développeur: s'occupe de la conception et le développement des solutions informatiques en réponse aux besoins des clients exp.. dans le gestionnaire des bugs. Son travail permet d'alimenter le gestionnaire de versions.
@@ -266,36 +279,35 @@ Comme montré dans la Figure.... Une pipeline de production logicielle a un cert
 En plus de ces acteurs humains une infrastructure de production logicielle contient des composants logiciels pour automatiser un certain nombre de tâches:
 \begin{itemize}
 \item Gestionnaire de bugs: Comme son nom l'indique ce composant est un outil de communication et de traçabilité permettant de suivre l'évolution de la réponse du développeur au besoin du client et à la correction des bugs.
-\item Gestionnaire de versions: Cet outil est un classique de la gestion des projets informatiques, il permet, entre autres, aux développeurs de collaborer sur le même code source sans que cela n'affecte  d'archiver tous les changements effectués sur un code source. Par souci de traçabilité, un gestionnaire de version est indispensable dans un projet informatique même s'il n y a qu'un développeur.
-\item Intégration continue
+\item Gestionnaire de versions: Cet outil est un classique de la gestion des projets informatiques, il permet, entre autres, aux développeurs de collaborer sur le même code source sans que cela n'affecte d'archiver tous les changements effectués sur un code source. Par souci de traçabilité, un gestionnaire de version est indispensable dans un projet informatique même s'il n y a qu'un développeur.
+\item Intégration continue: C'est ce qui fait le lien entre les tests et l'environnement de production. Cet outil sert à automatiser les tâches relatives à la compilation et le déploiement.
 \end{itemize}
 
 
 \evenchapter[Conception et développement des couches logicielles et matérielles relatives à la norme NFC ISO14443 et de l'IHM Android dédiée]{Conception et développement des couches logicielles et matérielles relatives à la norme NFC ISO14443 et de l'IHM Android dédiée}
 
 \section{Analyse du besoin:}
-Dans le but de simplifier au maximum la mécanique et d’assurer au mieux l’étanchéité de celle-ci, il est prévu dans la version industrielle du geocube de n’utiliser ni interrupteur On/Off ni connecteur permettant de communiquer avec le geocube par un lien filaire. La seule possibilité de lien se fera par la radio, dont le débit est trop faible pour assurer des transfert de fichiers de données.
+Dans le but de simplifier au maximum la mécanique et d’assurer au mieux l’étanchéité de celle-ci, il est prévu dans la version industrielle du Géocube de n’utiliser ni interrupteur On/Off ni connecteur permettant de communiquer avec le Géocube par un lien filaire. La seule possibilité de lien se fera par la radio, dont le débit est trop faible pour assurer des transfert de fichiers de données.
 
-Solution :
+Nous proposons donc d’inclure dans le Géocube la fonctionnalité NFC. Elle devra pouvoir déclencher l’allumage ou au moins le réveil de sommeil profond du processeur du Géocube, ainsi que son extinction. Elle devra aussi pouvoir servir de lien de communication avec le logiciel de commande du Géocube pour permettre la configuration et le test de bon fonctionnement du Géocube par exemple lors de son installation. Enfin, elle permettra le déchargement et le chargement de fichiers depuis et vers la carte µSD.
 
-Nous proposons donc d’inclure dans le geocube la fonctionnalité NFC. Elle devra pouvoir déclencher l’allumage ou au moins le réveil de sommeil profond du processeur du geocube, ainsi que son extinction. Elle devra aussi pouvoir servir de lien de communication avec le logiciel de commande du geocube pour permettre la configuration et le test de bon fonctionnement du geocube par exemple lors de son installation. Enfin, elle permettra le déchargement et le chargement de fichiers depuis et vers la carte µSD.
-Le stage se déroulera en plusieurs phases :
+La réponse à ce besoin passera par les étapes suivantes:
 
 - Identification du chipset NFC à utiliser. Il y en a un déjà dans le design actuel, il faudra vérifier si ses performances sont suffisantes.
 
-- Modification ébventuelles de la carte du geocube pour intégrer le circuit choisi et assurer les fonctionnalités demandées.
+- Modification éventuelles de la carte du Géocube pour intégrer le circuit choisi et assurer les fonctionnalités demandées.
 
-- Test du chipset choisi.
+- Test de la puce choisie.
 
-- Réalisation des couches logicielles interface dans G3OS
+- Réalisation des couches logicielles interface dans G3OS.
 
-- Réalisation d’une appli dédiée sous Android pour l’IHM
+- Réalisation d’une application dédiée sous Android pour l’IHM.
 
 
 \subsection{Choix de la puce NFC:}
-Le choix d'une puce NFC s'est basé sur une webographie effectuée sur les sites des constructeurs pour trouver la puce la plus adaptée à la description du besoin du commanditaire. Une puce NFC doit répondre au mieux à ce besoin tout en encapsulant le maximum de fonctionnalités des 3 derniers niveaux (2, 3 et 4) de la norme ISO-14443. Cette norme garantie l'interaction avec les dispositifs utilisant le système exploitation Android.
+Le choix d'une puce NFC s'est basé sur une webographie effectuée sur les sites des constructeurs pour trouver la puce la plus adaptée à la description du besoin du commanditaire. Une puce NFC doit répondre au mieux à ce besoin tout en encapsulant le maximum de fonctionnalités des 3 derniers niveaux (2, 3 et 4) de la norme ISO-14443. Cette norme garantit l'interaction avec les dispositifs utilisant le système exploitation Android.
 
-Après une première analyse des caractéristiques de quelques dix puces sélectionnées, On ne garde pour la suite que les trois citées dans le Tableau ci-dessous. La plupart des puces disponibles dans le marché et qui sont interfaçables avec un micro-contrôleur\footnote{La plupart des puces sont stand-alone et programmable une fois.}.
+Après une première analyse des caractéristiques de quelques dix puces sélectionnées, on ne garde pour la suite que les trois citées dans le tableau ci-dessous. La plupart des puces disponibles sur le marché et qui sont interfaçables avec un micro-contrôleur\footnote{La plupart des puces sont stand-alone et programmable une fois.}.
 \begin{figure}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -311,21 +323,23 @@ PN533 & NXP & NC & 848 & 3 & USB2 & -40°-125° & 1KO\\
 \caption{Tableau comparatif des puces NFC présélectionnées.}
 \end{figure}
 
-On remarque qu'aucun constructeur ne propose des puces compatibles avec le 4ème niveau de la norme ISO/IEC 14443. L'utilisation de cette norme est indipensable pour pouvoir communiquer avec un dispositif Android\footnote{Android n'accepte pas les protocoles propriétaires pour la communication en champ proche. Que les protocoles certifiés par l'ISO/IEC}. Un travail serait alors à effectuer pour programmer le niveau manquant de la dite norme dans le micro-contrôleur.
+On remarque qu'aucun constructeur ne propose des puces compatibles avec le 4ème niveau de la norme ISO/IEC 14443. L'utilisation de cette norme est indispensable pour pouvoir communiquer avec un dispositif Android\footnote{Android n'accepte pas les protocoles propriétaires pour la communication en champ proche. Que les protocoles certifiés par l'ISO/IEC}. Un travail serait alors à effectuer pour programmer le niveau manquant de la dite norme dans le micro-contrôleur.
 
 Une puce existe déjà dans la version actuelle du Géocube. C'est l'AS3953, Le maintien de cette puce permettra de gagner:
 \begin{itemize}
 \item en temps de développement matériel.
 \item en prix: c'est la moins cher de sa catégorie.
-\item ultra basse consommation électrique\footnote{Ce qui est crucial pour le Géocube} Dans plusieurs cas d'utilisation la puce s'alimente de l'énergie émise par le smartphone.
+\item ultra basse consommation électrique\footnote{Ce qui est crucial pour le Géocube}. Dans plusieurs cas d'utilisation la puce s'alimente de l'énergie émise par le smartphone.
 \end{itemize}
-Pour ces raison le choix de l'AS3953 a été maintenu pour le Géocube.
+Pour ces raisons le choix de l'AS3953 a été maintenu pour le Géocube.
 
-\section{Conception de la solution}
+L'AS3953 est compatible avec les trois premiers niveaux de la norme NFC. Le 4ème niveau sera implémenté dans le micro-contrôleur du Géocube qui est le MSP430(voir [13]).
+
+\section{Conception et développement de la solution}
 
 \subsection{Conception et expérimentation de l'antenne:}
 
-Les prototypes des antennes NFC sont généralement conçus d'une manière empirique. Pour cela, Il existe plusieurs méthodes expérimentales conventionnelles. Mais avant de présenter les expériences réalisées. Il faut comprendre qu'un circuit NFC typique peut être assimilé à un circuit de type RLC. L'équivalent électrique d'une puce NFC et son antenne pourrait être assimilé au circuit de la Figure\ref{fig:nfcandantenna}.
+Les prototypes des antennes NFC sont généralement conçus d'une manière empirique. Pour cela, il existe plusieurs méthodes expérimentales conventionnelles. Mais avant de présenter les expériences réalisées. Il faut comprendre qu'un circuit NFC typique peut être assimilé à un circuit de type RLC. L'équivalent électrique d'une puce NFC et son antenne pourrait être assimilé au circuit de la Figure\ref{fig:nfcandantenna}.
 
 \begin{figure}[h!]
 \centering
@@ -369,24 +383,24 @@ alors que:
 
 $$R_{p-ant}=R_{s-ant}\times(1+(\frac{L_{ant}\times\omega}{R_{s-ant}})^2)$$
 
-La fréquence de raisonnance $f_0$ d'un circuit LC parallèle peut être calculée en utilisant cette formule:
+La fréquence de résonnance $f_0$ d'un circuit LC parallèle peut être calculée en utilisant cette formule:
 
 $$f_0=\frac{1}{2\pi\sqrt{L_{ant}.C_{tun}}}$$
 
-L'inductance de l'antenne à la raisonnance peut être exprimée comme suit:
+L'inductance de l'antenne à la résonnance peut être exprimée comme suit:
 $$L_{ant}=\frac{1}{(2\pi.f_0)^2.C_{tun}}$$
 
 Dans la plupart des cas on dispose de l'inductance $L_{ant}$ dans les datasheets des antennes. La grandeur qui reste à déterminer est alors $C_{tun}$. Comme nous avons vu précédemment:
 
 $$C_{tun}=C_{chip}+C_{conn}+C_{ant}$$
 
-Les valeurs de $C_{ant}$ et $C_{chip}$ sont généralement disponibles dans les datasheets de l'antenne et de la puce NFC. Théoriquement, La seule grandeur qui reste à déterminer est $C_{conn}$:
+Les valeurs de $C_{ant}$ et $C_{chip}$ sont généralement disponibles dans les datasheets de l'antenne et de la puce NFC. Théoriquement, la seule grandeur qui reste à déterminer est $C_{conn}$:
 
 $$C_{conn}=C_{tun}-C_{chip}-C_{ant}$$
 
-Malheureusement, ce n'est pas toujours le cas\footnote{Comme c'est le cas pour le Géocube} le circuit imprimé sur lequel vient s'ajouter l'antenne NFC peut modifier l'inductance de l'antenne d'une manière (pseudo-)aléatoire et dépendante des composants rayonnants du circuit, en plus du plan de masse que peut présenter ce dernier. Un mode opératoire itératif qui consiste à faire varier la capacité $C_{conn}$ jusqu'à ce que la fréquence de raisonnance du circuit se stabilise autour de 13.56Mhz serait alors de.
+Malheureusement, ce n'est pas toujours le cas\footnote{Comme c'est le cas pour le Géocube} le circuit imprimé sur lequel vient s'ajouter l'antenne NFC peut modifier l'inductance de l'antenne d'une manière imprévisible et dépendante des composants rayonnants du circuit, en plus du plan de masse que peut présenter ce dernier. Un mode opératoire itératif qui consiste à faire varier la capacité $C_{conn}$ jusqu'à ce que la fréquence de résonnance du circuit se stabilise autour de 13.56Mhz est utilisé.
 
-Pour cela nous avons conçu l'expérimentation schématisée sur la Figure\ref{experience} Le but est alors de mesurer pour chaque itération(et donc pour chaque valeur de capacité) la fréquence de raisonnance du circuit à une antenne qui émet à 13.56Mhz\footnote{Ce qui simule l'antenne NFC d'un smartphone}, et ceci jusqu'à trouver la capacité pour laquelle le circuit: Géocube+antenne raisonne à 13.56Mhz. Un GBF(Générateur de Basses fréquences) réglé sur 13.56Mhz et lié à une antenne simule un smartphone avec son antenne NFC. Le but serait alors de mesurer à chaque itération, à l'aide d'un oscilloscope.
+Pour cela nous avons conçu l'expérimentation schématisée sur la Figure\ref{experience} Le but est alors de mesurer pour chaque itération(et donc pour chaque valeur de capacité) la fréquence de raisonnance du circuit à une antenne qui émet à 13.56Mhz\footnote{Ce qui simule l'antenne NFC d'un smartphone}, et ceci jusqu'à trouver la capacité pour laquelle le circuit: Géocube+antenne raisonne à 13.56Mhz. Un GBF(Générateur de Basses fréquences) réglé sur 13.56Mhz et lié à une antenne simule un smartphone avec son antenne NFC. Le but serait alors de mesurer à chaque itération, à l'aide d'un oscilloscope, la fréquence de résonnace.
 
 \begin{figure}[h!]
 \centering
@@ -394,13 +408,12 @@ Pour cela nous avons conçu l'expérimentation schématisée sur la Figure\ref{e
 \includegraphics[scale=0.55]{images/gbfoscillo.png}
 \caption{Expérimentation réalisée pour calibrer l'antenne NFC du Géocube}
 \end{figure}
-Les antennes testées sont des circuits éléctroniques imprimés que nous avons conçus spécialement pour le Géocube
-Cette expérimentation a permit de choisir une capacité pour les modèles d'antennes....
+Les antennes testées sont des circuits électroniques imprimés que nous avons conçus spécialement pour le Géocube. Un modèle d'antenne a été retenu à l'issu de cette expérimentation.
 
 \subsection{Conception statique des couches logicielles}
-La puce NFC retenu n'inclut pas le niveau 4 de la norme ISO/IEC 14443. Ce niveau est indispensable pour pouvoir communiquer avec d'autres dispositifs NFC et spécialement les smartphones utilisant un système d'exploitation Android. Ce niveau contient les spécifications relatifs au protocole de transmission des données entre le PCD et le PICC qu'on nomme Le BTP(Block Transmission Protocol).
+La puce NFC retenue n'inclut pas le niveau 4 de la norme ISO/IEC 14443. Ce niveau est indispensable pour pouvoir communiquer avec d'autres dispositifs NFC et spécialement les smartphones utilisant un système d'exploitation Android. Ce niveau contient les spécifications relatifs au protocole de transmission des données entre le PCD et le PICC qu'on nomme Le BTP(Block Transmission Protocol).
 
-Le BTP définit un format de bloc tel montré dans le Tableau
+Le BTP définit un format de blocs tel montré dans le Tableau suivant.
 
 \begin{tabular}[hf]{|c|c|c|c|c|c|c|c|}
 \hline
@@ -470,7 +483,7 @@ La structure de données du BTP qu'on vient de présenter a été programmée et
 \subsection{Conception dynamique des couches logicielles et développement}
 \textit{ Dans ce qui suit la notation $I(X)$ désigne un I-Block avec un numéro de bloc X. On utilise le diagramme de séquence UML pour modéliser les scénarios possibles. Tous les scénarios suivants ont été programmés et intégrés dans G3OS lors de ce stage}
 
-Comme dans n'importe quel RTOS. La NFC correspond à une tâche indépendante. L'ordonnanceur de G3OS reçoit un signal d'interruption de la puce NFC, acquitte l'interruption et lance la tâche correspondante. Et c'est alors à la tâche de découvrir pourquoi elle a été lancée en lisant le registre principal des interruptions de la puce NFC. Toutes les communications entre le micro-contrôleur (MSP430) et la puce NFC (AS3953) s'effectue en SPI(interface série).
+Comme dans n'importe quel RTOS, la NFC correspond à une tâche indépendante. L'ordonnanceur de G3OS reçoit un signal d'interruption de la puce NFC, acquitte l'interruption et lance la tâche correspondante. Et c'est alors à la tâche de découvrir pourquoi elle a été lancée en lisant le registre principal des interruptions de la puce NFC. Toutes les communications entre le micro-contrôleur (MSP430) et la puce NFC (AS3953) s'effectue en SPI(interface série).
 
 En plus des registres, l'AS3953 contient une EEPROM(Electrically Erasable Programmable Read-Only Memory) de 32 mots de 32 bits et une file FIFO (First In First Out) de 32 octets qui permet de stocker temporairement les informations à transmettre dans les deux sens. Tous ces éléments sont accessible en SPI\footnote{Voir Chapitre1 pour comprendre le fonctionnement}.
 
@@ -490,7 +503,7 @@ Donc la suite de bits: 1000 0000 0010 0000 1111 0000 envoyée en SPI correspond 
 
 Ainsi toutes les communications entre le micro-contrôleur et la puce NFC s'effectuent de la même façon: constituer un mot contenant un octet pour le mode de communication\footnote{Lire/Ecrire l'EEPROM, Lire/Ecrire les registres et Lire/Ecrire la FIFO}, suivi d'un mot pour indiquer l'adresse qu'on veut lire ou écrire et finalement le mot qu'on veut écrire pour l'écriture et rien pour la lecture.
 
-L'AS3953 implémente aussi un certain nombre de commandes dites commandes directes. Les commandes directes permettent au micro-contrôleur de notifier la puce NFC
+L'AS3953 implémente aussi un certain nombre de commandes dites commandes directes. Les commandes directes permettent au micro-contrôleur de notifier la puce NFC de l'action qu'elle doit entreprendre avec le smartphone:
 
 \begin{itemize}
 \item Clear: arrêter toutes les activités et effacer tous les mots de la FIFO.
@@ -544,12 +557,29 @@ Pour échanger des données entre les PCD et le PICC il faut utiliser des blocs 
 \end{figure}
 
 \subsubsection{Gestion des erreurs}
-Lorsqu'une erreur survient lors de la transmission des blocs, l'état du registre des erreurs est changé, 
+Lorsqu'une erreur survient lors de la transmission des blocs, l'état du registre des erreurs est changé. Et c'est alors au micro-contrôleur de lire les registres des erreurs à la réception de chaque bloc. Si une erreur survient, le micro-contrôleur demande au PICC d'envoyer un R(NAK) et d'attendre un R(ACK) jusqu'à ce que la transmission se rétablisse ou le time-out arrête définitivement la transmission.
 
+\section{Conception et développement de l'application Android:}
+L'application Android dédiée au dispositif NFC du Géocube, utilise principalement l'interface ISODep du SDK Android. Cette interface permet de simplifier le développement des applications Android en implémentant toutes les spécifications de la norme ISO/IEC 14443, jusqu'au 4ème niveau.
+
+L'application Android, se base sur 4 activités principales, voir Figure....
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{images/activities.png}
+\label{fig:android}
+\caption{Maquette et interaction des activités}
+\end{figure}
+
+\begin{itemize}
+\item La première activité: Demande à l'utilisateur d'approcher son smartphone du Géocube. Dès que le 4ème niveau de l'ISO/IEC 14443 est atteint. Un signal d'intention (intent) est envoyé de la première activité vers la 2ème.
+\item La deuxième activité: Envoie un I-Block de chaînage au Géocube en lui demandant de renvoyer les informations liées à la radio, GPS, mémoire, etc. Dès que l'échange des I-Blocks est effectué, un signal d'intention est alors envoyé à la 3ème activité avec les informations envoyés par le Géocube.
+\item La 3ème activité représente graphiquement les I-Blocks reçus de la 2ème activité. et propose des toggle-buttons pour modifier les états du Géocube. Dès que l'utilisateur a effectué ses modifications sur l'interface graphique, un bouton "configurer" permet de valider les modifications, et c'est alors que la première activité est relancée pour demander à l'utilisateur de rapprocher son smartphone du Géocube pour appliquer les changements effectués.
+\end{itemize}
 %------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------
 \evenchapter[Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:]{Conception, développement et déploiement d'un système de mise à jour automatique destinée au système Géocube:}
-\textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Pour plus d'informations sur le langage voir []. Le système de mise à jour développé fut baptisé Sharokey}
+\textit{ Dans ce chapitre plusieurs diagrammes UML(Unified Modelling Language) sont utilisés pour simplifier la conception du système de mise à jour au lecteur. Le système de mise à jour développé fut baptisé Sharokey}
 \section{Étude du besoin:}
 Le besoin se fait ressentir de plus en plus au sein de la société Kylia de disposer d'un système permettant aux clients qui ont acheté un système Géocube  d'effectuer des mises à jour automatiques et de profiter ainsi des améliorations éventuelles qui seront amenées aux couches logicielles des produit sans pour autant procéder à un rappel de celui ci.
 
@@ -564,7 +594,7 @@ En plus de la gestion des mises à jour, ce système doit être au coeur de plus
 
 De la Figure\ref{fig:context_statique} on définit les acteurs suivants:
 \begin{itemize}
-\item Opérateur commercial: Personne qui procède à la vente des systèmes Géocubes et des licences de mise à jour. Une licence a un date de début et une date de fin. Elle détermine la période ((pour laquelle)) le client à le droit de profiter du support logiciel à travers la mise à jour de son dispositif.
+\item Opérateur commercial: Personne qui procède à la vente des systèmes Géocubes et des licences de mise à jour. Une licence a une date de début et une date de fin. Elle détermine la période ((pour laquelle)) le client à le droit de profiter du support logiciel à travers la mise à jour de son dispositif.
 \item Développeur: Personne responsable de l'alimentation continue du système en versions.
 \item Administrateur: Personne responsable de l'administration et la supervision du système de mise à jour.
 \item Coordinateur: Dispositif client destiné à être mis à jour.
@@ -573,7 +603,6 @@ De la Figure\ref{fig:context_statique} on définit les acteurs suivants:
 Ce système doit en plus présenter les particularités suivantes:
 \begin{itemize}
 \item La supervision et l'administration du système doit être simplifiée à travers des interfaces homme-machine.
-\item 
 \item Les logs du système doivent être expressifs et facilement accessible par l'administrateur.
 \item Les requêtes du client et les réponses du serveur doivent être sécurisées.
 \end{itemize}
@@ -611,12 +640,12 @@ Une mise à jour est un script auto-extractible fabriqué en utilisant le progra
 Sharokey est une solution informatique légère de mise à jour automatique pour les solutions informatiques propriétaires basés sur un système d'exploitation GNU/Linux et nécessitant une licence ou une autorisation pour faire les mises à jour. Il est basé sur une architecture client-serveur. Le client est codé entièrement en Shell pour garantir une portabilité sur toutes les distributions GNU/Linux et sur une grande panoplie d'architectures matérielles: Intel, ARM, MIPS, ... Le serveur est écrit en NodeJS. Ce choix garantie se portabilité sur les serveurs utilisant des OS type Windows ou GNU/Linux. Toute fois, il est fortement conseillé d'utiliser GNU/Linux. Les tests effectués jusqu'à ce jour n'ont porté que sur ce type d'OS.
 
 \subsubsection{Client:}
-Comme schématisé dans la Figure, La partie client est contituée d'un ensemble de paquets Kylia dont nous présentons les fonctionnalités ci-dessous:
+Comme schématisé dans la Figure\ref{fig:composants}, La partie client est constituée d'un ensemble de paquets Kylia dont nous présentons les fonctionnalités ci-dessous:
 \begin{itemize}
 \item checker.kyl: Ce paquet renvoie trois codes possibles 0, 1 ou 2. 0 si le dispositif client arrive à se connecter au serveur mais aucune nouvelle mise à jour n'est disponible. 1 si le dispositif client arrive à se connecter au serveur et il y a une nouvelle mise à jour a effectué. 2 si le dispositif client n'arrive pas à se connecter à internet\footnote{Le code retour 2 est important pour le coordinateur des Géocubes, puisque ce dernier est dépendant d'internet. Ce code retour permet d'informer le client d'un souci de réseau}.
-\item update.kyl: Ce paquet télécharge et éxécute les mises à jour, il change ensuite le numéro de la version courante dans le dispositif client pour l'adapter à celle du serveur.
+\item update.kyl: Ce paquet télécharge et exécute les mises à jour, il change ensuite le numéro de la version courante dans le dispositif client pour l'adapter à celle du serveur.
 \item zeus.kyl: Ce script a pour but d'automatiser la procédure d'installation d'un coordinateur "à la sortie d'usine".
-\item phenix.kyl: Le but de ce paquet est de désintaller le coordinateur et de le réinstaller automatiquement, de partir d'une version minimaliste si une erreur survient.
+\item phenix.kyl: Le but de ce paquet est de désinstaller le coordinateur et de le réinstaller automatiquement, de partir d'une version minimaliste si une erreur survient.
 \end{itemize}
 \section{conception dynamique et développement}
 
@@ -629,9 +658,9 @@ La stratégie de sécurité instaurée pour Sharokey doit respecter les trois po
 \end{itemize}
 Dans cette perspective un système d'authentification par vérification de signature numérique sur la clef publique du client a été implémenté dans Sharokey. Une autorité de certification (KyliaCA) a été créée\footnote{Système cryptographique asymétrique en utilisant le standard RSA}. Son but est de signer la clef publique des clients pour garantir que leur dispositif a bien été vendu par Kylia. La génération des clés (privé et publique) des clients s'effectue d'une manière automatique dans Sharokey dès la création d'un nouveau client dans la base de données, d'ou le trigger Pl/PGSQL sur la table client(Figure\ref{fig:mpd}).
 
-Pour créer une pair de clés (privé et publique signée) pour un client. Sharokey effectue trois opérations en utilisant les fonctions de la librairie OpenSSL:
+Pour créer une paire de clés (privé et publique signée) pour un client. Sharokey effectue trois opérations en utilisant les fonctions de la librairie OpenSSL:
 \begin{itemize}
-\item Créer une pair de clés aléatoires en utilisant le standard RSA et avec une longueur de 2048 octets\footnote{À ce jour, aucune faille n'est connue dans RSA pour les clés de longueur 2048 octets}
+\item Créer une paire de clés aléatoires en utilisant le standard RSA et avec une longueur de 2048 octets\footnote{À ce jour, aucune faille n'est connue dans RSA pour les clés de longueur 2048 octets}
 \item À partir de la clef publique, créer un CSR (Certificate Signature Request).
 \item Signer le fichier CSR avec KyliaCA et générer ainsi une clef publique signée par l'autorité de certification de l'entreprise\footnote{Une autorité de certification est aussi une pair de clés publique-privé sauf qu'elle n'a été signée par aucune autre CA. Elle est auto-signée par elle même}.
 \end{itemize}
@@ -639,7 +668,7 @@ Un tel mécanisme d'authentification assure que le dispositif qui veut effectuer
 
 Concernant le deuxième point relatif au cryptage des requêtes clients et des réponses du serveur. Sharokey oblige toutes les requêtes à passer par le protocole HTTPS pour garantir le cryptage des informations échangés entre le client et le serveur, et ceci en utilisant une cryptographie asymétrique basée sur l'échange mutuel des clés publiques.
 
-Enfin, le troisième point relatif à l'intégrité des données transitant par le réseau est garantit par un mécanisme de checksum-MD5 implémenté par défaut dans le générateur de scripts auto-extractibles Makeself que Sharokey utilsie pour créer les paquets de mise à jour.
+Enfin, le troisième point relatif à l'intégrité des données transitant par le réseau est garanti par un mécanisme de checksum-MD5 implémenté par défaut dans le générateur de scripts auto-extractibles Makeself que Sharokey utilise pour créer les paquets de mise à jour.
 
 \subsection{Composants et interaction:}
 
@@ -650,57 +679,54 @@ Enfin, le troisième point relatif à l'intégrité des données transitant par 
 \caption{Schéma des composants de Sharokey}
 \end{figure}
 
-La Figure\ref{fig:composants} présente les composants de sharokey. Dans ce qui suit le rlôe de chaque composant et son interaction avec les autres:
+La Figure\ref{fig:composants} présente les composants de Sharokey. Dans ce qui suit le rlôe de chaque composant et son interaction avec les autres:
 
 \begin{itemize}
 \item Model: module NodeJS qui encapsule toute la logique liée aux opérations que les autres composants peuvent effectuer sur la base de donnée. Ainsi, si un module veut effectuer une opération sur la base de données, il devra passer par ce module.
 \item Kernel: C'est le noyau NodeJS de Sharokey (l'API centrale) qui contient toutes les fonctions communes aux autres modules.
-\item Watcher: C'est le composant le plus dynamique du système il écoute les triggers de la base de données effectue les modifications nécessaires sur le systèmes de fichier et vice-versa. Il encapsule aussi la logique liée à la sécurité et la génération automatique et signature des clés publiques et privés des nouveaux clients.
+\item Watcher: C'est le composant le plus dynamique du système il écoute les triggers de la base de données effectue les modifications nécessaires sur le système de fichiers et vice-versa. Il encapsule aussi la logique liée à la sécurité et la génération automatique et signature des clés publiques et privés des nouveaux clients.
 \item server: C'est le serveur NodeJS qui reçoit les requêtes des clients en HTTPS, vérifie la signature sur leurs clés publiques, vérifie leur droit d'effectuer des mises à jour, prépare et envoie la mise à jour sous format de scripts auto-extractible.
 \end{itemize}
 
 Le système a été conçu d'une manière modulaire, chaque composant peut vivre sur une machine à part l’interaction entre les modules s'effectue en utilisant TCP/IP.
 
-Les Figures .... présentent les interactions entre les composants à travers des diagrammes de séquence UML.
+Les Figures\ref{fig:seq_dev}, \ref{fig:new_client}, \ref{fig:new_product} présentent les interactions entre les composants à travers des diagrammes de séquence UML.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.8]{images/new_client.png}
 \label{fig:new_client}
-\caption{Digramme de séquence: ajout d'un nouveau client}
+\caption{Diagramme de séquence: ajout d'un nouveau client}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.8]{images/new_product.png}
 \label{fig:new_product}
-\caption{Digramme de séquence: ajout d'un nouveau produit}
+\caption{Diagramme de séquence: ajout d'un nouveau produit}
 \end{figure}
 
 \begin{figure}
 \centering\includegraphics[scale=0.8]{images/maj.png}
 \label{fig:maj}
-\caption{Digramme de séquence: Mise à jour du coordianteur}
+\caption{Diagramme de séquence: Mise à jour du coordianteur}
 \end{figure}
 
 \begin{figure}
 \centering\includegraphics[scale=0.8]{images/seq_dev.png}
 \label{fig:seq_dev}
-\caption{Digramme de séquence: Ajout d'une nouvelle version dans le dépôt}
+\caption{Diagramme de séquence: Ajout d'une nouvelle version dans le dépôt}
 \end{figure}
 
+\section{Déploiement et mise en production:}
+Les tests de validation ont été effectué, Sharokey est actuellement sur le serveur de production de la société Kylia (voir chapitre IV). Le déploiement de la solution a été effectué avec le module NodeJS PM2 qui permet de:
 
-\begin{comment}
 \begin{itemize}
-\item \texttt{themeensg.cls} : contient les personnalisations et macros utiles
-\item \texttt{jury.tex} : pour la feuille de présentation du jury
-\item le dossier \texttt{images} : il doit contenir toutes les images, il contient déjà le dossier logo avec celui de l'\ensg
-\item \texttt{bibliographie.bib} contient la bibliographie
+\item Superviser les noeuds du serveur (CPU, mémoire, ...).
+\item Gérer les logs de chaque noeud à part.
+\item Garantir la haute disponibilité des noeuds en relançant automatiquement les composants du système en cas de problème.
+\item Charger automatiquement les dernières versions depuis le dépôt des logiciels(intégration continue).
 \end{itemize}
-\end{comment}
-
-
-
 
 \evenchapter[Mise en place et sécurisation d'une infrastructure virtuelle de production des logiciels:]{Mise en place et sécurisation d'une infrastructure virtuelle de production des logiciels:}
 
@@ -710,13 +736,13 @@ Le besoin se fait ressentir au sein de la société Kylia de disposer d'une infr
 
 Pour déployer une infrastructure de production des logiciels. il faut disposer d'un serveur avec une adresse IP statique, permettant à tous les acteurs de centraliser leurs contributions et de les rendre accessibles aux autres en temps réel.
 
-Selon la taille des entreprises et des performances demandées des solutions existent. Pour les PME (cas de la société Kylia) qui ne disposent pas moyens logistiques\footnote{installations électriques, systèmes de climatisation, connexion internet deterministique, ...} pour accueillir un serveur physique, Des prestataires, dont le métier est l'hébergement des data-centres proposent des solutions pour la location d'un serveur virtuel. Ainsi une société peut disposer d'un serveur hautement disponible sans pour autant l'accueillir physiquement.
+Selon la taille des entreprises et des performances demandées, des solutions existent. Pour les PME (cas de la société Kylia) qui ne disposent pas moyens logistiques\footnote{installations électriques, systèmes de climatisation, connexion internet deterministique, ...} pour accueillir un serveur physique, des prestataires, dont le métier est l'hébergement des data-centres proposent des solutions pour la location d'un serveur virtuel. Ainsi une société peut disposer d'un serveur hautement disponible sans pour autant l'accueillir physiquement.
 
 Ce type de solution, communément connus sous le nom de VPS(Virtual Private Server), est accessible en ligne de commande à travers le protocole SSH (Shell sécurisé) et laisse la liberté complète à l'administrateur de gérer le système, comme dans un serveur physique.
 
-Le prestataire selectionné garantit une accessibilité de 99.989\% ce qui correspond à 364.96 jours accessibles par an, une bande passante de 100Mbps, une puissance de calcul permettant de signer 114 certificats OpenSSL par seconde et par CPU.
+Le prestataire selectionné garantit une accessibilité de 99.989\% ce qui correspond à 364.96 jours accessibles par an, une bande passante de 100Mbps, une puissance de calcul permettant de signer 114 certificats OpenSSL par seconde et par CPU\footnote{Cet exemple n'a pas été choisi par hasard, la signature des clés publiques est l'opération qui consomme le plus de puissance de calcul dans Sharokey}.
 
-Un tel serveur est adapté pour accueillir une infrastructure logicielle d'une PME ainsi que de proposer des services en ligne (voir chapitre3) pour un nombre de clients qu'on estime à vingts.
+Un tel serveur est adapté pour accueillir une infrastructure logicielle d'une PME ainsi que de proposer des services en ligne (voir chapitre3) pour un nombre de clients qu'on estime à vingt.
 
 \subsection{Choix du système d'exploitation:}
 
@@ -750,7 +776,7 @@ Ainsi nous avons opté pour un système de versioning basé sur Git. Et ceci à 
 
 Gitolite est une réécriture de Gitosis, par Sitaram Chamarty. Il permet de gérer des dépôts Git à l'aide d'un.. dépôt Git, il attribut aux utilisateurs du système des droits spécifiques comme la lecture, écriture, etc. Il possède un fichier de configuration qui permet le contrôle d'accès sur chaque branche, incluant des spécifications comme qui peut ou ne peut pas revenir sur une branche donnée.
 
-Gitolite utilise évidement les clés publiques ssh pour l'ajout d'utilisateur, mais il est intéressant car il interdit ses utilisateurs de se connecter au shell dans les dépôts. Ainsi aucune modification ne peut être effectuer sur le code d'un dépôt sans commiter les modifications sans C'est l'un des points importants de sécurité auxquels répond Gitolite.
+Gitolite utilise évidement les clés publiques ssh pour l'ajout d'utilisateur, mais il est intéressant car il interdit ses utilisateurs de se connecter au shell dans les dépôts. Ainsi aucune modification ne peut être effectuée sur le code d'un dépôt sans commiter les modifications sans C'est l'un des points importants de sécurité auxquels répond Gitolite.
 
  La configuration de Gitolite est simple. Un dépôt de configuration nommé gitolite-admin est créé sur le serveur, ainsi que son clône dans le répertoire personnel de l'administrateur. C'est dans celui-ci les dépôts sont configurés. Cette configuration comprend un fichier et un dossier :
 \begin{itemize}
@@ -765,7 +791,7 @@ Tous les codes de la société Kylia sont actuellement intégrés à l'outil de 
 \section{Gestionnaire de bugs:}
 Un gestionnaire de bugs, et contrairement à ce que son nom peut laisse croire, ne sert pas qu'à gérer les bugs. C'est un système d'information qui permet de coordonner le travail du développeur, testeur et opérateur commercial. Ce système permet de reporter les bugs, les propositions d'amélioration, les remarques des clients ainsi que de suivre l'évolution de la réalisation et la réponse des développeurs à tout ça.
 
-Le plus connu des gestionnaires de bugs est BugZilla, c'est une solution libre de la fondation Mozilla qui a su fédérer une grande communauté de développeurs et d'utilisateurs. C'est une solution stable qui est utilisée dans plusieurs grands projets informatiques\footnote{Le plus connu reste le navigateur FireFox}. Elle a donc été choisit comme gestionnaire de bugs au sein de la société Kylia. Le lecteur curieux désirant Son installation sur le serveur de production et sa configuration peut se reférer directement à sa documentation officielle.
+Le plus connu des gestionnaires de bugs est BugZilla, c'est une solution libre de la fondation Mozilla qui a su fédérer une grande communauté de développeurs et d'utilisateurs. C'est une solution stable qui est utilisée dans plusieurs grands projets informatiques\footnote{Le plus connu reste le navigateur FireFox}. Elle a donc été choisie comme gestionnaire de bugs au sein de la société Kylia. Le lecteur curieux désirant en savoir plus sur son installation sur le serveur de production et sa configuration peut se reférer directement à sa documentation officielle.
 
 
 %-------------------------------------------------------------------------------
@@ -774,11 +800,9 @@ Le plus connu des gestionnaires de bugs est BugZilla, c'est une solution libre d
   \addcontentsline{toc}{part}{Conclusion}
   \vspace{1.5cm}
 
-Les développements nécessaires à l'implémentation de la solution NFC dans le Géocube était une réelle chance de travailler, pour la première fois, sur le noyau d'un système d'exploitation en temps-réel, de comprendre le fonctionnement de ses composants et de les manipuler. Cette partie du stage était une opportunité de s'ouvrir sur le monde de l'électronique, de comprendre de processus par lequel passe une carte électronique depuis sa conception jusqu'à sa fabrication et d'entreprendre, moi même, des tests et des expérimentations électroniques en vue de valider les hypothèses émises lors de la phase ...
+Les développements nécessaires à l'implémentation de la solution NFC dans le Géocube était une réelle chance de travailler, pour la première fois, sur le noyau d'un système d'exploitation en temps-réel, de comprendre le fonctionnement de ses composants et de les manipuler. Cette partie du stage était une opportunité de s'ouvrir sur le monde de l'électronique, de comprendre de processus par lequel passe une carte électronique depuis sa conception jusqu'à sa fabrication et d'entreprendre, moi même, des tests et des expérimentations électroniques en vue de valider les hypothèses émises lors de la phase de conception.
 
-La deuxième partie du stage relative au développement de Sharokey était pour moi une mise en pratique des connaissances que j'ai acquis durant mon année de spécialité à l'ENSG, de décomposer le système d'information en couches: de la partie matérielle jusqu'à l'interface homme-machine en passant par la sécurité du systèmes, le développements des composants, jusqu'aux tests et mise en production.
-
-La troisième partie qui traite de la mise en place d'une infrastructure virtuelle de production des logicielles au sein de la société Kylia est une 
+La deuxième partie du stage relative au développement de Sharokey et la La troisième partie qui traite de la mise en place d'une infrastructure virtuelle de production des logicielles au sein de la société Kylia, étaient pour moi une mise en pratique des connaissances que j'ai acquis durant mon année de spécialité à l'ENSG, de décomposer le système d'information en couches: de la partie matérielle jusqu'à l'interface homme-machine en passant par la sécurité du systèmes, le développements des composants, jusqu'aux tests et mise en production.
 
 Enfin, durant ce stage j'ai aussi effectué un travail de réflexion autour d'un sujet de thèse proposé par LOEMI et Kylia et qui s'articule autour du système Géocube. Un projet de recherche a été produit, voir Annexe I.
 
